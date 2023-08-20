@@ -1,0 +1,46 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+label {
+  span {
+    font-weight: lighter;
+  }
+}
+button {
+  font-size: 14px;
+  color: white;
+}
+
+.top_shadow {
+  background: linear-gradient(180deg, #1e1e1e 0%, rgba(30, 30, 30, 0) 100%);
+  width: 100%;
+  height: 152px;
+}
+
+.testimonial {
+  border-radius: 8px;
+  border: 1px solid var(--grey-60, #ccc);
+  background: rgba(39, 39, 39, 0.1);
+  backdrop-filter: blur(30px);
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+//Media Queries
+
+@media screen and (min-width: 768px) {
+  .left[hidden] {
+    display: none; /* Display the content on tablet and larger screens */
+  }
+  .center {
+    left: 50%;
+    transform: translate(-50%);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .left[hidden] {
+    display: block; /* Hide the content on desktop screens */
+  }
+}
