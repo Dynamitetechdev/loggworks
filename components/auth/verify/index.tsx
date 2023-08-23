@@ -151,4 +151,8 @@ const VerifyForm: React.FC<AuthFormProp> = ({ title, login }) => {
   );
 };
 
+<<<<<<< HEAD
 export default VerifyForm;
+=======
+export default AuthForm;
+>>>>>>> dd1fac04d24989ac18acfc063d0a699cdefedc22
