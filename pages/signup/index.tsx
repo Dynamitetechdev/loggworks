@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { useState } from "react";
-import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import AuthForm from "../../components/auth/authForm";
 const SignUp = () => {

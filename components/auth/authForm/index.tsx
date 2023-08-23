@@ -93,7 +93,7 @@ const AuthForm: React.FC<AuthFormProp> = ({ title, login }) => {
       </div>
 
       <div className="right max-sm:flex max-sm:flex-col max-sm:justify-between formInput col-span-4 px-5 md:w-6/12 md:mx-auto md:my-auto ">
-        <h1 className="max-sm:mt-12 form_header max-sm:text-left text-2xl md:font-bold text-grekDark md:my-5">
+        <h1 className="max-sm:mt-12 form_header max-sm:text-left text-2xl md:font-bold text-greyDark md:my-5">
           {title}
         </h1>
         {login && <p className="text-left  md:hidden">Welcome back</p>}
@@ -197,7 +197,7 @@ const AuthForm: React.FC<AuthFormProp> = ({ title, login }) => {
                   </div>
                 </div>
                 {login && (
-                  <p className="text-right underline text-grekDark mt-2">
+                  <p className="text-right underline text-greyDark mt-2">
                     Forgot Password
                   </p>
                 )}
@@ -226,7 +226,7 @@ const AuthForm: React.FC<AuthFormProp> = ({ title, login }) => {
             </div>
             <span>Sign up with Facebook</span>
           </button>
-          <button className="w-full my-4 bg-grekDark font-bold py-2 px-4 rounded h-[48px] flex justify-center items-center">
+          <button className="w-full my-4 bg-greyDark font-bold py-2 px-4 rounded h-[48px] flex justify-center items-center">
             <div className="icon">
               <Image
                 src={"/assets/icons/apple.svg"}
