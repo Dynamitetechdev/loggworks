@@ -63,7 +63,7 @@ const VerifyForm: React.FC<AuthFormProp> = ({ title, login }) => {
       <Testimonial />
 
       <div className="right max-sm:flex max-sm:flex-col max-sm:justify-between formInput col-span-4 px-5 md:w-6/12 md:mx-auto md:my-auto max-sm:relative">
-        <div className="mobile_nav absolute top-10">
+        <div className="md:hidden mobile_nav absolute top-10">
           <Image
             src={"/assets/icons/navBack.svg"}
             width={24}
