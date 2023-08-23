@@ -7,13 +7,14 @@ import "react-phone-input-2/lib/style.css";
 interface AuthFormProp {
   title: string;
   newPassword?: boolean;
+  sub?: string;
 }
 interface FormData {
   email?: string;
   newPassword?: string;
   confirmPassword?: string;
 }
-const ResetForm: React.FC<AuthFormProp> = ({ title, newPassword }) => {
+const ResetForm: React.FC<AuthFormProp> = ({ title, newPassword, sub }) => {
   const [numberReactInput, setNumberReactInput] = useState<any>(null);
 
   const [formData, setFormData] = useState<FormData>({
@@ -46,45 +47,89 @@ const ResetForm: React.FC<AuthFormProp> = ({ title, newPassword }) => {
             alt=""
           />
         </div>
-        <h1 className="max-sm:mt-12 max-sm:text-center form_header max-sm:text-left text-2xl md:font-bold text-greyDark md:my-5">
+        <h1 className="max-sm:mt-12 max-sm:text-center form_header max-sm:text-left text-2xl font-bold text-greyDark md:my-5">
           {title}
         </h1>
-        <p className="text-center">
-          Please enter your email address and we will send you a password reset
-          link
-        </p>
+        <p className="text-center text-greyDark">{sub}</p>
 
         <div className="max-sm:mt-10">
-          <form action="" onSubmit={handleSubmit} className="mb-10">
-            <div className="md:mb-4">
-              <div className="password mb-4">
-                <label
-                  className="block text-gray-700 text-sm font-bold mb-1 text-left"
-                  id="email"
-                >
-                  <span>Email</span>
-                </label>
-                <div className="relative">
-                  <input
-                    className="border border-grey rounded w-full py-2 px-3 text-gray-700 h-[48px]"
+          <form action="" onSubmit={handleSubmit}>
+            {!newPassword ? (
+              <div className="md:mb-4">
+                <div className="password mb-4">
+                  <label
+                    className="block text-gray-700 text-sm font-bold mb-1 text-left"
                     id="email"
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleOnChange}
-                  />
+                  >
+                    <span>Email</span>
+                  </label>
+                  <div className="relative">
+                    <input
+                      className="border border-grey rounded w-full py-2 px-3 text-gray-700 h-[48px]"
+                      id="email"
+                      type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleOnChange}
+                    />
+                  </div>
                 </div>
+
+                <button className="mb-10 w-full h-[48px] bg-green  font-bold py-2 px-4 rounded">
+                  {newPassword ? "Reset password" : "Send reset link"}
+                </button>
+                <Link
+                  href={"/login"}
+                  className="text-center underline text-green"
+                >
+                  Back to login
+                </Link>
               </div>
+            ) : (
+              <div className="md:my-4">
+                <div className="password mb-4">
+                  <label
+                    className="block text-gray-700 text-sm font-bold mb-1 text-left"
+                    id="newPassword"
+                  >
+                    <span>New password</span>
+                  </label>
+                  <div className="relative">
+                    <input
+                      className="border border-grey rounded w-full py-2 px-3 text-gray-700 h-[48px]"
+                      id="newPassword"
+                      type="text"
+                      name="newPassword"
+                      value={formData.newPassword}
+                      onChange={handleOnChange}
+                    />
+                  </div>
+                </div>
+                <div className="password mb-4">
+                  <label
+                    className="block text-gray-700 text-sm font-bold mb-1 text-left"
+                    id="confirmPassword"
+                  >
+                    <span>New password</span>
+                  </label>
+                  <div className="relative">
+                    <input
+                      className="border border-grey rounded w-full py-2 px-3 text-gray-700 h-[48px]"
+                      id="confirmPassword"
+                      type="text"
+                      name="confirmPassword"
+                      value={formData.confirmPassword}
+                      onChange={handleOnChange}
+                    />
+                  </div>
+                </div>
 
-              <button className="w-full h-[48px] bg-green  font-bold py-2 px-4 rounded">
-                {newPassword ? "Reset password" : "Send reset link"}
-              </button>
-            </div>
+                <button className="w-full h-[48px] bg-green  font-bold py-2 px-4 rounded">
+                  {newPassword ? "Reset password" : "Send reset link"}
+                </button>
+              </div>
+            )}
           </form>
-
-          <Link href={"/login"} className="text-center underline text-green">
-            Back to login
-          </Link>
         </div>
 
         <p className="absolute bottom-5 left-1/2 transform -translate-x-1/2">

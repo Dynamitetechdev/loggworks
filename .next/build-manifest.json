@@ -22,15 +22,15 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/login": [
+    "/personal": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/login.js"
+      "static/chunks/pages/personal.js"
     ],
-    "/reset/reset-password": [
+    "/verify": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/reset/reset-password.js"
+      "static/chunks/pages/verify.js"
     ]
   },
   "ampFirstPages": []

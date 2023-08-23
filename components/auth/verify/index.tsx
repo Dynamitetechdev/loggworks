@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import Testimonial from "../testimonial";
+import { useRouter } from "next/router";
 
 interface AuthFormProp {
   title: string;
@@ -14,7 +15,8 @@ interface FormData {
   FACode: any;
 }
 let currentInputIndex: number;
-const VerifyForm: React.FC<AuthFormProp> = ({ title, login }) => {
+const VerifyForm: React.FC<AuthFormProp> = ({ title, login, route }) => {
+  const Goto = useRouter();
   const [verifyCode, setVerifyCode] = useState<string[]>(new Array(5).fill(""));
   const [editNumber, setEditNumber] = useState<boolean>(false);
   const [timer, setTimer] = useState<number>(60);
@@ -28,6 +30,8 @@ const VerifyForm: React.FC<AuthFormProp> = ({ title, login }) => {
   const handleSubmit = (e: any): void => {
     e.preventDefault();
     console.log(formData);
+
+    Goto.push("/personal");
   };
 
   const [activeInputIndex, setActiveInputIndex] = useState<number>(0);
