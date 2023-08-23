@@ -11,7 +11,6 @@ button {
   font-size: 14px;
   color: white;
 }
-
 .top_shadow {
   background: linear-gradient(180deg, #1e1e1e 0%, rgba(30, 30, 30, 0) 100%);
   width: 100%;
@@ -26,6 +25,12 @@ button {
   position: absolute;
   left: 50%;
   transform: translate(-50%);
+}
+
+.personalForm {
+  input {
+    outline-color: #2fa500;
+  }
 }
 
 //Media Queries
