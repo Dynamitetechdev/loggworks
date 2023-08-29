@@ -9,7 +9,7 @@ const BannerCarousel = () => {
     "/assets/images/client_test.png",
   ];
 
-  const handleSlideChange = (index) => {
+  const handleSlideChange = (index: number) => {
     setActiveSlide(index);
   };
 
@@ -25,17 +25,17 @@ const BannerCarousel = () => {
   }, [activeSlide, slideImages.length]);
 
   return (
-    <div className="banner">
-      <div className="banner_img mt-5 relative flex flex-col items-center">
-        <div className="relative w-[980px] h-[390px] overflow-hidden">
+    <div className="banner max-sm:mx-3 max-sm:my-2 md:mt-24">
+      <div className="banner_img md:mt-5 relative flex flex-col items-center">
+        <div className="relative w-[100%] h-[146px] md:w-[980px] md:h-[390px] overflow-hidden">
           <div
-            className="transition-transform duration-500 ease-in-out transform "
+            className="transition-transform duration-500 ease-in-out transform"
             style={{ transform: `translateX(-${activeSlide * 980}px)` }}
           >
             {slideImages.map((image, index) => (
               <div
                 key={index}
-                className="w-[980px] h-[390px] absolute "
+                className="w-[100%] h-[146px] md:w-[980px] md:h-[390px] absolute"
                 style={{ left: `${index * 980}px` }}
               >
                 <Image
@@ -44,7 +44,7 @@ const BannerCarousel = () => {
                   objectFit="cover"
                   objectPosition="center"
                   alt={`slide-${index}`}
-                  className="object-center object-cover rounded-lg"
+                  className="object-center object-cover md:rounded-lg"
                 />
               </div>
             ))}
@@ -56,7 +56,7 @@ const BannerCarousel = () => {
             <button
               key={index}
               onClick={() => handleSlideChange(index)}
-              className={`w-3 h-3 mx-1 rounded-full ${
+              className={`w-2 h-2 md:w-3 md:h-3 mx-1 rounded-full ${
                 activeSlide === index ? "bg-green" : "bg-grey80"
               }`}
             ></button>

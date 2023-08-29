@@ -94,10 +94,10 @@ const Categories = () => {
     // console.log(slide.current);
   }, []);
   return (
-    <div className="categories border-b my-2 border-categoriesColor w-full">
+    <div className="md:fixed bg-white md:z-10 top-12 categories border-b md:my-2 border-categoriesColor md:w-[1050px]">
       <div className="flex items-center overflow-x-hidden" ref={slide}>
         <motion.ul
-          className="flex items-center px-7 w-[auto] transition-transform duration-300"
+          className="max-sm:mb-4 flex items-center md:px-7 max-sm:px-3 transition-transform duration-300"
           drag="x"
           dragControls={controls}
           dragConstraints={{
@@ -108,7 +108,7 @@ const Categories = () => {
           {categories.map((x, index) => (
             <li
               key={`nav--${index}`}
-              className="flex items-center my-4 py-2 px-3 border border-categoriesColor rounded-full hover:text-white hover:bg-[#000000] cursor-pointer mr-3 "
+              className="flex items-center md:my-4 py-2 px-3 border border-categoriesColor rounded-full hover:text-white hover:bg-[#000000] cursor-pointer mr-3 "
             >
               <span className="w-[14px]">
                 <HomeIcon />

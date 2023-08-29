@@ -54,20 +54,18 @@ button {
   width: 0.2em;
   background-color: #f5f5f5;
 }
-input {
-  outline-color: #2fa500;
+
+.wishlist {
+  background: #0d0d0d;
+  color: #ffffff;
+  width: 32px;
+  height: 32px;
 }
 
 //Media Queries
-
-@media screen and (min-width: 768px) {
-  .left[hidden] {
-    display: none; /* Display the content on tablet and larger screens */
-  }
-  .center {
-    left: 50%;
-    transform: translate(-50%);
-  }
+@media (max-width: 480px) {
+}
+@media (max-width: 768px) {
 }
 @media screen and (min-width: 1024px) {
   .left[hidden] {

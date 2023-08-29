@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const LocationSearch = () => {
   return (
-    <div className="location_search w-[416px] h-[44px]">
+    <div className="location_search max-sm:mt-5 max-sm:mb-4  md:w-[416px] h-[44px] ">
       <form>
         <div className="relative grid grid-cols-6 w-full">
           <div className="col-span-4">
@@ -26,7 +26,7 @@ const LocationSearch = () => {
             <input
               type="search"
               id="default-search"
-              className="block w-full p-3 pl-10 text-sm text-gray-900 border border-grey"
+              className="w-full p-3 pl-10 text-sm text-gray-900 border border-grey max-sm:rounded-[0]"
               placeholder="Try searching carpenter..."
             />
           </div>
