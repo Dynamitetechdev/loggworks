@@ -25,9 +25,9 @@ const BannerCarousel = () => {
   }, [activeSlide, slideImages.length]);
 
   return (
-    <div className="banner max-sm:mx-3 max-sm:my-2 md:mt-24">
+    <div className="banner mx-3 my-2 md:mt-24">
       <div className="banner_img md:mt-5 relative flex flex-col items-center">
-        <div className="relative w-[100%] h-[146px] md:w-[980px] md:h-[390px] overflow-hidden">
+        <div className="relative w-full max-sm:h-[146px] h-[390px] overflow-hidden">
           <div
             className="transition-transform duration-500 ease-in-out transform"
             style={{ transform: `translateX(-${activeSlide * 980}px)` }}
@@ -35,7 +35,7 @@ const BannerCarousel = () => {
             {slideImages.map((image, index) => (
               <div
                 key={index}
-                className="w-[100%] h-[146px] md:w-[980px] md:h-[390px] absolute"
+                className="w-full max-sm:h-[146px] h-[390px] absolute"
                 style={{ left: `${index * 980}px` }}
               >
                 <Image

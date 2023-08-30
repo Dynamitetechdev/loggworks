@@ -6,7 +6,7 @@ import WishListButton from "../wishlist";
 
 const CardLarge = () => {
   return (
-    <div className="card max-w-lg max-sm:w-[374px] bg-white rounded-lg my-5 shadow relative">
+    <div className="card max-w-lg min-md:w-[374px] bg-white rounded-lg my-5 shadow relative">
       <WishListButton />
 
       <div className="">
@@ -30,14 +30,14 @@ const CardLarge = () => {
             />
             <h4 className="font-bold">Elite Carpenters</h4>
           </div>
-          <div className="flex items-center my-1 max-sm:text-[14px]">
+          <div className="flex items-center my-1 min-md:text-[14px]">
             <StarReview />
             <p className="mx-1">5.0</p>
             <p>(300k)</p>
           </div>
         </div>
 
-        <div className="job_category max-sm:text-[14px]">
+        <div className="job_category min-md:text-[14px]">
           <h1>Job category</h1>
 
           <ul className="flex my-3 ">
@@ -50,7 +50,7 @@ const CardLarge = () => {
           </ul>
         </div>
 
-        <div className="flex items-center justify-between mb-3 max-sm:text-[14px]">
+        <div className="flex items-center justify-between mb-3 min-md:text-[14px]">
           <h5>Get 20% off 5 weeks booking</h5>{" "}
           <h5 className="text-green">
             Ends in: <span className="ml-2">04:34:40</span>{" "}

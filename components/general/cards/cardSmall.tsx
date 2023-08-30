@@ -31,13 +31,13 @@ const CardSmall: React.FC<CardSmallProps> = ({ reccomend }) => {
             <h4>Elite Carpenters</h4>
           </div>
 
-          <div className="flex items-center my-1 max-sm:text-[14px]">
+          <div className="flex items-center my-1 min-md:text-[14px]">
             <StarReview />
             <p className="mx-1">5.0</p>
             <p>(300k)</p>
           </div>
 
-          <div className="flex items-center mb-2 max-sm:text-[14px]">
+          <div className="flex items-center mb-2 min-md:text-[14px]">
             <h5>Carpenrty</h5> <span className="mx-1">|</span>{" "}
             <h5>5 miles away</h5>
           </div>
