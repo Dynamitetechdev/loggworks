@@ -6,7 +6,7 @@ const SignUp = () => {
   const [phoneNumber, SetPhoneNumer] = useState<any>(null);
 
   const [star, setStar] = useState<any[]>(Array(4).fill(""));
-  return <AuthForm title="Join Loggworks for free" />;
+  return <AuthForm title="Join Loggworks for free" route={"/verify"} />;
 };
 
 export default SignUp;

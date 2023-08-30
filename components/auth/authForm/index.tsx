@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { useState } from "react";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
@@ -7,15 +8,16 @@ import "react-phone-input-2/lib/style.css";
 interface AuthFormProp {
   title: string;
   login?: boolean;
+  route?: any;
 }
 interface FormData {
   email?: string;
   phoneNumber?: string;
   password: string;
 }
-const AuthForm: React.FC<AuthFormProp> = ({ title, login }) => {
+const AuthForm: React.FC<AuthFormProp> = ({ title, login, route }) => {
+  const Goto = useRouter();
   const [numberReactInput, setNumberReactInput] = useState<any>(null);
-
   const [star, setStar] = useState<any[]>(Array(4).fill(""));
   const [inputOption, setInputOption] = useState<string>("phone");
   const [passwordVisibity, setPasswordVisibity] = useState<boolean>(false);
@@ -36,6 +38,8 @@ const AuthForm: React.FC<AuthFormProp> = ({ title, login }) => {
   const handleSubmit = (e: any): void => {
     e.preventDefault();
     console.log(formData);
+
+    Goto.push(route);
   };
 
   console.log(numberReactInput);
