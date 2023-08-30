@@ -61,6 +61,31 @@ button {
   width: 32px;
   height: 32px;
 }
+.form-checkbox {
+  /* Remove default browser styles */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* Set the checkbox dimensions */
+  width: 20px;
+  height: 20px;
+  /* Add a custom border */
+  border: 2px solid #efefef; /* Replace #ccc with your desired grey color */
+  /* Add some space between the checkbox and the label text */
+  vertical-align: middle;
+  /* Set a background color for the checked state */
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+/* Style the checked state */
+.form-checkbox:checked {
+  background-color: #2fa500; /* Replace #ccc with your desired grey color */
+}
+
+.modal-container {
+  background: rgba(7, 26, 0, 0.25);
+}
 
 //Media Queries
 @media (max-width: 480px) {
