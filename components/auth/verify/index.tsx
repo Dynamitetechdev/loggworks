@@ -15,7 +15,7 @@ interface FormData {
   FACode: any;
 }
 let currentInputIndex: number;
-const VerifyForm: React.FC<AuthFormProp> = ({ title, login, route }) => {
+const VerifyForm: React.FC<AuthFormProp> = ({ title }) => {
   const Goto = useRouter();
   const [verifyCode, setVerifyCode] = useState<string[]>(new Array(5).fill(""));
   const [editNumber, setEditNumber] = useState<boolean>(false);
