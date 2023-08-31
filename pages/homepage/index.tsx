@@ -2,7 +2,6 @@ import SideBar from "../../components/general/sideBar";
 import { useEffect, useRef, useState } from "react";
 import Header from "../../components/general/nav/header";
 import HomeTab from "../../components/pageTabs/homeTab";
-import PostJobTab from "../../components/pageTabs/postJobTab";
 
 const HomePage = () => {
   useEffect(() => {}, []);

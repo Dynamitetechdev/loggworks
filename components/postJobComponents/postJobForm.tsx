@@ -97,7 +97,7 @@ const PostJobForm: React.FC<{
             </button>
           </form>
         )}
-        {activeStep == 1 && (
+        {/* {activeStep == 1 && (
           <form action="" onSubmit={handleSubmit} className="text-grey20">
             <div className="flex flex-wrap mb-6">
               <div className="x-3 my-2 md:mb-0 w-full">
@@ -196,8 +196,8 @@ const PostJobForm: React.FC<{
               Enter a budget
             </button>
           </form>
-        )}
-        {activeStep == 2 && (
+        )} */}
+        {activeStep == 1 && (
           <form action="" onSubmit={handleSubmit} className="text-grey20">
             <div className="flex flex-wrap mb-6">
               <div className="x-3 my-2 md:mb-0 w-full">
@@ -229,7 +229,7 @@ const PostJobForm: React.FC<{
             </button>
           </form>
         )}
-        {activeStep == 3 && (
+        {activeStep == 2 && (
           <form action="" onSubmit={handleSubmit} className="text-grey20">
             <div className="flex flex-wrap mb-6">
               <div className="x-3 my-2 md:mb-0 w-full">
@@ -296,34 +296,36 @@ const PostJobForm: React.FC<{
             </button>
           </form>
         )}
-        {activeStep == 4 && (
+        {activeStep == 3 && (
           <form action="" onSubmit={handleSubmit} className="text-grey20">
             <h1 className="capitalize text-md font-semibold">
               Upload an image (Optional)
             </h1>
-            <div className="flex justify-between my-6">
-              {uploadItem.map((_, i) => (
-                <div
-                  key={i}
-                  className="border border-dashed border-[#CCCCCC] rounded w-[101px] h-[108px] my-2 focus:outline-none bg-grey80  md:mb-0 relative "
-                >
-                  <label className="text-gray-700  " id="grid-first-name">
-                    <div className="absolute top-[37px] left-[37px]">
-                      <PlusIcon width={24} height={24} />
-                    </div>
-                    <input
-                      id="grid-first-name"
-                      type="file"
-                      name="title"
-                      hidden
-                    />
+            <div className="max-sm:overflow-x-scroll max-sm:scrolling-touch max-sm:overflow-x-hidden md:hidden ">
+              <div className="flex justify-between my-6  max-sm:w-[130%]">
+                {uploadItem.map((_, i) => (
+                  <div
+                    key={i}
+                    className="border border-dashed border-[#CCCCCC] rounded w-[101px] h-[108px] my-2 focus:outline-none bg-grey80  md:mb-0 relative "
+                  >
+                    <label className="text-gray-700  " id="grid-first-name">
+                      <div className="absolute top-[37px] left-[37px]">
+                        <PlusIcon width={24} height={24} />
+                      </div>
+                      <input
+                        id="grid-first-name"
+                        type="file"
+                        name="title"
+                        hidden
+                      />
 
-                    <div className="absolute w-[24px] h-[24px] rounded-full bg-[#7E57CF] flex justify-center items-center text-white -bottom-2 -right-3">
-                      <PlusIcon width={16} height={16} />
-                    </div>
-                  </label>
-                </div>
-              ))}
+                      <div className="absolute w-[24px] h-[24px] rounded-full bg-[#7E57CF] flex justify-center items-center text-white -bottom-2 -right-3">
+                        <PlusIcon width={16} height={16} />
+                      </div>
+                    </label>
+                  </div>
+                ))}
+              </div>
             </div>
             <p className="mb-4">
               Add supporting images to best showcase your job request
