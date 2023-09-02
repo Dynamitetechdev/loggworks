@@ -1,19 +1,7 @@
 {
-  "/api/hello": "pages/api/hello.js",
   "/_app": "pages/_app.js",
-  "/homepage": "pages/homepage.html",
-  "/": "pages/index.html",
-  "/login": "pages/login.html",
-  "/personal": "pages/personal.html",
-  "/reset/email-sent": "pages/reset/email-sent.html",
-  "/reset/password-change": "pages/reset/password-change.html",
-  "/reset/reset-password": "pages/reset/reset-password.html",
-  "/signup": "pages/signup.html",
-  "/verify": "pages/verify.html",
-  "/post-job": "pages/post-job.html",
-  "/reset/confirm-password": "pages/reset/confirm-password.html",
-  "/jobs": "pages/jobs.html",
-  "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/404": "pages/404.html"
+  "/_error": "pages/_error.js",
+  "/post-job": "pages/post-job.js",
+  "/": "pages/index.js"
 }

@@ -19,6 +19,7 @@ const SideBar = () => {
     ListBulletIcon,
     UserIcon,
   };
+
   const sideNav = [
     {
       id: 1,
