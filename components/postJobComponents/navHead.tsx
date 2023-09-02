@@ -1,25 +1,29 @@
 import { ChevronLeftIcon, PlusIcon } from "@heroicons/react/24/outline";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
-interface NavHeadProps {
-  postJob?: boolean;
-}
-const NavHead: React.FC<NavHeadProps> = ({ postJob }) => {
+const NavHead: React.FC<{ activeStep: number; setActiveStep: any }> = ({
+  activeStep,
+  setActiveStep,
+}) => {
+  const router = useRouter();
+  const goBack = () => {
+    if (activeStep != 0) {
+      setActiveStep(activeStep - 1);
+    } else router.push("/jobs");
+  };
+
   return (
-    <div className="max-md:hidden nav_head flex items-center md:py-3 md:mx-6  border-b  border-grey80">
-      <div className="back border border-grey80 w-[40px] h-[40px] flex items-center justify-center">
+    <div className="nav_head flex items-center md:py-3  pb-3 md:mx-6 mx-3 border-b  border-grey80">
+      <div
+        className="back md:border border-grey80 w-[40px] h-[40px] flex items-center justify-center"
+        onClick={() => goBack()}
+      >
         <ChevronLeftIcon width={20} height={20} />
       </div>
 
-      <div className="flex items-center ml-36 w-full justify-between">
+      <div className="flex items-center md:ml-36 w-full md:justify-between justify-center -ml-12">
         <h1 className="font-bold">Post a Job</h1>
-        {!postJob && (
-          <button className="ad bg-green py-3 px-3 rounded mx-3 text-white flex items-center">
-            <span className="mr-1">
-              <PlusIcon width={16} height={16} />
-            </span>
-            <span>Post A Job</span>
-          </button>
-        )}
       </div>
     </div>
   );

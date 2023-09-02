@@ -84,6 +84,31 @@ const Categories = () => {
       image: "home",
       activeImage: "home-green",
     },
+    {
+      title: "beauty",
+      image: "home",
+      activeImage: "home-green",
+    },
+    {
+      title: "beauty",
+      image: "home",
+      activeImage: "home-green",
+    },
+    {
+      title: "beauty",
+      image: "home",
+      activeImage: "home-green",
+    },
+    {
+      title: "beauty",
+      image: "home",
+      activeImage: "home-green",
+    },
+    {
+      title: "beauty",
+      image: "home",
+      activeImage: "home-green",
+    },
   ];
   return (
     <div className="md:fixed bg-white md:z-10 top-12 categories border-b md:my-2 border-categoriesColor md:w-[1050px]">
