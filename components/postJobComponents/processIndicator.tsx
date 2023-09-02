@@ -39,13 +39,13 @@ const ProcessIndicator: React.FC<{
             key={index}
             className={`relative w-full border-t-2 ${
               activeStep >= index + 1 ? "border-dark" : "border-grey"
-            } ${index === steps.length - 1 && "w-10"}`}
+            } ${index === steps.length - 1 && "w-0"}`}
           >
             <div className="flex">
               <span
                 className={`absolute w-3 h-3 bg-dark rounded-full -top-[7px] ${
                   activeStep >= index ? "bg-dark" : "bg-grey"
-                } ${index === steps.length - 1 ? "top-0" : ""}`}
+                } ${index === steps.length - 1 ? "" : ""}`}
               ></span>
               {/* <h3
                 className={`font-medium text-dark ${

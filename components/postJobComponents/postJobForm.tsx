@@ -2,14 +2,19 @@ import { ChevronDownIcon, PlusIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
 import ModalPopup from "./modalPopup";
 import Image from "next/image";
+import GeneralModal from "../general/generalModal";
 
 const PostJobForm: React.FC<{
   activeStep: number;
   setActiveStep: any;
 }> = ({ activeStep, setActiveStep }) => {
   const [optionSelected, setOptionSelected] = useState<any>(null);
+  const [formFilled, setFormFilled] = useState<any>(false);
+  const [uploadedImages, setUploadedImages] = useState<any>(
+    Array(4).fill({ imageUrl: "" })
+  );
 
-  const uploadItem = Array(4).fill("");
+  console.log(uploadedImages);
   console.log("dd", activeStep);
   const [formData, setFormData] = useState<any>({
     title: "",
@@ -28,6 +33,18 @@ const PostJobForm: React.FC<{
   const handleSubmit = (e: any): void => {
     e.preventDefault();
     console.log(formData);
+  };
+
+  const handleImageChange = (e: any, index: number): void => {
+    const files = e.target.files;
+    const imageUrl = URL.createObjectURL(files[0]);
+
+    setUploadedImages((prev: any) => {
+      const prevImages = [...prev];
+      prevImages[index] = { imageUrl };
+      return prevImages;
+    });
+    console.log(imageUrl);
   };
 
   return (
@@ -301,28 +318,47 @@ const PostJobForm: React.FC<{
             <h1 className="capitalize text-md font-semibold">
               Upload an image (Optional)
             </h1>
-            <div className="max-sm:overflow-x-scroll max-sm:scrolling-touch max-sm:overflow-x-hidden md:hidden ">
-              <div className="flex justify-between my-6  max-sm:w-[130%]">
-                {uploadItem.map((_, i) => (
-                  <div
-                    key={i}
-                    className="border border-dashed border-[#CCCCCC] rounded w-[101px] h-[108px] my-2 focus:outline-none bg-grey80  md:mb-0 relative "
-                  >
-                    <label className="text-gray-700  " id="grid-first-name">
-                      <div className="absolute top-[37px] left-[37px]">
-                        <PlusIcon width={24} height={24} />
+            <div className="max-sm:overflow-x-scroll max-sm:scrolling-touch max-sm:overflow-x-hidden  ">
+              <div className="flex justify-between my-6 max-sm:w-[130%]">
+                {uploadedImages.map((x: any, i: number) => (
+                  <div className="" key={i}>
+                    {x.imageUrl ? (
+                      <div className="rounded w-[101px] h-[108px] my-2 focus:outline-none bg-grey80  md:mb-0 relative ">
+                        <div className="" id="grid-first-name">
+                          <Image
+                            src={x.imageUrl}
+                            width={101}
+                            height={108}
+                            alt=""
+                            objectFit="cover"
+                            objectPosition="center"
+                            className="object-center object-cover min-h-[108px] max-h-[108px]"
+                          />
+                          <div className="absolute w-[24px] h-[24px] rounded-full bg-[#7E57CF] flex justify-center items-center text-white -bottom-2 -right-3">
+                            <PlusIcon width={16} height={16} />
+                          </div>
+                        </div>
                       </div>
-                      <input
-                        id="grid-first-name"
-                        type="file"
-                        name="title"
-                        hidden
-                      />
+                    ) : (
+                      <div className="border border-dashed border-[#CCCCCC] rounded w-[101px] h-[108px] my-2 focus:outline-none bg-grey80  md:mb-0 relative ">
+                        <label className="text-gray-700  " id="grid-first-name">
+                          <div className="absolute top-[37px] left-[37px]">
+                            <PlusIcon width={24} height={24} />
+                          </div>
+                          <input
+                            id="grid-first-name"
+                            type="file"
+                            name="title"
+                            onChange={(e) => handleImageChange(e, i)}
+                            hidden
+                          />
 
-                      <div className="absolute w-[24px] h-[24px] rounded-full bg-[#7E57CF] flex justify-center items-center text-white -bottom-2 -right-3">
-                        <PlusIcon width={16} height={16} />
+                          <div className="absolute w-[24px] h-[24px] rounded-full bg-[#7E57CF] flex justify-center items-center text-white -bottom-2 -right-3">
+                            <PlusIcon width={16} height={16} />
+                          </div>
+                        </label>
                       </div>
-                    </label>
+                    )}
                   </div>
                 ))}
               </div>
@@ -332,7 +368,9 @@ const PostJobForm: React.FC<{
             </p>
             <button
               className="bg-green text-white w-full h-[48px] font-bold py-2 px-4 rounded"
-              onClick={() => setActiveStep(activeStep)}
+              onClick={() => {
+                setActiveStep(activeStep), setFormFilled(true);
+              }}
             >
               Post Job
             </button>
@@ -346,6 +384,15 @@ const PostJobForm: React.FC<{
           setModalPopUp={setModalPopUp}
           optionSelected={optionSelected}
           setOptionSelected={setOptionSelected}
+        />
+      )}
+
+      {formFilled && (
+        <GeneralModal
+          message="Job posting successful"
+          img="starMark"
+          setModalPopUp={setFormFilled}
+          modalPop={formFilled}
         />
       )}
     </>

@@ -1,0 +1,28 @@
+import { useState } from "react";
+import CardSmall from "../general/cards/cardSmall";
+
+const MobileAds = () => {
+  const [promotions, setPromotion] = useState<any[]>(Array(6).fill(""));
+  return (
+    <div className="md:hidden promotion bg-sideBarColor py-2 px-3 relative ">
+      <div className="">
+        <div className="head flex items-center py-3">
+          <div className="ad bg-yellow py-1 px-2 rounded-md mr-3 text-white">
+            Ads
+          </div>
+          <h1 className="text-1xl">Promotions</h1>
+        </div>
+
+        <div className=" all_promotions flex overflow-x-scroll scrolling-touch overflow-x-hidden">
+          {promotions.map((_, i) => (
+            <div className="max-md:flex-shrink-0" key={i}>
+              <CardSmall />
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default MobileAds;

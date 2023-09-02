@@ -24,7 +24,7 @@ const LocationSearch = () => {
               </svg>
             </div>
             <input
-              type="search"
+              type="text"
               id="default-search"
               className="w-full p-3 pl-10 text-sm text-gray-900 border border-grey max-md:rounded-[0]"
               placeholder="Try searching carpenter..."

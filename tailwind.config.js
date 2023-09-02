@@ -22,6 +22,7 @@ module.exports = {
       grey90: "var(--grey-20, #4B4B4B)",
       categoriesColor: "var(--grey-80, #ECECEC)",
       primary100: "#F9FDF7",
+      yellow: "#E2B801",
     },
     screens: {
       sm: "576px",

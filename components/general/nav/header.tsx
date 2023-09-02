@@ -5,6 +5,7 @@ import Link from "next/link";
 const Header = () => {
   const mobile_icons = [
     { icon: "post_mobile", route: "/post-job" },
+    { icon: "bookmark_mobile", route: "/" },
     { icon: "wishlist_mobile", route: "/" },
   ];
   return (

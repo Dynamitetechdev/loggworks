@@ -5,6 +5,12 @@ import CardLarge from "../general/cards/cardLarge";
 import CardMedium from "../general/cards/cardMedium";
 import CardSmall from "../general/cards/cardSmall";
 import CardPlain from "../general/cards/cardPlain";
+import DealOfTheDay from "../mainPageTabs/dealOfTheDay";
+import Offers from "../mainPageTabs/offers";
+import Recommendations from "../mainPageTabs/reccomendation";
+import Explore from "../mainPageTabs/explore";
+import AdsPromotions from "../mainPageTabs/adsPromotions";
+import MobileAds from "../mainPageTabs/mobileAds";
 
 const HomeTab = () => {
   const [deals, setDeals] = useState<any[]>(Array(6).fill(""));
@@ -25,83 +31,29 @@ const HomeTab = () => {
         <Categories />
 
         <BannerCarousel />
-        <div className="deals mx-3 md:mx-10">
-          <h1 className="text-2xl font-bold">Deal of the day</h1>
-          <div className="deals md:grid grid-cols-8 gap-10 max-md:flex max-md:overflow-x-scroll max-md:scrolling-touch max-md:overflow-x-hidden ">
-            {deals.map((_, i) => (
-              <div className="max-md:flex-shrink-0 md:col-span-4" key={i}>
-                <CardLarge />
-              </div>
-            ))}
-          </div>
 
-          <div className="md:hidden">
-            <div className="banner_nav flex items-center my-5 justify-center">
-              {deals.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => handleSlideChange(index)}
-                  className={`w-2 h-2 md:w-3 md:h-3 mx-1 rounded-full ${
-                    activeSlide === index ? "bg-green" : "bg-grey80"
-                  }`}
-                ></button>
-              ))}
-            </div>
-          </div>
-        </div>
+        {/* Deals of the day */}
+        <DealOfTheDay />
 
-        <div className="Offers mx-3 md:mx-10">
-          <h1 className="text-2xl font-bold my-3">Offers</h1>
-          <div className="md:grid grid-cols-9 gap-5 max-md:flex max-md:overflow-x-scroll max-md:scrolling-touch">
-            {offers.map((_, i) => (
-              <div className="md:col-span-3 max-md:flex-shrink-0" key={i}>
-                <CardMedium />
-              </div>
-            ))}
-          </div>
-        </div>
+        {/* Ads */}
+        <MobileAds />
 
-        <div className=" reccomendation mx-3 md:mx-10">
-          <h1 className="text-2xl font-bold my-3">Recommendations</h1>
-          <div className="md:grid grid-cols-9  gap-5 max-md:flex max-md:overflow-x-scroll max-md:scrolling-touch max-md:overflow-x-hidden">
-            {reccomendation.map((_, i) => (
-              <div className="md:col-span-3 max-md:flex-shrink-0" key={i}>
-                <CardSmall reccomend={true} />
-              </div>
-            ))}
-          </div>
-        </div>
+        {/* Offers */}
+        <Offers />
 
-        <div className="max-md:hidden explore mx-10">
-          <h1 className="text-2xl font-bold my-3">Offers</h1>
-          <div className="grid grid-cols-9  gap-5">
-            {explore.map((_, i) => (
-              <div className="col-span-3" key={i}>
-                <CardPlain />
-              </div>
-            ))}
-          </div>
-        </div>
+        {/* Ads */}
+        <MobileAds />
+
+        {/* Recommendations */}
+        <Recommendations />
+
+        <Explore />
+
+        {/* Ads */}
+        <MobileAds />
       </div>
-      <div className="promotion bg-[#FEFEFE] md:z-20 py-2 px-3 md:col-span-3 relative ">
-        <div className="md:fixed">
-          <div className="head flex items-center py-3">
-            <h1 className="text-2xl">Promotions</h1>
 
-            <div className="ad bg-green py-2 px-3 rounded-md mx-3 text-white">
-              Ads
-            </div>
-          </div>
-
-          <div className="all_promotions  md:overflow-y-scroll md:h-[calc(100vh-4rem)] max-md:flex max-md:overflow-x-scroll max-md:scrolling-touch max-md:overflow-x-hidden">
-            {promotions.map((_, i) => (
-              <div className="max-md:flex-shrink-0 max-md:mb-16" key={i}>
-                <CardSmall />
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+      <AdsPromotions />
     </div>
   );
 };
