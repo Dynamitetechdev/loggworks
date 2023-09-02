@@ -16,7 +16,7 @@ const NavHead: React.FC<{ activeStep: number; setActiveStep: any }> = ({
   return (
     <div className="nav_head flex items-center md:py-3  pb-3 md:mx-6 mx-3 border-b  border-grey80">
       <div
-        className="back md:border border-grey80 w-[40px] h-[40px] flex items-center justify-center"
+        className="back z-10 md:border border-grey80 w-[40px] h-[40px] flex items-center justify-center"
         onClick={() => goBack()}
       >
         <ChevronLeftIcon width={20} height={20} />
