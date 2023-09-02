@@ -13,12 +13,12 @@ const JobCard = () => {
       <div className="card relative">
         <div className="card_content p-3">
           <div className="title">
-            <h4 className="font-bold">Elite Carpenters</h4>
+            <h4 className="font-bold text-1xl">Elite Carpenters</h4>
 
-            <p className="text-grey20 font-light">
+            <p className="text-grey20 font-light max-sm:text-[13px] max-sm:my-2">
               {sampleText.substring(100, -1)}.....
             </p>
-            <div className="flex items-center min-md:text-[14px] my-2">
+            <div className="flex items-center md:text-[14px] text-[13px] my-1 md:my-2">
               <Image
                 src={"/assets/icons/money.svg"}
                 width={20}
@@ -30,7 +30,7 @@ const JobCard = () => {
                 £<span>600</span> - £<span>1000</span>
               </h5>
             </div>
-            <div className="flex items-center min-md:text-[14px]">
+            <div className="flex items-center md:text-[14px] text-[13px]">
               <Image
                 src={"/assets/icons/location.svg"}
                 width={20}
