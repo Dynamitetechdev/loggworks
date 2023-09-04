@@ -42,13 +42,13 @@ const CardMedium = () => {
             <h5>5 miles away</h5>
           </div>
 
-          <div className=" my-3">
-            <p className="text-center bg-lightWhite w-7/12 md:w-9/12 px-2 md:px-3 py-1 rounded-full mr-2 min-md:text-[10px]">
+          <div className="my-3">
+            <p className="text-center bg-lightWhite w-7/12 md:w-7/12 px-2 md:px-3 py-1 rounded-full mr-2 min-md:text-[10px]">
               Power contractors
             </p>
           </div>
 
-          <div className="md:flex items-center justify-between mb-3 min-md:text-[10px]">
+          <div className="md:flex items-center justify-between mb-3 min-md:text-[10px] text-[14px]">
             <p>{sampleText.substring(20, -1)}...</p>{" "}
             <p className="text-green">
               Ends in: <span className="ml-1">04:34:40</span>{" "}

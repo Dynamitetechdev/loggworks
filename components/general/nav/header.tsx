@@ -1,13 +1,17 @@
 import Image from "next/image";
 import LocationSearch from "../locationSearch";
 import Link from "next/link";
+import AdminNav from "./adminNav";
+import { useState } from "react";
 
 const Header = () => {
   const mobile_icons = [
     { icon: "post_mobile", route: "/post-job" },
-    { icon: "bookmark_mobile", route: "/" },
+    { icon: "bookmark_mobile", route: "/bookmark" },
     { icon: "wishlist_mobile", route: "/" },
   ];
+
+  const [openAdminNav, setOpenAdminNav] = useState(false);
   return (
     <div className="header md:bg-white md:z-50 md:fixed md:w-10/12 md:h-[62px] md:flex justify-between md:border-b border-grey items-center md:px-6 px-3 max-sm:pt-3">
       <div className="lg:hidden mobile flex items-center justify-between">
@@ -56,18 +60,23 @@ const Header = () => {
           </div>
         </Link>
 
-        <div className="bookmarks flex flex-col items-center mr-10">
-          <Image
-            src={"/assets/icons/nav_icons/bookmark.svg"}
-            width={24}
-            height={24}
-            alt=""
-          />
-          <p className="text-14px">Bookmarks</p>
-        </div>
+        <Link href={"/bookmark"}>
+          <div className="bookmarks flex flex-col items-center mr-10">
+            <Image
+              src={"/assets/icons/nav_icons/bookmark.svg"}
+              width={24}
+              height={24}
+              alt=""
+            />
+            <p className="text-14px">Bookmarks</p>
+          </div>
+        </Link>
 
         <div className="adminOption">
-          <div className="admin_image">
+          <div
+            className="admin_image cursor-pointer"
+            onClick={() => setOpenAdminNav(!openAdminNav)}
+          >
             <Image
               src={"/assets/images/client_test.png"}
               width={40}
@@ -75,7 +84,15 @@ const Header = () => {
               alt=""
             />
           </div>
-          <div className="admin_nav"></div>
+
+          {openAdminNav && (
+            <div className="admin_nav">
+              <AdminNav
+                setOpenAdminNav={setOpenAdminNav}
+                openAdminNav={openAdminNav}
+              />
+            </div>
+          )}
         </div>
       </div>
     </div>

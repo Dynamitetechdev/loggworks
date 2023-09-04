@@ -14,7 +14,11 @@ const PostJobPage = () => {
       <div className="main md:col-span-10">
         <Header />
         <div className="post-job bg-white h-screen relative md:mt-16">
-          <NavHead activeStep={activeStep} setActiveStep={setActiveStep} />
+          <NavHead
+            activeStep={activeStep}
+            setActiveStep={setActiveStep}
+            title="Post A Job"
+          />
           <PostJob activeStep={activeStep} setActiveStep={setActiveStep} />
         </div>
       </div>

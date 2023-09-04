@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import SignUp from "./signup";
 import HomePage from "./homepage";
+import FAQ from "./faq";
 
 const Home: NextPage = () => {
   return (

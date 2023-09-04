@@ -8,6 +8,7 @@ import {
 } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import { useState } from "react";
+import AdminNav from "./nav/adminNav";
 const SideBar = () => {
   interface AllIcons {
     [iconName: string]: React.ComponentType<any>;
@@ -70,7 +71,7 @@ const SideBar = () => {
       id: 4,
       title: "Account",
       icon: "UserIcon",
-      route: "/",
+      route: "",
     },
   ];
 
@@ -78,72 +79,87 @@ const SideBar = () => {
   const handleActive = (index: number) => {
     setActiveIndex(index);
   };
-
+  const [openAdminNav, setOpenAdminNav] = useState(false);
   return (
-    <div className="relative md:col-span-2">
-      <div className="sidebar max-md:fixed max-md:z-50 w-full max-md:bottom-0 md:fixed  bg-sideBarColor md:h-screen max-md:px-3">
-        <Link href="/">
-          <div className="max-md:hidden logo pl-7 pt-7">
-            <Image
-              src={"/assets/images/Logo-green.png"}
-              width={125}
-              height={20}
-              alt=""
-            />
+    <>
+      <div className="relative md:col-span-2">
+        <div className="sidebar max-md:fixed max-md:z-50 w-full max-md:bottom-0 md:fixed  bg-sideBarColor md:h-screen max-md:px-3">
+          <Link href="/">
+            <div className="max-md:hidden logo pl-7 pt-7">
+              <Image
+                src={"/assets/images/Logo-green.png"}
+                width={125}
+                height={20}
+                alt=""
+              />
+            </div>
+          </Link>
+
+          <div className="mobile_nav md:hidden side_nav md:mt-14 md:w-2/12">
+            <ul className="max-md:flex max-sm:justify-between max-md:justify-center  max-sm:mx-0">
+              {mobileNav.map((nav, index) => {
+                const Icon = allIcons[nav.icon];
+                return (
+                  <Link href={nav.route} key={`nav--${index}`}>
+                    <li
+                      className={`flex max-md:flex-col max-md:mx-4 items-center  md:my-4 py-2  cursor-pointer md:pl-7  ${
+                        activeIndex === index && "bg-lightWhite text-green"
+                      }`}
+                      onClick={() => {
+                        handleActive(index),
+                          index === 3
+                            ? setOpenAdminNav(!openAdminNav)
+                            : setOpenAdminNav(false);
+                      }}
+                    >
+                      <div className="icon w-[24px] h-[24px] max-md:ml-2">
+                        <Icon />
+                      </div>
+                      <p className="capitalize ml-2 max-md:text-[14px]">
+                        {nav.title}
+                      </p>
+                    </li>
+                  </Link>
+                );
+              })}
+            </ul>
           </div>
-        </Link>
 
-        <div className="mobile_nav md:hidden side_nav md:mt-14 md:w-2/12">
-          <ul className="max-md:flex max-sm:justify-between max-md:justify-center  max-sm:mx-0">
-            {mobileNav.map((nav, index) => {
-              const Icon = allIcons[nav.icon];
-              return (
-                <Link href={nav.route} key={`nav--${index}`}>
-                  <li
-                    className={`flex max-md:flex-col max-md:mx-4 items-center  md:my-4 py-2  cursor-pointer md:pl-7  ${
-                      activeIndex === index && "bg-lightWhite text-green"
-                    }`}
-                    onClick={() => handleActive(index)}
-                  >
-                    <div className="icon w-[24px] h-[24px] max-md:ml-2">
-                      <Icon />
-                    </div>
-                    <p className="capitalize ml-2 max-md:text-[14px]">
-                      {nav.title}
-                    </p>
-                  </li>
-                </Link>
-              );
-            })}
-          </ul>
-        </div>
-
-        <div className="side_nav md:mt-14 md:w-2/12">
-          <ul className="max-md:hidden max-md:flex max-sm:justify-between max-md:justify-center  max-sm:mx-0">
-            {sideNav.map((nav, index) => {
-              const Icon = allIcons[nav.icon];
-              return (
-                <Link href={nav.route} key={`nav--${index}`}>
-                  <li
-                    className={`flex max-md:flex-col max-md:mx-4 items-center  md:my-4 py-2  cursor-pointer md:pl-7  ${
-                      activeIndex === index && "bg-lightWhite text-green"
-                    }`}
-                    onClick={() => handleActive(index)}
-                  >
-                    <div className="icon w-[24px] h-[24px] max-md:ml-2">
-                      <Icon />
-                    </div>
-                    <p className="capitalize ml-2 max-md:text-[14px]">
-                      {nav.title}
-                    </p>
-                  </li>
-                </Link>
-              );
-            })}
-          </ul>
+          <div className="side_nav md:mt-14 md:w-2/12">
+            <ul className="max-md:hidden max-md:flex max-sm:justify-between max-md:justify-center  max-sm:mx-0">
+              {sideNav.map((nav, index) => {
+                const Icon = allIcons[nav.icon];
+                return (
+                  <Link href={nav.route} key={`nav--${index}`}>
+                    <li
+                      className={`flex max-md:flex-col max-md:mx-4 items-center  md:my-4 py-2  cursor-pointer md:pl-7  ${
+                        activeIndex === index && "bg-lightWhite text-green"
+                      }`}
+                      onClick={() => handleActive(index)}
+                    >
+                      <div className="icon w-[24px] h-[24px] max-md:ml-2">
+                        <Icon />
+                      </div>
+                      <p className="capitalize ml-2 max-md:text-[14px]">
+                        {nav.title}
+                      </p>
+                    </li>
+                  </Link>
+                );
+              })}
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
+      <div className="md:hidden">
+        {openAdminNav && (
+          <AdminNav
+            setOpenAdminNav={setOpenAdminNav}
+            openAdminNav={openAdminNav}
+          />
+        )}
+      </div>
+    </>
   );
 };
 
