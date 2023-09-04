@@ -23,6 +23,7 @@ module.exports = {
       categoriesColor: "var(--grey-80, #ECECEC)",
       primary100: "#F9FDF7",
       yellow: "#E2B801",
+      pTagGrey: "#505050",
     },
     screens: {
       sm: "576px",

@@ -2,10 +2,11 @@ import { ChevronLeftIcon, PlusIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-const NavHead: React.FC<{ activeStep: number; setActiveStep: any }> = ({
-  activeStep,
-  setActiveStep,
-}) => {
+const NavHead: React.FC<{
+  activeStep: number;
+  setActiveStep: any;
+  title: string;
+}> = ({ activeStep, setActiveStep, title }) => {
   const router = useRouter();
   const goBack = () => {
     if (activeStep != 0) {
@@ -23,7 +24,7 @@ const NavHead: React.FC<{ activeStep: number; setActiveStep: any }> = ({
       </div>
 
       <div className="flex items-center md:ml-36 w-full md:justify-between justify-center -ml-12">
-        <h1 className="font-bold">Post a Job</h1>
+        <h1 className="font-bold capitalize">{title}</h1>
       </div>
     </div>
   );

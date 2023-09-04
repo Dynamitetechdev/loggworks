@@ -1,8 +1,12 @@
 {
   "/_app": "pages/_app.js",
-  "/_document": "pages/_document.js",
   "/_error": "pages/_error.js",
-  "/jobs": "pages/jobs.js",
-  "/": "pages/index.js",
-  "/post-job": "pages/post-job.js"
+  "/_document": "pages/_document.js",
+  "/notifications": "pages/notifications.js",
+  "/help": "pages/help.js",
+  "/logg-cash": "pages/logg-cash.js",
+  "/referral": "pages/referral.js",
+  "/how-to-earn": "pages/how-to-earn.js",
+  "/dashboard-personal": "pages/dashboard-personal.js",
+  "/": "pages/index.js"
 }
