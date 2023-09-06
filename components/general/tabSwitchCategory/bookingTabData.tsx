@@ -14,7 +14,7 @@ const BookingTabData: React.FC<{ data: any[]; selectedOption: any }> = ({
   return (
     <div className="my-4">
       {data
-        .filter((x) => x.status.toLowerCase() !== selectedOption.toLowerCase())
+        .filter((x) => x.status.toLowerCase() === selectedOption.toLowerCase())
         .map((x, i) => (
           <div className="card_content px-2 py-1 my-3 shadow" key={i}>
             <div className="title flex items-center justify-between">

@@ -81,7 +81,7 @@ const Bookings = () => {
 
   const [activeTab, setTab] = useState<string>("bookings");
   const [activeSwitchIndex, setActiveSwitchIndex] = useState<number>(0);
-  const [selectedOption, setSelectedOptions] = useState(null);
+  const [selectedOption, setSelectedOptions] = useState();
 
   const handleActive = (tab: string) => {
     setTab(tab);
@@ -135,6 +135,7 @@ const Bookings = () => {
                 />
               </div>
 
+              {selectedOption}
               {activeTab === "bookings" && (
                 <BookingTabData
                   data={bookingSectionData.booking.bookingData}
