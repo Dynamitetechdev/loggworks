@@ -11,12 +11,12 @@ const ReviewTabData: React.FC<{ data: any[]; selectedOption: any }> = ({
   selectedOption,
 }) => {
   const [star, setStar] = useState<any[]>(Array(4).fill(""));
-
-  useEffect(() => {}, [selectedOption]);
   return (
     <div className="my-4">
       {data
-        .filter((x) => x.category.toLowerCase() == selectedOption.toLowerCase())
+        .filter(
+          (x) => x.category.toLowerCase() === selectedOption.toLowerCase()
+        )
         .map((x, i) => (
           <div
             className="card_content px-2 py-1 my-3 border-b border-grey80"

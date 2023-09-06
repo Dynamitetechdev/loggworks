@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 const TabNav: React.FC<{
   options: any;
   activeTab: string;

@@ -8,7 +8,6 @@ import {
 } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import { useState } from "react";
-import AdminNav from "./nav/adminNav";
 const SideBar = () => {
   interface AllIcons {
     [iconName: string]: React.ComponentType<any>;
@@ -44,7 +43,7 @@ const SideBar = () => {
       id: 4,
       title: "activities",
       icon: "ListBulletIcon",
-      route: "/",
+      route: "/activity",
     },
   ];
 
