@@ -63,8 +63,7 @@ const FAQ = () => {
     <div className="md:grid md:grid-cols-12">
       <SideBar />
       <div className="main md:col-span-10">
-        <Header />
-        <div className="post-job bg-white h-screen relative md:mt-16">
+        <div className="post-job bg-white h-screen relative ">
           <NavHead
             activeStep={activeStep}
             setActiveStep={setActiveStep}

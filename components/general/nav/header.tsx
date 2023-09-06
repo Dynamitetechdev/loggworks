@@ -63,7 +63,7 @@ const Header = () => {
         <Link href={"/bookmark"}>
           <div className="bookmarks flex flex-col items-center mr-10">
             <Image
-              src={"/assets/icons/nav_icons/bookmark.svg"}
+              src={"/assets/images/wishlist_mobile.svg"}
               width={24}
               height={24}
               alt=""

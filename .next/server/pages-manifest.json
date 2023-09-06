@@ -2,11 +2,9 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/notifications": "pages/notifications.js",
-  "/help": "pages/help.js",
-  "/logg-cash": "pages/logg-cash.js",
-  "/referral": "pages/referral.js",
-  "/how-to-earn": "pages/how-to-earn.js",
-  "/dashboard-personal": "pages/dashboard-personal.js",
-  "/": "pages/index.js"
+  "/": "pages/index.js",
+  "/payment-card": "pages/payment-card.js",
+  "/bookmark": "pages/bookmark.js",
+  "/bookings": "pages/bookings.js",
+  "/jobs": "pages/jobs.js"
 }

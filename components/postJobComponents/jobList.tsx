@@ -4,7 +4,7 @@ import JobCard from "../general/cards/jobListCard";
 
 const JobList = () => {
   const [allJobs, setAllJobs] = useState<any[]>(Array(4).fill(""));
-  // const [allJobs, setAllJobs] = useState<any>(false);
+
   return (
     <div className="all_job relative ">
       {allJobs.length > 0 ? (
