@@ -9,8 +9,7 @@ const Referral = () => {
     <div className="md:grid md:grid-cols-12">
       <SideBar />
       <div className="main md:col-span-10">
-        <Header />
-        <div className="post-job bg-white h-screen relative md:mt-16">
+        <div className="post-job bg-white h-screen relative">
           <div className="h-[475px] text-green bg-[#FFEFD9] flex flex-col items-center">
             <h1 className="text-[40px] font-bold text-center my-5">
               Refer your <br /> friends and earn!

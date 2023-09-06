@@ -58,7 +58,7 @@ const AdminNav: React.FC<{ openAdminNav: any; setOpenAdminNav: any }> = ({
   const progress = 100 - 50;
   return (
     <div className="w-full md:w-[293px] bg-lightWhite absolute max-sm:fixed md:z-50 z-20 md:right-10  md:top-[62px] shadow-xl  max-sm:overflow-y-scroll max-sm:h-full max-sm:overflow-y-scroll max-sm:h-[calc(100vh-62px)]">
-      <div className="admin_info mb-3 px-3 py-6 bg-white flex flex-col items-center">
+      <div className="admin_info mb-2 px-3 py-5 bg-white flex flex-col items-center">
         <div className="admin_image">
           <Image
             src={"/assets/images/client_test.png"}
@@ -67,10 +67,8 @@ const AdminNav: React.FC<{ openAdminNav: any; setOpenAdminNav: any }> = ({
             alt=""
           />
         </div>
-        <h1 className="text-[14px] font-bold mb-1 mt-3">
-          Crosby O&lsquo;Dennehy
-        </h1>
-        <p className="text-[12px]">Aristidedossouyovo@gmail.com</p>
+        <h1 className="text-[14px] font-bold my-1">Crosby O&lsquo;Dennehy</h1>
+        <p className="text-[12px] font-light">Aristidedossouyovo@gmail.com</p>
       </div>
       <div className="admin_info px-3 py-6 bg-white mx-t">
         <h1 className="text-left font-bold">Log points</h1>
@@ -84,6 +82,7 @@ const AdminNav: React.FC<{ openAdminNav: any; setOpenAdminNav: any }> = ({
             </div>
           </div>
           <div className="progress-circle__text text-[12px] py-3 px-2 -mt-[25px] bg-white">
+            {" "}
             of 5000
           </div>
 
@@ -105,13 +104,15 @@ const AdminNav: React.FC<{ openAdminNav: any; setOpenAdminNav: any }> = ({
           </Link>
         </div>
       </div>
-      <div className="account mb py-3">
-        <h1 className="text-left font-bold uppercase px-3 pb-2">Account</h1>
+      <div className="account mb py-2">
+        <h1 className="text-left font-bold uppercase px-3 pb-2 text-[12px]">
+          Account
+        </h1>
         <ul className=" bg-white px-2">
           {accountNav.map((x, i) => (
             <Link href={x.route} key={i}>
               <li
-                className="flex items-center justify-between py-2"
+                className="flex items-center justify-between py-2 text-[12px]"
                 onClick={() => setOpenAdminNav(false)}
               >
                 <div className="flex items-center">
@@ -130,7 +131,7 @@ const AdminNav: React.FC<{ openAdminNav: any; setOpenAdminNav: any }> = ({
           ))}
         </ul>
       </div>
-      <div className="account ">
+      <div className="text-[12px]">
         <h1 className="text-left font-bold uppercase px-3 pb-2">Settings</h1>
         <ul className=" bg-white px-3">
           {settingNav.map((x, i) => (
@@ -157,11 +158,11 @@ const AdminNav: React.FC<{ openAdminNav: any; setOpenAdminNav: any }> = ({
       </div>
 
       <div
-        className="logout flex items-center justify-center py-4 cursor-pointer"
+        className="logout flex items-center justify-center py-4 cursor-pointer text-[12px]"
         onClick={() => setOpenAdminNav(false)}
       >
         <Image src={"/assets/icons/logout.svg"} width={20} height={20} alt="" />
-        <p className="ml-2">Logout</p>
+        <p className="ml-1">Logout</p>
       </div>
     </div>
   );

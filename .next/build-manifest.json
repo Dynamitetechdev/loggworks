@@ -27,35 +27,25 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/dashboard-personal": [
+    "/bookings": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/dashboard-personal.js"
+      "static/chunks/pages/bookings.js"
     ],
-    "/help": [
+    "/bookmark": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/help.js"
+      "static/chunks/pages/bookmark.js"
     ],
-    "/how-to-earn": [
+    "/jobs": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/how-to-earn.js"
+      "static/chunks/pages/jobs.js"
     ],
-    "/logg-cash": [
+    "/payment-card": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/logg-cash.js"
-    ],
-    "/notifications": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/notifications.js"
-    ],
-    "/referral": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/referral.js"
+      "static/chunks/pages/payment-card.js"
     ]
   },
   "ampFirstPages": []

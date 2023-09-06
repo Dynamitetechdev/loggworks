@@ -32,7 +32,7 @@ const SideBar = () => {
       id: 2,
       title: "bookings",
       icon: "CalendarIcon",
-      route: "/",
+      route: "/bookings",
     },
     {
       id: 3,
@@ -71,7 +71,7 @@ const SideBar = () => {
       id: 4,
       title: "Account",
       icon: "UserIcon",
-      route: "",
+      route: "/account",
     },
   ];
 
@@ -150,14 +150,6 @@ const SideBar = () => {
             </ul>
           </div>
         </div>
-      </div>
-      <div className="md:hidden">
-        {openAdminNav && (
-          <AdminNav
-            setOpenAdminNav={setOpenAdminNav}
-            openAdminNav={openAdminNav}
-          />
-        )}
       </div>
     </>
   );
