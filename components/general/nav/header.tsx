@@ -47,7 +47,7 @@ const Header = () => {
       <LocationSearch />
 
       <div className="admin max-md:hidden flex justify-between items-center">
-        <Link href="/post-job">
+        <Link href="/jobs">
           <div className="post flex items-center bg-green p-2.5  text-white rounded-md mr-10">
             <Image
               src={"/assets/icons/nav_icons/plus.svg"}
@@ -61,7 +61,7 @@ const Header = () => {
         </Link>
 
         <Link href={"/bookmark"}>
-          <div className="bookmarks flex flex-col items-center mr-10">
+          <div className="bookmarks flex flex-col items-center">
             <Image
               src={"/assets/images/wishlist_mobile.svg"}
               width={24}
@@ -72,7 +72,7 @@ const Header = () => {
           </div>
         </Link>
 
-        <div className="adminOption">
+        {/* <div className="adminOption">
           <div
             className="admin_image cursor-pointer"
             onClick={() => setOpenAdminNav(!openAdminNav)}
@@ -93,7 +93,7 @@ const Header = () => {
               />
             </div>
           )}
-        </div>
+        </div> */}
       </div>
     </div>
   );

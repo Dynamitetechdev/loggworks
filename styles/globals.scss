@@ -78,9 +78,37 @@ button {
   border-radius: 50%;
 }
 
+.form-checkbox-square {
+  /* Remove default browser styles */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* Set the checkbox dimensions */
+  width: 22px;
+  height: 22px;
+  /* Add a custom border */
+
+  /* Add some space between the checkbox and the label text */
+  vertical-align: middle;
+  /* Set a background color for the checked state */
+  background-color: #fff;
+  border-radius: 4px;
+}
+
 /* Style the checked state */
-.form-checkbox:checked {
+.form-checkbox:checked,
+.form-checkbox-square:checked {
   background-color: #2fa500; /* Replace #ccc with your desired grey color */
+}
+
+.form-checkbox-square::after {
+  content: "\2713"; /* Unicode checkmark character */
+  font-size: 14px; /* Adjust the size of the checkmark */
+  color: white; /* Color of the checkmark symbol */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .modal-container {

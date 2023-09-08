@@ -24,6 +24,7 @@ module.exports = {
       primary100: "#F9FDF7",
       yellow: "#E2B801",
       pTagGrey: "#505050",
+      grey40: "var(--grey-40, #858585)",
     },
     screens: {
       sm: "576px",
