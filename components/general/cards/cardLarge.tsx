@@ -12,9 +12,10 @@ const CardLarge = () => {
       <div className="">
         <Image
           src={"/assets/images/promotions/01.png"}
-          width={360}
+          width={380}
           height={140}
           alt="object-fit"
+          className="min-w-[374px]"
         />
       </div>
 

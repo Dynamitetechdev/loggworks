@@ -5,6 +5,7 @@ import {
   ChatBubbleOvalLeftEllipsisIcon,
   ListBulletIcon,
   UserIcon,
+  UserCircleIcon,
 } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import { useState } from "react";
@@ -18,6 +19,7 @@ const SideBar = () => {
     ChatBubbleOvalLeftEllipsisIcon,
     ListBulletIcon,
     UserIcon,
+    UserCircleIcon,
   };
 
   const sideNav = [
@@ -44,6 +46,12 @@ const SideBar = () => {
       title: "activities",
       icon: "ListBulletIcon",
       route: "/activity",
+    },
+    {
+      id: 4,
+      title: "account",
+      icon: "UserCircleIcon",
+      route: "/account",
     },
   ];
 
@@ -101,15 +109,10 @@ const SideBar = () => {
                 return (
                   <Link href={nav.route} key={`nav--${index}`}>
                     <li
-                      className={`flex max-md:flex-col max-md:mx-4 items-center  md:my-4 py-2  cursor-pointer md:pl-7  ${
-                        activeIndex === index && "bg-lightWhite text-green"
+                      className={`flex max-md:flex-col max-md:mx-4 items-center md:my-4 py-2  cursor-pointer md:pl-7  ${
+                        activeIndex === index && "md:bg-lightWhite text-green"
                       }`}
-                      onClick={() => {
-                        handleActive(index),
-                          index === 3
-                            ? setOpenAdminNav(!openAdminNav)
-                            : setOpenAdminNav(false);
-                      }}
+                      onClick={() => handleActive(index)}
                     >
                       <div className="icon w-[24px] h-[24px] max-md:ml-2">
                         <Icon />
