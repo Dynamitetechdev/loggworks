@@ -5,11 +5,13 @@ import {
   MapPinIcon,
 } from "@heroicons/react/24/outline";
 import { useEffect, useState } from "react";
+import Modal from "./markAsComplete/modal";
 
 const NotificationsTab: React.FC<{ data: any[]; selectedOption: any }> = ({
   data,
   selectedOption,
 }) => {
+  const [modalPop, setModalPopUp] = useState(false);
   const [star, setStar] = useState<any[]>(Array(4).fill(""));
   return (
     <div className="my-4">
@@ -68,7 +70,10 @@ const NotificationsTab: React.FC<{ data: any[]; selectedOption: any }> = ({
                 </h5>
 
                 {x?.status === "completed" && (
-                  <button className="w-full h-[48px] text-green font-bold py-2 px-4 border-2 border-green rounded mb-4">
+                  <button
+                    className="w-full h-[48px] text-green font-bold py-2 px-4 border-2 border-green rounded mb-4"
+                    onClick={() => setModalPopUp(!modalPop)}
+                  >
                     Mark Job as Completed
                   </button>
                 )}
@@ -76,6 +81,12 @@ const NotificationsTab: React.FC<{ data: any[]; selectedOption: any }> = ({
             </div>
           </div>
         ))}
+
+      {modalPop && (
+        <div className="">
+          <Modal setModalPopUp={setModalPopUp} modalPop={modalPop} />
+        </div>
+      )}
     </div>
   );
 };

@@ -135,7 +135,6 @@ const Bookings = () => {
                 />
               </div>
 
-              {selectedOption}
               {activeTab === "bookings" && (
                 <BookingTabData
                   data={bookingSectionData.booking.bookingData}

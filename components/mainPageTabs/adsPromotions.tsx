@@ -7,9 +7,9 @@ const AdsPromotions = () => {
     <div className="max-sm:hidden promotion bg-[#FEFEFE] md:z-20 py-2 px-3 md:col-span-3 relative ">
       <div className="md:fixed">
         <div className="head flex items-center py-3">
-          <h1 className="text-2xl">Promotions</h1>
+          <h1 className="text-[18px]">Promotions</h1>
 
-          <div className="ad bg-green py-2 px-3 rounded-md mx-3 text-white">
+          <div className="ad bg-[#E2B801] text-[12px] py-1 px-2 rounded-md mx-3 text-white">
             Ads
           </div>
         </div>

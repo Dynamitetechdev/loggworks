@@ -53,11 +53,11 @@ const CardLarge = () => {
 
         <div className="flex items-center justify-between mb-3 min-md:text-[14px]">
           <h5>Get 20% off 5 weeks booking</h5>{" "}
-          <h5 className="text-green">
+          <h5 className="text-timerColor font-bold">
             Ends in: <span className="ml-2">04:34:40</span>{" "}
           </h5>
         </div>
-        <button className="w-full h-[48px] text-green font-bold py-2 px-4 border-2 border-green rounded mb-4">
+        <button className="w-full py-[4px] text-green text-[14px] text-green font-bold py-2 px-4 border-2 border-green rounded mb-4">
           Request Quote
         </button>
       </div>

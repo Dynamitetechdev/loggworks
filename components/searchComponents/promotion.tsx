@@ -67,7 +67,7 @@ const Promotions = () => {
                   </ul>
                 </div>
 
-                <button className="w-full h-[48px] text-green font-bold py-2 px-4 border-2 border-green rounded mb-4">
+                <button className="w-full py-[4px] text-green text-[14px] text-green font-bold py-2 px-4 border-2 border-green rounded mb-4">
                   Request Quote
                 </button>
               </div>

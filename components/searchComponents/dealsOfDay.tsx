@@ -48,9 +48,8 @@ const DealsOfTheDay = () => {
                 </div>
 
                 <div className="job_category ">
-                  <h1>Job category</h1>
-
-                  <ul className="flex my-3 ">
+                  <h1 className="mt-2">Job category</h1>
+                  <ul className="flex my-2">
                     <li className="bg-lightWhite px-3 py-1 rounded-full mr-2">
                       Power contractors
                     </li>
@@ -61,11 +60,11 @@ const DealsOfTheDay = () => {
                 </div>
                 <div className="flex items-center justify-between mb-3 min-md:text-[14px]">
                   <h5>Get 20% off 5 weeks booking</h5>{" "}
-                  <h5 className="text-green">
+                  <h5 className="text-timerColor font-bold">
                     Ends in: <span className="ml-2">04:34:40</span>{" "}
                   </h5>
                 </div>
-                <button className="w-full h-[48px] text-green font-bold py-2 px-4 border-2 border-green rounded mb-4">
+                <button className="w-full py-[4px] text-green text-[14px] font-bold py-2 px-4 border-2 border-green rounded mb-4">
                   Request Quote
                 </button>
               </div>

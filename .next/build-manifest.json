@@ -12,6 +12,11 @@
   ],
   "rootMainFiles": [],
   "pages": {
+    "/": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/index.js"
+    ],
     "/_app": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
@@ -22,15 +27,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/jobs": [
+    "/search": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/jobs.js"
-    ],
-    "/post-job": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/post-job.js"
+      "static/chunks/pages/search.js"
     ]
   },
   "ampFirstPages": []

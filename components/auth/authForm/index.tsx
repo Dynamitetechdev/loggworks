@@ -1,3 +1,4 @@
+import { EyeIcon, EyeSlashIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -173,30 +174,20 @@ const AuthForm: React.FC<AuthFormProp> = ({ title, login, route }) => {
                   <input
                     className="border border-grey rounded w-full py-2 px-3 text-gray-700 h-[48px]"
                     id="username"
-                    type="text"
+                    type={passwordVisibity ? "text" : "password"}
                     name="password"
                     value={formData.password}
                     onChange={handleOnChange}
                   />
 
                   <div
-                    className="absolute top-4 right-2"
+                    className="absolute top-[13px] right-2"
                     onClick={() => setPasswordVisibity(!passwordVisibity)}
                   >
                     {passwordVisibity ? (
-                      <Image
-                        src={"/assets/icons/eye.svg"}
-                        height={14}
-                        width={19}
-                        alt=""
-                      />
+                      <EyeSlashIcon width={35} height={19} />
                     ) : (
-                      <Image
-                        src={"/assets/icons/eye.svg"}
-                        height={14}
-                        width={19}
-                        alt=""
-                      />
+                      <EyeIcon width={35} height={19} />
                     )}
                   </div>
                 </div>

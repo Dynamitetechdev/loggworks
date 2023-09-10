@@ -7,7 +7,6 @@ import { useState } from "react";
 const Header = () => {
   const mobile_icons = [
     { icon: "post_mobile", route: "/post-job" },
-    { icon: "bookmark_mobile", route: "/bookmark" },
     { icon: "wishlist_mobile", route: "/" },
   ];
 
@@ -48,7 +47,7 @@ const Header = () => {
 
       <div className="admin max-md:hidden flex justify-between items-center">
         <Link href="/jobs">
-          <div className="post flex items-center bg-green p-2.5  text-white rounded-md mr-10">
+          <div className="post flex items-center bg-green p-2.5  text-white rounded mr-10">
             <Image
               src={"/assets/icons/nav_icons/plus.svg"}
               width={24}
