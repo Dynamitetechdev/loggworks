@@ -25,6 +25,7 @@ module.exports = {
       yellow: "#E2B801",
       pTagGrey: "#505050",
       grey40: "var(--grey-40, #858585)",
+      timerColor: "#E22410",
     },
     screens: {
       sm: "576px",

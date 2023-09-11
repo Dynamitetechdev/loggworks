@@ -112,8 +112,8 @@ const Categories = () => {
   ];
   return (
     <div className="md:fixed bg-white md:z-10 top-12 categories border-b md:my-2 border-categoriesColor md:w-[1050px]">
-      <div className="flex items-center overflow-x-hidden">
-        <ul className="max-md:mb-4 flex items-center md:px-7 max-md:px-3 transition-transform duration-300 overflow-x-scroll scrolling-touch">
+      <div className="flex items-center max-md:overflow-x-auto md:hover:overflow-auto md:hover:overflow-x-scroll">
+        <ul className="max-md:mb-4 flex items-center md:px-7 max-md:px-3 transition-transform duration-300">
           {categories.map((x, index) => (
             <li
               key={`nav--${index}`}

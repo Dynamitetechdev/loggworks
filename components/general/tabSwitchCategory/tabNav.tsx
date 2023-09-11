@@ -17,7 +17,11 @@ const TabNav: React.FC<{
             key={i}
             onClick={() => {
               handleActive(x);
-              setSelectedOptions(x.toLowerCase());
+              setSelectedOptions(
+                x.toLowerCase() === "bookings"
+                  ? "current"
+                  : x.toLowerCase() === "review" && "reviews"
+              );
             }}
           >
             {x}

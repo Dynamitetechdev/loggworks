@@ -8,7 +8,7 @@ import {
   UserCircleIcon,
 } from "@heroicons/react/24/outline";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 const SideBar = () => {
   interface AllIcons {
     [iconName: string]: React.ComponentType<any>;
@@ -39,7 +39,7 @@ const SideBar = () => {
       id: 3,
       title: "messages",
       icon: "ChatBubbleOvalLeftEllipsisIcon",
-      route: "/",
+      route: "/message",
     },
     {
       id: 4,
@@ -63,16 +63,22 @@ const SideBar = () => {
       route: "/",
     },
     {
+      id: 1,
+      title: "booking",
+      icon: "CalendarIcon",
+      route: "/bookings",
+    },
+    {
       id: 3,
       title: "messages",
       icon: "ChatBubbleOvalLeftEllipsisIcon",
-      route: "/",
+      route: "/message",
     },
     {
       id: 4,
       title: "activities",
       icon: "ListBulletIcon",
-      route: "/",
+      route: "/activity",
     },
     {
       id: 4,
@@ -83,10 +89,30 @@ const SideBar = () => {
   ];
 
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
+
   const handleActive = (index: number) => {
     setActiveIndex(index);
+    setActiveIndexInLocalStorage(index);
   };
+
   const [openAdminNav, setOpenAdminNav] = useState(false);
+
+  const setActiveIndexInLocalStorage = (index: number | null) => {
+    if (index !== null) {
+      localStorage.setItem("activeIndex", index.toString());
+    }
+  };
+
+  useEffect(() => {
+    const storedIndex = localStorage.getItem("activeIndex");
+    if (storedIndex !== null) {
+      const parsedIndex = parseInt(storedIndex, 10);
+      if (!isNaN(parsedIndex)) {
+        setActiveIndex(parsedIndex);
+      }
+    }
+  }, []);
+
   return (
     <>
       <div className="relative md:col-span-2">
@@ -109,12 +135,12 @@ const SideBar = () => {
                 return (
                   <Link href={nav.route} key={`nav--${index}`}>
                     <li
-                      className={`flex max-md:flex-col max-md:mx-4 items-center md:my-4 py-2  cursor-pointer md:pl-7  ${
+                      className={`flex max-md:flex-col items-center md:my-4 py-2  cursor-pointer md:pl-7  ${
                         activeIndex === index && "md:bg-lightWhite text-green"
                       }`}
                       onClick={() => handleActive(index)}
                     >
-                      <div className="icon w-[24px] h-[24px] max-md:ml-2">
+                      <div className="icon w-[20px] h-[20px] max-md:ml-2">
                         <Icon />
                       </div>
                       <p className="capitalize ml-2 max-md:text-[14px]">

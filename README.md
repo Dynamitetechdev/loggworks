@@ -3,16 +3,47 @@
 <!--
 **loggworks/loggworks** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
-Here are some ideas to get you started:
+## PAGE ROUTES
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
+## AUTH/ SIGN IN
+- /signup
+- /login
+- /verify
+- /personal
 
-- Map Different Booking datas
+## RESET
+- /reset/reset-password
+- /reset/email-sent (Alert)
+- /reset/confirm-password
+- /reset/password-change (Alert)
+
+##HOMEPAGE
+- /
+- /search
+- /post-job
+- /jobs
+- /bookmark
+- /bookings
+- /message
+- /activity
+- /account
+- /faq
+
+
+## MESSAGE
+- /message/quote/[id]
+- /message/payment/[id]
+- /message/payment/confirmed/[id]
+
+
+##Account
+- /how-to-earn
+- /logg-cash
+- /payment-card
+- /referral
+- /dashboard-personal (update profile)
+- /security
+- /notifications
+- /help
+- /connect-social
 -->
