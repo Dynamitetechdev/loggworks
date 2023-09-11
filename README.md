@@ -3,7 +3,7 @@
 ### PAGE ROUTES
 
 ### AUTH/ SIGN IN
--## /signup
+- /signup
 - /login
 - /verify
 - /personal
@@ -14,7 +14,7 @@
 - /reset/confirm-password
 - /reset/password-change (Alert)
 
-##HOMEPAGE
+## HOMEPAGE
 - /
 - /search
 - /post-job
@@ -33,7 +33,7 @@
 - /message/payment/confirmed/[id]
 
 
-##Account
+## Account
 - /how-to-earn
 - /logg-cash
 - /payment-card
