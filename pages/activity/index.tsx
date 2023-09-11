@@ -110,7 +110,7 @@ const Notifications = () => {
               {activeTab === "notifications" && (
                 <NotificationsTab
                   data={activitiesSectionData.notifications.notificationData}
-                  selectedOption={selectedOption || "notifications"}
+                  selectedOption={selectedOption || "booking"}
                 />
               )}
               {activeTab === "community" && (

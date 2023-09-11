@@ -233,10 +233,10 @@ const Search = () => {
             </div>
           </div>
 
-          <div className="max-sm:hidden bg-white md:z-20 py-2 px-3 md:col-span-3 relative z-50">
+          <div className="max-sm:hidden bg-white md:z-20 py-2 px-3 md:col-span-3 md:-ml-8 relative z-50">
             <div className="md:fixed w-[292px] py-3">
               <div
-                className="head flex items-center justify-between rounded  py-3 px-5 border border-grey80 text-[18px] cursor-pointer"
+                className="head flex items-center justify-between rounded  py-3 px-5 border border-grey80 text-[16px] cursor-pointer"
                 onClick={() => setOpenSortBox(!openSortBox)}
               >
                 <h1 className="font-bold">Sort By</h1>

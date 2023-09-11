@@ -3,7 +3,7 @@ import CardLarge from "../general/cards/cardLarge";
 
 const DealOfTheDay = () => {
   const [activeSlide, setActiveSlide] = useState(0);
-  const [deals, setDeals] = useState<any[]>(Array(6).fill(""));
+  const [deals, setDeals] = useState<any[]>(Array(4).fill(""));
   const handleSlideChange = (index: any) => {
     setActiveSlide(index);
   };

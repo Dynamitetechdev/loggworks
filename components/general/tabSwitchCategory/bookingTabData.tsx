@@ -5,11 +5,13 @@ import {
   MapPinIcon,
 } from "@heroicons/react/24/outline";
 import { useState } from "react";
+import Modal from "../../activitiesComponents/markAsComplete/modal";
 
 const BookingTabData: React.FC<{ data: any[]; selectedOption: any }> = ({
   data,
   selectedOption,
 }) => {
+  const [modalPop, setModalPopUp] = useState(false);
   const [star, setStar] = useState<any[]>(Array(4).fill(""));
   return (
     <div className="my-4">
@@ -90,13 +92,22 @@ const BookingTabData: React.FC<{ data: any[]; selectedOption: any }> = ({
               </button>
             )}
 
-            {selectedOption === "current" && (
-              <button className="w-full h-[48px] text-green font-bold py-2 px-4 border-2 border-green rounded mb-4">
+            {selectedOption === "current" && x.completed && (
+              <button
+                className="w-full h-[48px] text-green font-bold py-2 px-4 border-2 border-green rounded mb-4"
+                onClick={() => setModalPopUp(!modalPop)}
+              >
                 Mark Job as Completed
               </button>
             )}
           </div>
         ))}
+
+      {modalPop && (
+        <div className="">
+          <Modal setModalPopUp={setModalPopUp} modalPop={modalPop} />
+        </div>
+      )}
     </div>
   );
 };

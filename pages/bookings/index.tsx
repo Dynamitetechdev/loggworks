@@ -12,6 +12,7 @@ const Bookings = () => {
     {
       title: "RNS products",
       status: "current",
+      completed: false,
     },
     {
       title: "Daya & Sons",
@@ -32,10 +33,12 @@ const Bookings = () => {
     {
       title: "RNS products",
       status: "current",
+      completed: true,
     },
     {
       title: "RNS products",
       status: "current",
+      completed: true,
     },
   ];
   const reviewData = [
@@ -134,7 +137,6 @@ const Bookings = () => {
                   handleSelectSwitch={handleSelectSwitch}
                 />
               </div>
-
               {activeTab === "bookings" && (
                 <BookingTabData
                   data={bookingSectionData.booking.bookingData}
@@ -145,7 +147,7 @@ const Bookings = () => {
               {activeTab === "review" && (
                 <ReviewTabData
                   data={bookingSectionData.review.reviewData}
-                  selectedOption={selectedOption || "review"}
+                  selectedOption={selectedOption || "reviews"}
                 />
               )}
             </div>

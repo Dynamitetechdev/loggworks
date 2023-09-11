@@ -22,16 +22,16 @@ const Promotions = () => {
       <div className="deals md:grid grid-cols-8 gap-4 max-md:flex max-md:overflow-x-scroll max-md:scrolling-touch max-md:overflow-x-hidden ">
         {deals.map((_, i) => (
           <div className="max-md:flex-shrink-0 md:col-span-4" key={i}>
-            <div className="card max-w-lg min-md:w-[374px] bg-white rounded-lg my-5 shadow relative">
+            <div className="card max-w-[358px] min-md:w-[358px] bg-white rounded-lg my-5 shadow relative">
               <WishListButton />
 
               <div className="">
                 <Image
                   src={"/assets/images/promotions/01.png"}
-                  width={380}
+                  width={358}
                   height={140}
                   alt="object-fit"
-                  className="min-w-[374px]"
+                  className="max-w-[358px] max-h-[118px]"
                 />
               </div>
 
