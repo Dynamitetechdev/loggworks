@@ -8,13 +8,13 @@
 - /verify
 - /personal
 
-## RESET
+### RESET
 - /reset/reset-password
 - /reset/email-sent (Alert)
 - /reset/confirm-password
 - /reset/password-change (Alert)
 
-## HOMEPAGE
+### HOMEPAGE
 - /
 - /search
 - /post-job
@@ -27,13 +27,13 @@
 - /faq
 
 
-## MESSAGE
+### MESSAGE
 - /message/quote/[id]
 - /message/payment/[id]
 - /message/payment/confirmed/[id]
 
 
-## Account
+### Account
 - /how-to-earn
 - /logg-cash
 - /payment-card
