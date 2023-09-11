@@ -1,9 +1,9 @@
 ### Hi there 👋
 
-## PAGE ROUTES
+### PAGE ROUTES
 
-## AUTH/ SIGN IN
-- /signup
+### AUTH/ SIGN IN
+-## /signup
 - /login
 - /verify
 - /personal
