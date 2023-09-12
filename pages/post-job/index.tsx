@@ -17,6 +17,7 @@ const PostJobPage = () => {
             activeStep={activeStep}
             setActiveStep={setActiveStep}
             title="Post A Job"
+            type="notab"
           />
           <PostJob activeStep={activeStep} setActiveStep={setActiveStep} />
         </div>

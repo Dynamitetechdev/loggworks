@@ -876,7 +876,8 @@ const PostJobPage = ()=>{
                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_postJobComponents_navHead__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */ .Z, {
                             activeStep: activeStep,
                             setActiveStep: setActiveStep,
-                            title: "Post A Job"
+                            title: "Post A Job",
+                            type: "notab"
                         }),
                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_postJobComponents_postJob__WEBPACK_IMPORTED_MODULE_4__/* ["default"] */ .Z, {
                             activeStep: activeStep,

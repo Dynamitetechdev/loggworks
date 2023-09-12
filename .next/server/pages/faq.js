@@ -164,7 +164,8 @@ const FAQ = ()=>{
                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_postJobComponents_navHead__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Z, {
                             activeStep: activeStep,
                             setActiveStep: setActiveStep,
-                            title: "Frequently Asked Questions"
+                            title: "Frequently Asked Questions",
+                            type: "notab"
                         }),
                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
                             className: "px-6 md:px-9 pt-10 md:flex text-pTagGrey ",

@@ -48,7 +48,7 @@ const CardMedium = () => {
             </p>
           </div>
 
-          <div className="md:flex items-center justify-between mb-3 max-sm:text-[12px] text-[10px]">
+          <div className="md:flex items-center justify-between mb-3 max-sm:text-[12px] text-[12px]">
             <p>{sampleText.substring(20, -1)}...</p>{" "}
             <p className="text-timerColor font-bold">
               Ends in: <span className="ml-1">04:34:40</span>{" "}

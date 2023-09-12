@@ -148,7 +148,8 @@ const Security = ()=>{
                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_postJobComponents_navHead__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */ .Z, {
                             activeStep: activeStep,
                             setActiveStep: setActiveStep,
-                            title: "Security"
+                            title: "Security",
+                            type: "notab"
                         }),
                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
                             className: "px-6 md:px-9 pt-5 md:flex text-pTagGrey ",

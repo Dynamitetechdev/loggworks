@@ -2,6 +2,7 @@ import { useState } from "react";
 import Header from "../../components/general/nav/header";
 import SideBar from "../../components/general/sideBar";
 import Image from "next/image";
+import NavHead from "../../components/postJobComponents/navHead";
 
 const Referral = () => {
   const [activeStep, setActiveStep] = useState(0);
@@ -9,6 +10,12 @@ const Referral = () => {
     <div className="md:grid md:grid-cols-12">
       <SideBar />
       <div className="main md:col-span-10">
+        <NavHead
+          activeStep={activeStep}
+          setActiveStep={setActiveStep}
+          title="Refferal"
+          type="notab"
+        />
         <div className="post-job bg-white h-screen relative">
           <div className="h-[475px] text-green bg-[#FFEFD9] flex flex-col items-center">
             <h1 className="text-[40px] font-bold text-center my-5">

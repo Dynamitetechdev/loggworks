@@ -19,7 +19,7 @@ _heroicons_react_24_outline_esm_ChevronLeftIcon__WEBPACK_IMPORTED_MODULE_1__ = (
 
 
 
-const NavHead = ({ activeStep, setActiveStep, title })=>{
+const NavHead = ({ activeStep, setActiveStep, title, type })=>{
     const router = (0,next_router__WEBPACK_IMPORTED_MODULE_2__.useRouter)();
     const goBack = ()=>{
         if (activeStep) {
@@ -30,23 +30,60 @@ const NavHead = ({ activeStep, setActiveStep, title })=>{
             router.back();
         }
     };
-    return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-        className: "nav_head flex items-center md:py-3 py-3 md:mx-6 mx-3 border-b  border-grey80",
+    return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
         children: [
-            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                className: "back z-10 md:border border-grey80 w-[40px] h-[40px] flex items-center justify-center",
-                onClick: ()=>goBack(),
-                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_heroicons_react_24_outline_esm_ChevronLeftIcon__WEBPACK_IMPORTED_MODULE_1__["default"], {
-                    width: 20,
-                    height: 20
+            type === "notab" && /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                className: "nav_head flex items-center py-3 md:mx-6 mx-3 border-b border-grey80",
+                children: [
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                        className: "back z-10 md:border border-grey80 w-[40px] h-[40px] flex items-center justify-center",
+                        onClick: ()=>goBack(),
+                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_heroicons_react_24_outline_esm_ChevronLeftIcon__WEBPACK_IMPORTED_MODULE_1__["default"], {
+                            width: 20,
+                            height: 20
+                        })
+                    }),
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                        className: "md:w-5/12 w-full md:relative md:left-[26%] max-md:flex max-md:justify-center max-md:-ml-[40px]",
+                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                            className: "flex items-start",
+                            children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h1", {
+                                className: "font-bold capitalize md:text-[20px] text-[16px]",
+                                children: title
+                            })
+                        })
+                    })
+                ]
+            }),
+            type == "plain" && /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                className: "nav_head flex items-center md:py-5 py-3 md:mx-6 mx-3 border-b  border-grey80",
+                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                    className: "flex items-center md:w-8/12 w-full justify-center",
+                    children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h1", {
+                        className: "font-bold capitalize md:text-[20px] text-[16px]",
+                        children: title
+                    })
                 })
             }),
-            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                className: "flex items-center md:ml-36 w-full md:justify-between justify-center -ml-12",
-                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h1", {
-                    className: "font-bold capitalize",
-                    children: title
-                })
+            type === "notab-size" && /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                className: "nav_head flex items-center py-3 md:mx-6 mx-3 border-b  border-grey80",
+                children: [
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                        className: "back z-10 md:border border-grey80 w-[40px] h-[40px] flex items-center justify-center",
+                        onClick: ()=>goBack(),
+                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_heroicons_react_24_outline_esm_ChevronLeftIcon__WEBPACK_IMPORTED_MODULE_1__["default"], {
+                            width: 20,
+                            height: 20
+                        })
+                    }),
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                        className: "flex items-center md:w-4/12 w-full justify-center",
+                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h1", {
+                            className: "font-bold capitalize md:text-[20px] text-[16px]",
+                            children: title
+                        })
+                    })
+                ]
             })
         ]
     });

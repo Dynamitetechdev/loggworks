@@ -286,7 +286,7 @@ const Header = ()=>{
     const mobile_icons = [
         {
             icon: "post_mobile",
-            route: "/post-job"
+            route: "/jobs"
         },
         {
             icon: "wishlist_mobile",
@@ -298,7 +298,7 @@ const Header = ()=>{
         className: "header md:bg-white md:z-50 md:fixed md:w-10/12 md:h-[62px] md:flex justify-between md:border-b border-grey items-center md:px-6 px-3 max-sm:pt-3",
         children: [
             /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                className: "lg:hidden mobile flex items-center justify-between",
+                className: "md:hidden mobile flex items-center justify-between",
                 children: [
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
                         className: "mobile_log",

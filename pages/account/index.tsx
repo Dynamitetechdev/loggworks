@@ -64,6 +64,7 @@ const Account = () => {
             activeStep={activeStep}
             setActiveStep={setActiveStep}
             title="Account"
+            type="plain"
           />
           <div className="px-6 md:px-9 md:flex text-pTagGrey ">
             <div className="md:w-5/12 bg-[#fafafa] mx-auto">

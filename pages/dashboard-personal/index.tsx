@@ -46,6 +46,7 @@ const Personal = () => {
             activeStep={activeStep}
             setActiveStep={setActiveStep}
             title="Personal"
+            type="notab"
           />
 
           <div className="px-6 md:px-9 pt-5 md:flex text-pTagGrey ">

@@ -5,8 +5,9 @@ import { useRouter } from "next/router";
 const NavHead: React.FC<{
   activeStep: any;
   setActiveStep: any;
-  title: string;
-}> = ({ activeStep, setActiveStep, title }) => {
+  title: string | any;
+  type?: string;
+}> = ({ activeStep, setActiveStep, title, type }) => {
   const router = useRouter();
   const goBack = () => {
     if (activeStep) {
@@ -19,18 +20,53 @@ const NavHead: React.FC<{
   };
 
   return (
-    <div className="nav_head flex items-center md:py-3 py-3 md:mx-6 mx-3 border-b  border-grey80">
-      <div
-        className="back z-10 md:border border-grey80 w-[40px] h-[40px] flex items-center justify-center"
-        onClick={() => goBack()}
-      >
-        <ChevronLeftIcon width={20} height={20} />
-      </div>
+    <>
+      {type === "notab" && (
+        <div className="nav_head flex items-center py-3 md:mx-6 mx-3 border-b border-grey80">
+          <div
+            className="back z-10 md:border border-grey80 w-[40px] h-[40px] flex items-center justify-center"
+            onClick={() => goBack()}
+          >
+            <ChevronLeftIcon width={20} height={20} />
+          </div>
 
-      <div className="flex items-center md:ml-36 w-full md:justify-between justify-center -ml-12">
-        <h1 className="font-bold capitalize">{title}</h1>
-      </div>
-    </div>
+          <div className="md:w-5/12 w-full md:relative md:left-[26%] max-md:flex max-md:justify-center max-md:-ml-[40px]">
+            <div className="flex items-start">
+              <h1 className="font-bold capitalize md:text-[20px] text-[16px]">
+                {title}
+              </h1>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {type == "plain" && (
+        <div className="nav_head flex items-center md:py-5 py-3 md:mx-6 mx-3 border-b  border-grey80">
+          <div className="flex items-center md:w-8/12 w-full justify-center">
+            <h1 className="font-bold capitalize md:text-[20px] text-[16px]">
+              {title}
+            </h1>
+          </div>
+        </div>
+      )}
+
+      {type === "notab-size" && (
+        <div className="nav_head flex items-center py-3 md:mx-6 mx-3 border-b  border-grey80">
+          <div
+            className="back z-10 md:border border-grey80 w-[40px] h-[40px] flex items-center justify-center"
+            onClick={() => goBack()}
+          >
+            <ChevronLeftIcon width={20} height={20} />
+          </div>
+
+          <div className="flex items-center md:w-4/12 w-full justify-center">
+            <h1 className="font-bold capitalize md:text-[20px] text-[16px]">
+              {title}
+            </h1>
+          </div>
+        </div>
+      )}
+    </>
   );
 };
 
