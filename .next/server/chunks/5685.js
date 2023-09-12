@@ -93,7 +93,7 @@ const CardMedium = ()=>{
                             })
                         }),
                         /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                            className: "md:flex items-center justify-between mb-3 max-sm:text-[12px] text-[10px]",
+                            className: "md:flex items-center justify-between mb-3 max-sm:text-[12px] text-[12px]",
                             children: [
                                 /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("p", {
                                     children: [

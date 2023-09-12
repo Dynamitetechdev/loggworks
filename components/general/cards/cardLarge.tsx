@@ -3,6 +3,7 @@ import StarReview from "../starReview";
 import { BookmarkIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
 import WishListButton from "../wishlist";
+import Link from "next/link";
 
 const CardLarge = () => {
   return (
@@ -57,9 +58,11 @@ const CardLarge = () => {
             Ends in: <span className="ml-2">04:34:40</span>{" "}
           </h5>
         </div>
-        <button className="w-full py-[4px] text-green text-[14px] text-green font-bold py-2 px-4 border-2 border-green rounded mb-4">
-          Request Quote
-        </button>
+        <Link href={"/sampleCategory/Elite Carpenters/"}>
+          <button className="w-full py-[4px] text-green text-[14px] text-green font-bold py-2 px-4 border-2 border-green rounded mb-4">
+            Request Quote
+          </button>
+        </Link>
       </div>
     </div>
   );

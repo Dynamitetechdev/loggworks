@@ -363,43 +363,58 @@ var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_her
 
 const StepNavHead = ({ postJob, setPostJob })=>{
     const router = (0,next_router__WEBPACK_IMPORTED_MODULE_4__.useRouter)();
-    return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-        className: "max-md:hidden nav_head flex items-center md:py-3 md:mx-6  border-b  border-grey80",
+    return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
         children: [
-            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                className: "back border border-grey80 w-[40px] h-[40px] flex items-center justify-center",
-                onClick: ()=>router.back(),
-                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_heroicons_react_24_outline_esm_ChevronLeftIcon__WEBPACK_IMPORTED_MODULE_1__["default"], {
-                    width: 20,
-                    height: 20
-                })
-            }),
             /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                className: "flex items-center ml-36 w-full justify-between",
+                className: " nav_head flex items-center md:py-3 md:mx-6  border-b  border-grey80",
                 children: [
-                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h1", {
-                        className: "font-bold",
-                        children: "Post a Job"
-                    }),
-                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_3___default()), {
-                        href: "/post-job",
-                        children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("button", {
-                            className: "ad bg-green py-3 px-3 rounded mx-3 text-white flex items-center",
-                            children: [
-                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
-                                    className: "mr-1",
-                                    children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_heroicons_react_24_outline_esm_PlusIcon__WEBPACK_IMPORTED_MODULE_2__["default"], {
-                                        width: 16,
-                                        height: 16
-                                    })
-                                }),
-                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
-                                    children: "Post A Job"
-                                })
-                            ]
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                        className: "back md:border border-grey80 w-[40px] h-[40px] flex items-center justify-center",
+                        onClick: ()=>router.back(),
+                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_heroicons_react_24_outline_esm_ChevronLeftIcon__WEBPACK_IMPORTED_MODULE_1__["default"], {
+                            width: 20,
+                            height: 20
                         })
+                    }),
+                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                        className: "flex md:relative md:left-[25%] items-center justify-center md:justify-between md:w-5/12 w-full ",
+                        children: [
+                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h1", {
+                                className: "font-bold capitalize md:text-[20px] text-[16px] max-md:-ml-6",
+                                children: "Post a Job"
+                            }),
+                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_3___default()), {
+                                href: "/post-job",
+                                className: "max-md:hidden",
+                                children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("button", {
+                                    className: " ad -mr-5 bg-green py-3 px-3 rounded mx-3 text-white flex items-center",
+                                    children: [
+                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
+                                            className: "mr-1",
+                                            children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_heroicons_react_24_outline_esm_PlusIcon__WEBPACK_IMPORTED_MODULE_2__["default"], {
+                                                width: 16,
+                                                height: 16
+                                            })
+                                        }),
+                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
+                                            children: "Post A Job"
+                                        })
+                                    ]
+                                })
+                            })
+                        ]
                     })
                 ]
+            }),
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                className: "hidden nav_head flex items-center md:py-5 py-3 md:mx-6 mx-3 border-b  border-grey80",
+                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                    className: "flex items-center md:w-8/12 w-full justify-center -ml-2",
+                    children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h1", {
+                        className: "font-bold capitalize text-[20px]",
+                        children: "Post a Job"
+                    })
+                })
             })
         ]
     });

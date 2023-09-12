@@ -303,7 +303,11 @@ var image_default = /*#__PURE__*/__webpack_require__.n(next_image);
 var starReview = __webpack_require__(9049);
 // EXTERNAL MODULE: ./components/general/wishlist.tsx
 var wishlist = __webpack_require__(1757);
+// EXTERNAL MODULE: ./node_modules/next/link.js
+var next_link = __webpack_require__(1664);
+var link_default = /*#__PURE__*/__webpack_require__.n(next_link);
 ;// CONCATENATED MODULE: ./components/general/cards/cardLarge.tsx
+
 
 
 
@@ -401,9 +405,12 @@ const CardLarge = ()=>{
                             })
                         ]
                     }),
-                    /*#__PURE__*/ jsx_runtime.jsx("button", {
-                        className: "w-full py-[4px] text-green text-[14px] text-green font-bold py-2 px-4 border-2 border-green rounded mb-4",
-                        children: "Request Quote"
+                    /*#__PURE__*/ jsx_runtime.jsx((link_default()), {
+                        href: "/sampleCategory/Elite Carpenters/",
+                        children: /*#__PURE__*/ jsx_runtime.jsx("button", {
+                            className: "w-full py-[4px] text-green text-[14px] text-green font-bold py-2 px-4 border-2 border-green rounded mb-4",
+                            children: "Request Quote"
+                        })
                     })
                 ]
             })

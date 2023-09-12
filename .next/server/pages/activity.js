@@ -618,7 +618,8 @@ const Notifications = ()=>{
                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_postJobComponents_navHead__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */ .Z, {
                             activeStep: activeStep,
                             setActiveStep: setActiveStep,
-                            title: "Activities"
+                            title: "Activities",
+                            type: "plain"
                         }),
                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
                             className: "px-6 md:px-9 pt-5 md:flex text-pTagGrey ",
@@ -939,7 +940,7 @@ module.exports = import("@heroicons/react/24/outline/esm/XMarkIcon");;
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [2940,9815,2636,3061,8198,515,3940,1766], () => (__webpack_exec__(9602)));
+var __webpack_exports__ = __webpack_require__.X(0, [2940,9815,2636,3061,8198,515,3940,8880,8949], () => (__webpack_exec__(9602)));
 module.exports = __webpack_exports__;
 
 })();

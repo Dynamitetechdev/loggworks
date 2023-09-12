@@ -15,6 +15,7 @@ const ConnectSocial = () => {
             activeStep={activeStep}
             setActiveStep={setActiveStep}
             title="Connect social accounts"
+            type="notab"
           />
 
           <div className="px-6 md:px-9 pt-10 md:flex text-pTagGrey ">

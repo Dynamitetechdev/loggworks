@@ -98,8 +98,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_general_sideBar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(515);
 /* harmony import */ var next_image__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(5675);
 /* harmony import */ var next_image__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_image__WEBPACK_IMPORTED_MODULE_3__);
-var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_components_general_sideBar__WEBPACK_IMPORTED_MODULE_2__]);
-_components_general_sideBar__WEBPACK_IMPORTED_MODULE_2__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
+/* harmony import */ var _components_postJobComponents_navHead__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(3940);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_components_general_sideBar__WEBPACK_IMPORTED_MODULE_2__, _components_postJobComponents_navHead__WEBPACK_IMPORTED_MODULE_4__]);
+([_components_general_sideBar__WEBPACK_IMPORTED_MODULE_2__, _components_postJobComponents_navHead__WEBPACK_IMPORTED_MODULE_4__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+
 
 
 
@@ -110,167 +112,175 @@ const Referral = ()=>{
         className: "md:grid md:grid-cols-12",
         children: [
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_general_sideBar__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Z, {}),
-            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
                 className: "main md:col-span-10",
-                children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                    className: "post-job bg-white h-screen relative",
-                    children: [
-                        /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                            className: "h-[475px] text-green bg-[#FFEFD9] flex flex-col items-center",
-                            children: [
-                                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("h1", {
-                                    className: "text-[40px] font-bold text-center my-5",
-                                    children: [
-                                        "Refer your ",
-                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("br", {}),
-                                        " friends and earn!"
-                                    ]
-                                }),
-                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_3___default()), {
-                                    src: "/assets/images/gift.svg",
-                                    width: 179,
-                                    height: 132,
-                                    alt: ""
-                                }),
-                                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                                    className: "flex items-center -ml-8 mt-3",
-                                    children: [
-                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_3___default()), {
-                                            src: "/assets/icons/coin.svg",
-                                            width: 16,
-                                            height: 16,
-                                            alt: "",
-                                            className: "mr-2"
-                                        }),
-                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h1", {
-                                            className: "text-dark font-bold text-[20px]",
-                                            children: "200 Loggpoints"
-                                        })
-                                    ]
-                                })
-                            ]
-                        }),
-                        /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                            className: "mx-auto rounded-lg w-11/12 md:w-6/12 px-6 md:px-10 pt-10 md:flex flex flex-col items-center  text-pTagGrey bg-white -mt-20",
-                            children: [
-                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h1", {
-                                    className: "font-bold text-[20px] text-center text-dark mx-auto mb-3",
-                                    children: "Refer a business and earn 200 points"
-                                }),
-                                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                                    className: "flex flex-col items-center justify-center",
-                                    children: [
-                                        /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                                            className: "md:flex items-center",
-                                            children: [
-                                                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                                                    className: "flex items-start md:w-1/2 md:pr-2 max-sm:mb-3",
-                                                    children: [
-                                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_3___default()), {
-                                                            src: "/assets/icons/mark.svg",
-                                                            width: 24,
-                                                            height: 24,
-                                                            alt: "",
-                                                            className: "mr-2"
-                                                        }),
-                                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h1", {
-                                                            className: "text-[16px] ",
-                                                            children: "Send them your unique referral link"
-                                                        })
-                                                    ]
-                                                }),
-                                                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                                                    className: "flex items-start md:w-2/2 md:pl-4",
-                                                    children: [
-                                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_3___default()), {
-                                                            src: "/assets/icons/mark.svg",
-                                                            width: 24,
-                                                            height: 24,
-                                                            alt: "",
-                                                            className: "mr-2"
-                                                        }),
-                                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h1", {
-                                                            className: "text-[16px]",
-                                                            children: "You get 200 Points when they get their first boooking"
-                                                        })
-                                                    ]
-                                                })
-                                            ]
-                                        }),
-                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                                            className: "my-5",
-                                            children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                                                className: "pl-2 text-center rounded-lg border border-dashed border-green flex items-center w-[280px] bg-[#FFEFD9]",
+                children: [
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_postJobComponents_navHead__WEBPACK_IMPORTED_MODULE_4__/* ["default"] */ .Z, {
+                        activeStep: activeStep,
+                        setActiveStep: setActiveStep,
+                        title: "Refferal",
+                        type: "notab"
+                    }),
+                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                        className: "post-job bg-white h-screen relative",
+                        children: [
+                            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                                className: "h-[475px] text-green bg-[#FFEFD9] flex flex-col items-center",
+                                children: [
+                                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("h1", {
+                                        className: "text-[40px] font-bold text-center my-5",
+                                        children: [
+                                            "Refer your ",
+                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("br", {}),
+                                            " friends and earn!"
+                                        ]
+                                    }),
+                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_3___default()), {
+                                        src: "/assets/images/gift.svg",
+                                        width: 179,
+                                        height: 132,
+                                        alt: ""
+                                    }),
+                                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                                        className: "flex items-center -ml-8 mt-3",
+                                        children: [
+                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_3___default()), {
+                                                src: "/assets/icons/coin.svg",
+                                                width: 16,
+                                                height: 16,
+                                                alt: "",
+                                                className: "mr-2"
+                                            }),
+                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h1", {
+                                                className: "text-dark font-bold text-[20px]",
+                                                children: "200 Loggpoints"
+                                            })
+                                        ]
+                                    })
+                                ]
+                            }),
+                            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                                className: "mx-auto rounded-lg w-11/12 md:w-6/12 px-6 md:px-10 pt-10 md:flex flex flex-col items-center  text-pTagGrey bg-white -mt-20",
+                                children: [
+                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h1", {
+                                        className: "font-bold text-[20px] text-center text-dark mx-auto mb-3",
+                                        children: "Refer a business and earn 200 points"
+                                    }),
+                                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                                        className: "flex flex-col items-center justify-center",
+                                        children: [
+                                            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                                                className: "md:flex items-center",
                                                 children: [
                                                     /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                                                        className: "w-8/12",
+                                                        className: "flex items-start md:w-1/2 md:pr-2 max-sm:mb-3",
                                                         children: [
-                                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h3", {
-                                                                className: "text-[14px]",
-                                                                children: "Your referral code"
+                                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_3___default()), {
+                                                                src: "/assets/icons/mark.svg",
+                                                                width: 24,
+                                                                height: 24,
+                                                                alt: "",
+                                                                className: "mr-2"
                                                             }),
                                                             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h1", {
-                                                                className: "font-bold text-[24px]",
-                                                                children: "ABC123G"
+                                                                className: "text-[16px] ",
+                                                                children: "Send them your unique referral link"
                                                             })
                                                         ]
                                                     }),
-                                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                                                        className: "p-2 my-2 border-l border-dashed border-green",
-                                                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h1", {
-                                                            className: "text-green",
-                                                            children: "Copy Code"
-                                                        })
+                                                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                                                        className: "flex items-start md:w-2/2 md:pl-4",
+                                                        children: [
+                                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_3___default()), {
+                                                                src: "/assets/icons/mark.svg",
+                                                                width: 24,
+                                                                height: 24,
+                                                                alt: "",
+                                                                className: "mr-2"
+                                                            }),
+                                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h1", {
+                                                                className: "text-[16px]",
+                                                                children: "You get 200 Points when they get their first boooking"
+                                                            })
+                                                        ]
                                                     })
                                                 ]
-                                            })
-                                        }),
-                                        /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                                            className: "social",
-                                            children: [
-                                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
-                                                    className: "text-center",
-                                                    children: "Share link referral via"
-                                                }),
-                                                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                                                    className: "flex items-center my-3",
+                                            }),
+                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                                                className: "my-5",
+                                                children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                                                    className: "pl-2 text-center rounded-lg border border-dashed border-green flex items-center w-[280px] bg-[#FFEFD9]",
                                                     children: [
-                                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_3___default()), {
-                                                            src: "/assets/icons/socials/facebook.svg",
-                                                            width: 32,
-                                                            height: 32,
-                                                            alt: ""
+                                                        /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                                                            className: "w-8/12",
+                                                            children: [
+                                                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h3", {
+                                                                    className: "text-[14px]",
+                                                                    children: "Your referral code"
+                                                                }),
+                                                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h1", {
+                                                                    className: "font-bold text-[24px]",
+                                                                    children: "ABC123G"
+                                                                })
+                                                            ]
                                                         }),
-                                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_3___default()), {
-                                                            src: "/assets/icons/socials/twitter.svg",
-                                                            width: 32,
-                                                            height: 32,
-                                                            alt: "",
-                                                            className: "mx-5"
-                                                        }),
-                                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_3___default()), {
-                                                            src: "/assets/icons/socials/insta.svg",
-                                                            width: 32,
-                                                            height: 32,
-                                                            alt: "",
-                                                            className: "mr-5"
-                                                        }),
-                                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_3___default()), {
-                                                            src: "/assets/icons/socials/whatsapp.svg",
-                                                            width: 32,
-                                                            height: 32,
-                                                            alt: ""
+                                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                                                            className: "p-2 my-2 border-l border-dashed border-green",
+                                                            children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h1", {
+                                                                className: "text-green",
+                                                                children: "Copy Code"
+                                                            })
                                                         })
                                                     ]
                                                 })
-                                            ]
-                                        })
-                                    ]
-                                })
-                            ]
-                        })
-                    ]
-                })
+                                            }),
+                                            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                                                className: "social",
+                                                children: [
+                                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
+                                                        className: "text-center",
+                                                        children: "Share link referral via"
+                                                    }),
+                                                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                                                        className: "flex items-center my-3",
+                                                        children: [
+                                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_3___default()), {
+                                                                src: "/assets/icons/socials/facebook.svg",
+                                                                width: 32,
+                                                                height: 32,
+                                                                alt: ""
+                                                            }),
+                                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_3___default()), {
+                                                                src: "/assets/icons/socials/twitter.svg",
+                                                                width: 32,
+                                                                height: 32,
+                                                                alt: "",
+                                                                className: "mx-5"
+                                                            }),
+                                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_3___default()), {
+                                                                src: "/assets/icons/socials/insta.svg",
+                                                                width: 32,
+                                                                height: 32,
+                                                                alt: "",
+                                                                className: "mr-5"
+                                                            }),
+                                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_3___default()), {
+                                                                src: "/assets/icons/socials/whatsapp.svg",
+                                                                width: 32,
+                                                                height: 32,
+                                                                alt: ""
+                                                            })
+                                                        ]
+                                                    })
+                                                ]
+                                            })
+                                        ]
+                                    })
+                                ]
+                            })
+                        ]
+                    })
+                ]
             })
         ]
     });
@@ -457,6 +467,13 @@ module.exports = require("next/dist/shared/lib/utils/warn-once.js");
 
 /***/ }),
 
+/***/ 1853:
+/***/ ((module) => {
+
+module.exports = require("next/router");
+
+/***/ }),
+
 /***/ 6689:
 /***/ ((module) => {
 
@@ -482,6 +499,13 @@ module.exports = import("@heroicons/react/24/outline/esm/CalendarIcon");;
 /***/ ((module) => {
 
 module.exports = import("@heroicons/react/24/outline/esm/ChatBubbleOvalLeftEllipsisIcon");;
+
+/***/ }),
+
+/***/ 8923:
+/***/ ((module) => {
+
+module.exports = import("@heroicons/react/24/outline/esm/ChevronLeftIcon");;
 
 /***/ }),
 
@@ -520,7 +544,7 @@ module.exports = import("@heroicons/react/24/outline/esm/UserIcon");;
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [2940,9815,2636,3061,8198,515], () => (__webpack_exec__(9947)));
+var __webpack_exports__ = __webpack_require__.X(0, [2940,9815,2636,3061,8198,515,3940], () => (__webpack_exec__(9947)));
 module.exports = __webpack_exports__;
 
 })();

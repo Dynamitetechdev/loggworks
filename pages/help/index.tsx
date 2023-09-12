@@ -19,6 +19,7 @@ const Help = () => {
             activeStep={activeStep}
             setActiveStep={setActiveStep}
             title="Help"
+            type="notab"
           />
 
           <div className="px-6 md:px-9 pt-5 md:flex text-pTagGrey ">

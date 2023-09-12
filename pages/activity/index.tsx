@@ -86,6 +86,7 @@ const Notifications = () => {
             activeStep={activeStep}
             setActiveStep={setActiveStep}
             title="Activities"
+            type="plain"
           />
           <div className="px-6 md:px-9 pt-5 md:flex text-pTagGrey ">
             <div className="md:w-5/12 mx-auto">
