@@ -39,7 +39,7 @@ const ProcessIndicator: React.FC<{
             key={index}
             className={`relative w-full border-t-2 max-sm:pr-2 ${
               activeStep >= index + 1 ? "border-dark" : "border-grey"
-            } ${index === steps.length - 1 ? "w-1" : ""}`}
+            } ${index === steps.length - 1 ? "w-[0] max-w-[0] min-w-[0]" : ""}`}
           >
             <div className="flex">
               <span

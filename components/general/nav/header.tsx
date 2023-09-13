@@ -7,7 +7,7 @@ import { useState } from "react";
 const Header = () => {
   const mobile_icons = [
     { icon: "post_mobile", route: "/jobs" },
-    { icon: "wishlist_mobile", route: "/" },
+    { icon: "wishlist_mobile", route: "/bookmark" },
   ];
 
   const [openAdminNav, setOpenAdminNav] = useState(false);

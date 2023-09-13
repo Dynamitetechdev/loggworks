@@ -78,14 +78,35 @@ const ReviewTabData: React.FC<{ data: any[]; selectedOption: any }> = ({
                     x.category === "comments") && <h1>3 mins ago</h1>}
                 </div>
               </div>
-              <h5 className="font-light pb-3">
+
+              {x.category === "reviews" && (
+                <div className="">
+                  <div className="grid grid-cols-5 gap-0 mb-2">
+                    {Array(x.image)
+                      .fill("")
+                      .map((x, i) => (
+                        <div className="others" key={i}>
+                          <Image
+                            src={"/assets/images/details/gallery2.png"}
+                            width={48}
+                            height={48}
+                            alt={`slide-main`}
+                            className="md:rounded-lg"
+                          />
+                        </div>
+                      ))}
+                  </div>
+                </div>
+              )}
+
+              <h5 className="font-light pb-3 max-sm:text-[16px]">
                 {x.category === "reviews" && x.reviewText}
                 {x.category === "question & answers" && x.question}
                 {x.category === "comments" && x.reply}
               </h5>
 
               {x.category === "question & answers" && (
-                <h5 className="p-2 border border-grey80 rounded my-2">
+                <h5 className="p-2 border border-grey80 rounded my-2 max-sm:text-[16px]">
                   {x.answer}
                 </h5>
               )}

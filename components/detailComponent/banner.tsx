@@ -28,7 +28,7 @@ const Banner = () => {
   const [onWishlist, setOnwishList] = useState(false);
   return (
     <div className="banner">
-      <div className="banner_img md:mt-5 relative flex flex-col items-center h-[228px]">
+      <div className="banner_img md:mt-5 relative flex flex-col items-center h-[228px] max-sm:h-[170px]">
         <div className="z-50 absolute right-4 top-3 flex">
           <div
             className="wishlist cursor-pointer rounded-full flex items-center justify-center"
@@ -75,7 +75,7 @@ const Banner = () => {
           </div>
         </div>
 
-        <div className="relative w-full max-sm:h-[146px] h-[228px] overflow-hidden">
+        <div className="relative w-full h-[228px] overflow-hidden">
           <div
             className="transition-transform duration-500 ease-in-out transform"
             style={{
@@ -101,7 +101,7 @@ const Banner = () => {
             ))}
           </div>
         </div>
-        <div className="banner_nav flex items-center -m-10 z-50">
+        <div className="banner_nav flex items-center md:-m-10 -m-28 z-50">
           {slideImages.map((_, index) => (
             <button
               key={index}

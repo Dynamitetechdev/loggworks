@@ -425,7 +425,7 @@ const Message = () => {
 
                                           {quoteRequest && (
                                             <div className="acceptRequest">
-                                              <button className="bg-[#FDE8E7] text-dark w-full text-[14px] text-[#F02D16] py-[8px] px-4 rounded mt-2 capitalize">
+                                              <button className="bg-[#FDE8E7] text-dark w-full text-[14px] text-[#f02d16] py-[8px] px-4 rounded mt-2 capitalize">
                                                 {quoteRequest}
                                               </button>
                                             </div>
