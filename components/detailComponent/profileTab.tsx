@@ -53,8 +53,40 @@ const ProfileTab = () => {
         <p>8 miles</p>
       </div>
 
+      <div className="my-5">
+        <h1 className="font-bold text-[18px] md:mb-3">Gallery</h1>
+
+        <div className="">
+          <div className="w-full max-sm:h-[146px]">
+            <Image
+              src={"/assets/images/details/gallery1.png"}
+              width={469}
+              objectFit="contain"
+              height={228}
+              objectPosition="center"
+              alt={`slide-main`}
+              className="object-center md:rounded-lg"
+            />
+          </div>
+          <div className="grid grid-cols-5 gap-0">
+            {Array(6)
+              .fill("")
+              .map((x, i) => (
+                <div className="others mt-5" key={i}>
+                  <Image
+                    src={"/assets/images/details/gallery2.png"}
+                    width={64}
+                    height={64}
+                    alt={`slide-main`}
+                    className="md:rounded-lg"
+                  />
+                </div>
+              ))}
+          </div>
+        </div>
+      </div>
       <div className=" my-4">
-        <h1 className="font-bold text-[18px] mb-3">Service Description</h1>
+        <h1 className="font-bold text-[18px] md:mb-3">Service Description</h1>
         <p className="text-[16px]">
           Dyson Electricals is a firm that performs specialized construction
           work related to the design, installation, and maintenance of
@@ -65,7 +97,7 @@ const ProfileTab = () => {
 
       <div className="mb-3">
         <h1 className="font-bold text-[18px] mb-1">Skill and Price Tags</h1>
-        <div className="flex items-center ">
+        <div className="flex items-center flex-wrap">
           <div className="flex items-center">
             <p className="px-3 py-1 my-2 border border-categoriesColor rounded-full hover:text-white hover:bg-[#000000] cursor-pointer mr-3">
               Electrotechnical
@@ -109,36 +141,36 @@ const ProfileTab = () => {
         <div className="text-[14px]">
           <div className="flex my-2 items-center justify-between">
             <p>5 Stars</p>
-            <div className="bar w-[453px] h-[10px] bg-grey80 relative">
-              <div className="absolute w-[200px] h-[10px] bg-green"></div>
+            <div className="bar max-md:w-9/12 min-md:w-10/12 w-9/12  h-[10px] bg-grey80 relative">
+              <div className="absolute w-[20%] h-[10px] bg-green"></div>
             </div>
             <p>(16)</p>
           </div>
           <div className="flex my-2 items-center justify-between">
             <p>4 Stars</p>
-            <div className="bar w-[453px] h-[10px] bg-grey80 relative">
-              <div className="absolute w-[200px] h-[10px] bg-green"></div>
+            <div className="bar max-sm:w-9/12 min-md:w-10/12 w-9/12  h-[10px] bg-grey80 relative">
+              <div className="absolute w-[50%] h-[10px] bg-green"></div>
             </div>
             <p>(16)</p>
           </div>
           <div className="flex my-2 items-center justify-between">
             <p>3 Stars</p>
-            <div className="bar w-[453px] h-[10px] bg-grey80 relative">
-              <div className="absolute w-[200px] h-[10px] bg-green"></div>
+            <div className="bar max-sm:w-9/12 min-md:w-10/12 w-9/12  h-[10px] bg-grey80 relative">
+              <div className="absolute w-[60%] h-[10px] bg-green"></div>
             </div>
             <p>(16)</p>
           </div>
           <div className="flex my-2 items-center justify-between">
             <p>2 Stars</p>
-            <div className="bar w-[453px] h-[10px] bg-grey80 relative">
-              <div className="absolute w-[200px] h-[10px] bg-green"></div>
+            <div className="bar max-sm:w-9/12 min-md:w-10/12 w-9/12  h-[10px] bg-grey80 relative">
+              <div className="absolute w-[40%] h-[10px] bg-green"></div>
             </div>
             <p>(16)</p>
           </div>
           <div className="flex my-2 items-center justify-between">
             <p>1 Stars</p>
-            <div className="bar w-[453px] h-[10px] bg-grey80 relative">
-              <div className="absolute w-[200px] h-[10px] bg-green"></div>
+            <div className="bar max-sm:w-9/12 min-md:w-10/12 w-9/12  h-[10px] bg-grey80 relative">
+              <div className="absolute w-[80%] h-[10px] bg-green"></div>
             </div>
             <p>(16)</p>
           </div>

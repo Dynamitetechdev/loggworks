@@ -103,16 +103,6 @@ const Account = () => {
                         <div className="progress-circle__text text-[12px] py-3 px-2 -mt-[25px] bg-white">
                           of 5000
                         </div>
-
-                        {/* <CircularProgress
-            determinate
-            sx={{
-              "--CircularProgress-trackThickness": "10px",
-              "--CircularProgress-progressThickness": "10px",
-              "--CircularProgress-size": "110px",
-            }}
-            value={progress}
-          /> */}
                       </div>
 
                       <div className="flex items-center justify-between">
@@ -124,14 +114,14 @@ const Account = () => {
                         </Link>
                       </div>
                     </div>
-                    <div className="account mb py-3">
+                    <div className="account mb py-3 text-[12px]">
                       <h1 className="text-left font-bold uppercase px-3 pb-2">
                         Account
                       </h1>
                       <ul className=" bg-white px-2">
                         {accountNav.map((x, i) => (
                           <Link href={x.route} key={i}>
-                            <li className="flex items-center justify-between py-2">
+                            <li className="flex items-center justify-between py-[12px]">
                               <div className="flex items-center">
                                 <Image
                                   src={`/assets/icons/${x.icon}.svg`}
@@ -148,14 +138,14 @@ const Account = () => {
                         ))}
                       </ul>
                     </div>
-                    <div className="account ">
+                    <div className="account text-[12px]">
                       <h1 className="text-left font-bold uppercase px-3 pb-2">
                         Settings
                       </h1>
                       <ul className=" bg-white px-3">
                         {settingNav.map((x, i) => (
                           <Link href={x.route} key={i}>
-                            <li className="flex items-center justify-between py-2">
+                            <li className="flex items-center justify-between py-[12px] ">
                               <div className="flex items-center">
                                 <Image
                                   src={`/assets/icons/${x.icon}.svg`}

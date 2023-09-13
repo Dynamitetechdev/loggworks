@@ -14,7 +14,7 @@ const BookingTabData: React.FC<{ data: any[]; selectedOption: any }> = ({
   const [modalPop, setModalPopUp] = useState(false);
   const [star, setStar] = useState<any[]>(Array(4).fill(""));
   return (
-    <div className="my-4">
+    <div className="my-4 mb-28">
       {data
         .filter((x) => x.status.toLowerCase() === selectedOption.toLowerCase())
         .map((x, i) => (
@@ -29,18 +29,20 @@ const BookingTabData: React.FC<{ data: any[]; selectedOption: any }> = ({
                   className="mr-2"
                 />
                 <div>
-                  <h4 className="font-bold text-[18px]">{x.title}</h4>
-                  <div className="dateTime text-[14px]">
+                  <h4 className="font-bold text-[18px] max-sm:text-[16px]">
+                    {x.title}
+                  </h4>
+                  <div className="dateTime text-[14px] max-sm:text-[12px]">
                     <span>26/06/2021</span> | <span>6:32AM</span>
                   </div>
                 </div>
               </div>
             </div>
-            <h5>
+            <h5 className="max-sm:text-[16px]">
               Electrician required to fix a spoilt vaccum cleaner. Please treat
               as urgent.
             </h5>
-            <div className="flex items-center w-11/12 md:w-7/12 justify-between min-md:text-[14px] my-3 font-light ">
+            <div className="flex items-center max-md:w-11/12 w-8/12 justify-between  min-md:text-[14px] max-sm:text-[14px] md:my-3 my-2 font-light ">
               <div className="flex items-center">
                 <CalendarIcon width={24} height={24} />
                 <p className="ml-1">09/06/2021</p>
@@ -54,7 +56,7 @@ const BookingTabData: React.FC<{ data: any[]; selectedOption: any }> = ({
                 <p className="ml-1">5 days</p>
               </div>
             </div>
-            <div className=" flex items-center mb-3">
+            <div className=" flex items-center mb-3 max-sm:text-[14px]">
               <MapPinIcon width={24} height={24} />
               <p className="ml-1 font-light">
                 8 High Street, Chase Terrace, WS7 1LP
@@ -87,14 +89,14 @@ const BookingTabData: React.FC<{ data: any[]; selectedOption: any }> = ({
               </div>
             )}
             {selectedOption === "past" && !x.completed && (
-              <button className="w-full h-[48px] text-green font-bold py-2 px-4 border-2 border-green rounded mb-4">
+              <button className="w-full h-[40px] text-green font-bold py-2 px-4 border-2 border-green rounded mb-4">
                 Leave a Review
               </button>
             )}
 
             {selectedOption === "current" && x.completed && (
               <button
-                className="w-full h-[48px] text-green font-bold py-2 px-4 border-2 border-green rounded mb-4"
+                className="w-full h-[40px] text-green font-bold py-2 px-4 border-2 border-green rounded mb-4"
                 onClick={() => setModalPopUp(!modalPop)}
               >
                 Mark Job as Completed

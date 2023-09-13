@@ -47,7 +47,7 @@ const Bookings = () => {
       category: "reviews",
       reviewText:
         "You've heard this before — the rate of technological change is accelerating. It's unpredictable and unprecedented. As the World Economic Forum acknowledged in its Future of Jobs report, we’re entering a fourth industrial revolution",
-      image: [""],
+      image: 3,
     },
     {
       title: "Dyson Electrica",

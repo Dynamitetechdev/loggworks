@@ -47,6 +47,9 @@ const HomeTab = () => {
         {/* Recommendations */}
         <Recommendations />
 
+        {/* Ads */}
+        <MobileAds />
+
         <Explore />
 
         {/* Ads */}

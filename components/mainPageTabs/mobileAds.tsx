@@ -13,12 +13,12 @@ const MobileAds = () => {
           <h1 className="text-1xl">Promotions</h1>
         </div>
 
-        <div className=" all_promotions flex overflow-x-scroll scrolling-touch overflow-x-hidden">
-          {promotions.map((_, i) => (
-            <div className="max-md:flex-shrink-0" key={i}>
+        <div className=" all_promotions">
+          {
+            <div className="max-md:flex-shrink-0">
               <CardSmall />
             </div>
-          ))}
+          }
         </div>
       </div>
     </div>
