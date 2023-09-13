@@ -68,7 +68,7 @@ const ProfileTab = () => {
               className="object-center md:rounded-lg"
             />
           </div>
-          <div className="grid grid-cols-5 gap-0">
+          <div className="max-sm:mt-7 grid grid-cols-5 gap-0">
             {Array(6)
               .fill("")
               .map((x, i) => (
