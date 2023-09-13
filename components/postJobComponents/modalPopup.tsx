@@ -43,26 +43,6 @@ const ModalPopup: React.FC<{
       title: "Mobile Mechanic",
       options: ["Domestic appliance repair", "Appliance repair"],
     },
-    {
-      id: "4",
-      title: "Mobile Mechanic",
-      options: ["Domestic appliance repair", "Appliance repair"],
-    },
-    {
-      id: "4",
-      title: "Mobile Mechanic",
-      options: ["Domestic appliance repair", "Appliance repair"],
-    },
-    {
-      id: "4",
-      title: "Mobile Mechanic",
-      options: ["Domestic appliance repair", "Appliance repair"],
-    },
-    {
-      id: "4",
-      title: "Mobile Mechanic",
-      options: ["Domestic appliance repair", "Appliance repair"],
-    },
   ];
 
   const [optionToggle, setOptionToggle] = useState(
