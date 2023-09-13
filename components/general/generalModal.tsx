@@ -12,7 +12,7 @@ const GeneralModal: React.FC<{
     <div className="relative">
       <div className="fixed modal-container z-50 w-full bg-green md:p-4 top-0 left-0 h-full flex items-center max-sm:items-end justify-center">
         <div className=" w-full max-w-2xl  mx-auto flex items-center justify-center">
-          <div className="relative bg-white md:w-[511px] h-[374px] md:rounded-md rounded-lg shadow dark:bg-gray-700 md:px-8 px-6 py-6 flex flex-col items-center md:justify-between">
+          <div className="relative bg-white md:w-[511px] w-full h-[374px] md:rounded-md rounded-lg shadow dark:bg-gray-700 md:px-8 px-6 py-6 flex flex-col items-center justify-between">
             <div
               className="max-sm:hidden close cursor-pointer absolute right-6 top-5"
               onClick={() => setModalPopUp(false)}
