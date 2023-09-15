@@ -70,8 +70,8 @@ const ModalPopup: React.FC<{
       {" "}
       <div className="fixed modal-container z-50 w-full bg-green md:p-4 top-0 left-0 h-full flex items-center justify-center max-sm:mt-10">
         <div className=" w-full max-w-2xl  mx-auto ">
-          <div className="bg-white  md:w-[511px] md:h-[630px] h-screen rounded-md shadow dark:bg-gray-700 md:px-8 px-6 py-6">
-            <div className="flex items-start justify-between   dark:border-gray-600">
+          <div className="bg-white  md:w-[511px] md:h-[830px] h-screen rounded-md shadow dark:bg-gray-700 md:px-8 px-6 py-6">
+            <div className="flex items-start justify-between dark:border-gray-600">
               <h3 className="text-xl font-semibold text-dark">Categories</h3>
               <div
                 className="close cursor-pointer"
@@ -93,7 +93,7 @@ const ModalPopup: React.FC<{
               </div>
 
               <div className="flex flex-col h-[550px] md:h-[660px] justify-between">
-                <div className="max-h-[660px] overflow-y-scroll">
+                <div className="max-h-[660px] overflow-y-auto">
                   {optionSampleData
                     .filter((x: any) =>
                       x.title.toLowerCase().includes(searchValue)

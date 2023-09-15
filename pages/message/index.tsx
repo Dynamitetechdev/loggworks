@@ -5,6 +5,9 @@ import AllChatList from "../../components/messageComponents/allChatList";
 import AttachmentMenu from "../../components/messageComponents/attachmentComponent";
 import NoInbox from "../../components/messageComponents/noInbox";
 import { ChevronLeftIcon } from "@heroicons/react/24/outline";
+import ChatHead from "../../components/messageComponents/chatHead";
+import QuoteMessage from "../../components/messageComponents/quoteMessage";
+import Chats from "../../components/messageComponents/chats";
 
 const Message = () => {
   const [chats, setChats] = useState([
@@ -283,28 +286,12 @@ const Message = () => {
               <div className="">
                 {chats[active] && (
                   <>
-                    <div className="max-md:fixed max-md:w-full max-md:top-0 z-50 bg-white chat_head flex items-center md:py-3 py-3 md:px-6  border-b  border-grey80">
-                      <div className="flex items-center">
-                        <div className="" onClick={() => setShowChatList(true)}>
-                          <ChevronLeftIcon
-                            width={28}
-                            height={28}
-                            className="mr-3 ml-2"
-                          />
-                        </div>
+                    <ChatHead
+                      chats={chats}
+                      active={active}
+                      setShowChatList={setShowChatList}
+                    />
 
-                        <Image
-                          src={"/assets/images/client_test.png"}
-                          width={32}
-                          height={32}
-                          alt="profile"
-                        />
-                      </div>
-
-                      <h1 className="font-bold capitalize text-[16px] ml-2">
-                        {chats[active].name}
-                      </h1>
-                    </div>
                     <div className="w-full h-[94vh] relative max-md:pt-10">
                       <div className="day flex justify-center">
                         <h1 className="fixed bg-[#f6f6f6] px-3 py-1 rounded-full text-[12px] top-20 md:mt-3">
@@ -316,135 +303,13 @@ const Message = () => {
                         className="md:overflow-y-scroll md:h-[calc(95vh-4rem)]"
                         ref={messageContainerRef}
                       >
-                        <div className="messages md:px-8 px-4 mt-16 ">
-                          <div
-                            className="flex flex-col pb-36"
-                            ref={messageContainerRef}
-                          >
-                            {chats[active].message.map((x, i) =>
-                              x.status === "sent" ? (
-                                <div
-                                  className="sent flex justify-end mb-2"
-                                  key={i}
-                                >
-                                  <div className="bg-blue-500 p-3 rounded-lg max-w-[325px] bg-[#D2F0C1]">
-                                    {x.quote ? (
-                                      <div className="mb-3">
-                                        <div className="quote">
-                                          <div className="img max-w-[288px] min-w-[288px] max-h-[104px] ">
-                                            <Image
-                                              src={
-                                                "/assets/images/test_quote.png"
-                                              }
-                                              width={288}
-                                              height={104}
-                                              alt="profile"
-                                              className="object-fit"
-                                            />
-                                          </div>
-                                          {!quoteRequest && (
-                                            <div className="button mt-2">
-                                              <button
-                                                className="bg-white text-dark w-[140px] text-[14px] py-[8px] px-4 rounded mr-2"
-                                                onClick={() =>
-                                                  setQuoteRequest("decline")
-                                                }
-                                              >
-                                                Decline
-                                              </button>
-                                              <button
-                                                className="bg-green text-white w-[140px] text-[14px] py-[8px] px-4 rounded"
-                                                onClick={() =>
-                                                  setQuoteRequest("paid")
-                                                }
-                                              >
-                                                Accept
-                                              </button>
-                                            </div>
-                                          )}
-
-                                          {quoteRequest && (
-                                            <div className="acceptRequest">
-                                              <button className="bg-[#FDE8E7] text-dark w-full text-[14px] text-[#F02D16] py-[8px] px-4 rounded mt-2 capitalize">
-                                                {quoteRequest}
-                                              </button>
-                                            </div>
-                                          )}
-                                        </div>
-                                      </div>
-                                    ) : (
-                                      <h1 className="text-[14px] mb-3">
-                                        {x.text}
-                                      </h1>
-                                    )}
-                                    <p className="text-xs text-right text-[#5E5E5E]">
-                                      {x.time}
-                                    </p>
-                                  </div>
-                                </div>
-                              ) : (
-                                <div
-                                  className="received flex justify-start mb-2"
-                                  key={i}
-                                >
-                                  <div className="bg-gray-300 p-3 rounded-lg max-w-[325px] bg-[#f6f6f6]">
-                                    {x.quote ? (
-                                      <div className="mb-3">
-                                        <div className="quote">
-                                          <div className="img max-w-[288px] min-w-[288px] max-h-[104px] ">
-                                            <Image
-                                              src={
-                                                "/assets/images/test_quote.png"
-                                              }
-                                              width={288}
-                                              height={104}
-                                              alt="profile"
-                                              className="object-fit"
-                                            />
-                                          </div>
-                                          {!quoteRequest && (
-                                            <div className="button mt-2">
-                                              <button
-                                                className="bg-white text-dark w-[140px] text-[14px] py-[8px] px-4 rounded mr-2"
-                                                onClick={() =>
-                                                  setQuoteRequest("decline")
-                                                }
-                                              >
-                                                Decline
-                                              </button>
-                                              <button
-                                                className="bg-green text-white w-[140px] text-[14px] py-[8px] px-4 rounded"
-                                                onClick={() =>
-                                                  setQuoteRequest("paid")
-                                                }
-                                              >
-                                                Accept
-                                              </button>
-                                            </div>
-                                          )}
-
-                                          {quoteRequest && (
-                                            <div className="acceptRequest">
-                                              <button className="bg-[#FDE8E7] text-dark w-full text-[14px] text-[#f02d16] py-[8px] px-4 rounded mt-2 capitalize">
-                                                {quoteRequest}
-                                              </button>
-                                            </div>
-                                          )}
-                                        </div>
-                                      </div>
-                                    ) : (
-                                      <h1 className="text-[14px] mb-3">
-                                        {x.text}
-                                      </h1>
-                                    )}
-
-                                    <p className="text-xs"> {x.time}</p>
-                                  </div>
-                                </div>
-                              )
-                            )}
-                          </div>
-                        </div>
+                        <Chats
+                          chats={chats}
+                          active={active}
+                          quoteRequest={quoteRequest}
+                          setQuoteRequest={setQuoteRequest}
+                          messageContainerRef={messageContainerRef}
+                        />
 
                         <div className="typeMessage w-7/12 fixed md:bottom-0 bottom-[55px] max-md:bg-white max-md:w-full">
                           <div className="flex items-center md:px-8 px-4">

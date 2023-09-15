@@ -7,7 +7,7 @@ const AllChatList: React.FC<{
   setShowChatList: any;
 }> = ({ data, onChat, setActive, setShowChatList }) => {
   return (
-    <div className="all_chat max-md:mt-24 md:overflow-y-scroll md:h-[calc(90vh-4rem)] ">
+    <div className="all_chat max-md:mt-24 md:overflow-y-auto md:h-[calc(90vh-4rem)] ">
       {data.map((x, i) => (
         <div
           className={`chat flex items-center p-2 rounded mb-2 cursor-pointer ${

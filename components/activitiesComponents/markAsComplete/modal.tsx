@@ -83,10 +83,10 @@ const Modal: React.FC<{
                                   alt=""
                                   objectFit="cover"
                                   objectPosition="center"
-                                  className="object-center object-cover min-h-[108px] max-h-[108px]"
+                                  className="object-center object-cover min-h-[68px] max-h-[68px]"
                                 />
-                                <div className="absolute w-[24px] h-[24px] rounded-full bg-[#7E57CF] flex justify-center items-center text-white -bottom-2 -right-3">
-                                  <PlusIcon width={16} height={16} />
+                                <div className="absolute w-[24px] h-[24px] rounded-full bg-[#FF5F40] flex justify-center items-center text-white -bottom-2 -right-3">
+                                  <XMarkIcon width={16} height={16} />
                                 </div>
                               </div>
                             </div>

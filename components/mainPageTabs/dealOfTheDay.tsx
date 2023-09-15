@@ -1,37 +1,95 @@
-import { useState } from "react";
+// import { useState } from "react";
+// import CardLarge from "../general/cards/cardLarge";
+
+// const DealOfTheDay = () => {
+//   const [activeSlide, setActiveSlide] = useState(0);
+//   const [deals, setDeals] = useState<any[]>(Array(4).fill(""));
+//   const handleSlideChange = (index: any) => {
+//     setActiveSlide(index);
+//   };
+//   return (
+//     <div className="deals px-3 max-sm:py-3 md:mx-4">
+//       <h1 className="text-2xl font-bold max-sm:text-[18px]">Deal of the day</h1>
+//       <div className="deals gap-4 flex overflow-x-scroll scrolling-touch overflow-x-hidden ">
+//         {deals.map((_, i) => (
+//           <div className="flex-shrink-0 md:col-span-4" key={i}>
+//             <CardLarge />
+//           </div>
+//         ))}
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default DealOfTheDay;
+
+import { useState, useRef } from "react";
 import CardLarge from "../general/cards/cardLarge";
 
 const DealOfTheDay = () => {
   const [activeSlide, setActiveSlide] = useState(0);
   const [deals, setDeals] = useState<any[]>(Array(4).fill(""));
-  const handleSlideChange = (index: any) => {
-    setActiveSlide(index);
-  };
-  return (
-    <div className="deals px-3 max-sm:py-3 md:mx-10">
-      <h1 className="text-2xl font-bold max-sm:text-[18px]">Deal of the day</h1>
-      <div className="deals md:grid grid-cols-8 gap-4 max-md:flex max-md:overflow-x-scroll max-md:scrolling-touch max-md:overflow-x-hidden ">
-        {deals.map((_, i) => (
-          <div className="max-md:flex-shrink-0 md:col-span-4" key={i}>
-            <CardLarge />
-          </div>
-        ))}
-      </div>
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
 
-      <div className="md:hidden">
-        <div className="banner_nav flex items-center my-5 justify-center">
-          {deals.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => handleSlideChange(index)}
-              className={`w-2 h-2 md:w-3 md:h-3 mx-1 rounded-full ${
-                activeSlide === index ? "bg-green" : "bg-grey80"
-              }`}
-            ></button>
+  const containerRef: any = useRef(null);
+
+  const handleMouseDown = (e: any) => {
+    setIsDragging(true);
+    setStartX(e.pageX - containerRef.current.offsetLeft);
+    setScrollLeft(containerRef.current.scrollLeft);
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+  };
+
+  const handleMouseMove = (e: any) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX - containerRef.current.offsetLeft;
+    const walk = (x - startX) * 4; // Adjust the multiplier for sensitivity
+    containerRef.current.scrollLeft = scrollLeft - walk;
+  };
+
+  return (
+    <>
+      <div className=" deals px-3 max-sm:py-3 md:mx-4">
+        <h1 className="text-2xl font-bold max-sm:text-[18px]">
+          Deal of the day
+        </h1>
+        <div
+          id="deals-container"
+          className="deals md:hidden gap-4 flex overflow-x-scroll scrolling-touch overflow-x-hidden"
+          style={{ scrollBehavior: "smooth" }}
+        >
+          {deals.map((_, i) => (
+            <div className="flex-shrink-0 md:col-span-4 cursor-pointer" key={i}>
+              <CardLarge />
+            </div>
+          ))}
+        </div>
+        <div
+          ref={containerRef}
+          className="deals max-md:hidden gap-7 flex overflow-x-hidden"
+          style={{ scrollBehavior: "smooth" }}
+          onMouseDown={handleMouseDown}
+          onMouseUp={handleMouseUp}
+          onMouseLeave={handleMouseUp}
+          onMouseMove={handleMouseMove}
+          onTouchStart={handleMouseDown}
+          onTouchEnd={handleMouseUp}
+          onTouchMove={handleMouseMove}
+        >
+          {deals.map((_, i) => (
+            <div className="flex-shrink-0 md:col-span-4 cursor-pointer" key={i}>
+              <CardLarge />
+            </div>
           ))}
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

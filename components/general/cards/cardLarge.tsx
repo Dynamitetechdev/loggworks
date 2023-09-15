@@ -10,7 +10,7 @@ const CardLarge = () => {
     <div className="card max-w-lg min-md:w-[374px] bg-white rounded-lg my-5 shadow relative">
       <WishListButton />
 
-      <div className="">
+      <Link href={"/sampleCategory/Elite Carpenters/"}>
         <Image
           src={"/assets/images/promotions/01.png"}
           width={380}
@@ -18,20 +18,22 @@ const CardLarge = () => {
           alt="object-fit"
           className="min-w-[374px]"
         />
-      </div>
+      </Link>
 
       <div className="card_content md:p-3 p-2">
         <div className="title flex items-center justify-between">
-          <div className="flex items-center">
-            <Image
-              src={"/assets/images/client_test.png"}
-              width={24}
-              height={24}
-              alt="brand_logo "
-              className="mr-2"
-            />
-            <h4 className="font-bold">Elite Carpenters</h4>
-          </div>
+          <Link href={"/sampleCategory/Elite Carpenters/"}>
+            <div className="flex items-center">
+              <Image
+                src={"/assets/images/client_test.png"}
+                width={24}
+                height={24}
+                alt="brand_logo "
+                className="mr-2"
+              />
+              <h4 className="font-bold">Elite Carpenters</h4>
+            </div>
+          </Link>
           <div className="flex items-center my-1 min-md:text-[14px]">
             <StarReview />
             <p className="mx-1">5.0</p>
@@ -58,7 +60,7 @@ const CardLarge = () => {
             Ends in: <span className="ml-2">04:34:40</span>{" "}
           </h5>
         </div>
-        <Link href={"/sampleCategory/Elite Carpenters/"}>
+        <Link href={"/message"}>
           <button className="w-full py-[4px] text-green text-[14px] text-green font-bold py-2 px-4 border-2 border-green rounded mb-4">
             Request Quote
           </button>

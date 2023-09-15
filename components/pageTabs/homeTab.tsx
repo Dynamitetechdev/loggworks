@@ -53,7 +53,9 @@ const HomeTab = () => {
         <Explore />
 
         {/* Ads */}
-        <MobileAds />
+        <div className="pb-36">
+          <MobileAds />
+        </div>
       </div>
 
       <AdsPromotions />

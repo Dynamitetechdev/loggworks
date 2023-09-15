@@ -60,7 +60,7 @@ const ProfileTab = () => {
           <div className="w-full max-sm:h-[146px]">
             <Image
               src={"/assets/images/details/gallery1.png"}
-              width={469}
+              width={600}
               objectFit="contain"
               height={228}
               objectPosition="center"
