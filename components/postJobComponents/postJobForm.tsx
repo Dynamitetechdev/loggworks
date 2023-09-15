@@ -58,7 +58,7 @@ const PostJobForm: React.FC<{
                   className="capitalize tracking-wide text-md"
                   id="grid-first-name"
                 >
-                  First Name
+                  Title
                 </label>
                 <input
                   className="appearance-none w-full text-gray-700 border border-red-500 rounded p-4 my-2 leading-tight focus:outline-none focus:bg-white bg-lightWhite border border-grey80"

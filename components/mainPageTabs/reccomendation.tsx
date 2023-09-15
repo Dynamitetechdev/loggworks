@@ -6,7 +6,7 @@ const Recommendations = () => {
     Array(6).fill("")
   );
   return (
-    <div className=" reccomendation mx-3 md:mx-10">
+    <div className=" reccomendation mx-3 md:mx-4">
       <h1 className="text-2xl max-sm:text-[18px] font-bold my-3">
         Recommendations
       </h1>

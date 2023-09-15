@@ -154,13 +154,13 @@ const SideBar = () => {
           </div>
 
           <div className="side_nav md:mt-14 md:w-2/12">
-            <ul className="max-md:hidden max-md:flex max-sm:justify-between max-md:justify-center  max-sm:mx-0">
+            <ul className="max-md:hidden max-md:flex max-sm:justify-between max-md:justify-center  max-sm:mx-0 pr-5">
               {sideNav.map((nav, index) => {
                 const Icon = allIcons[nav.icon];
                 return (
                   <Link href={nav.route} key={`nav--${index}`}>
                     <li
-                      className={`flex max-md:flex-col max-md:mx-4 items-center  md:my-4 py-2  cursor-pointer md:pl-7  ${
+                      className={`flex max-md:flex-col max-md:mx-4 items-center  md:my-4 py-2  cursor-pointer md:pl-7 font-[500]  ${
                         activeIndex === index && "bg-lightWhite text-green"
                       }`}
                       onClick={() => handleActive(index)}

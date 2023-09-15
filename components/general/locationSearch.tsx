@@ -116,17 +116,28 @@ const LocationSearch = () => {
     },
   ];
   const [openSearch, setOpenSearch] = useState(false);
+  const [isInput, setIsInput] = useState(false);
 
   const handleOnChange = (e: any) => {
     if (e.target.value.length <= 0) {
       setOpenSearch(false);
+      setIsInput(false);
     } else {
+      setIsInput(true);
       setOpenSearch(true);
     }
   };
   const handleSubmit = (e: any) => {
     e.preventDefault();
   };
+
+  const closeBackDrop = (e: any) => {
+    if (e.target.classList.contains("closeBackdrop" || "")) {
+      setOpenSearch(false);
+      console.log(e.target);
+    }
+  };
+
   return (
     <div className="location_search max-md:mt-5 max-md:mb-4 w-full md:w-[420px] h-[44px] text-[16px] border border-grey rounded">
       <form onSubmit={(e) => handleSubmit(e)}>
@@ -155,7 +166,9 @@ const LocationSearch = () => {
             </div>
             <button
               type="submit"
-              className=" py-[9px] text-grey40 px-4 items-center bg-none hover:bg-green hover:text-white"
+              className={`py-[9px] text-grey40 px-4 items-center ${
+                isInput && "bg-green text-white"
+              }`}
             >
               <MagnifyingGlassIcon width={20} height={24} />
             </button>
@@ -166,13 +179,19 @@ const LocationSearch = () => {
       {openSearch && (
         <div className="searchDetail">
           <div className="relative">
-            <div className="fixed modal-container z-50 w-full bg-green top-[130px] md:top-[60px] left-0 h-full">
-              <div className="w-full mx-auto text-grey40">
-                <div className="relative bg-white w-full md:w-[420px] h-[369px] rounded py-4 shadow dark:bg-gray-700 px-4 md:px-4 md:left-[18%]">
+            <div
+              className="fixed modal-container z-50 w-full bg-green top-[130px] md:top-[60px] left-0 h-full closeBackdrop"
+              onClick={closeBackDrop}
+            >
+              <div
+                className="w-full mx-auto text-grey40 closeBackdrop"
+                onClick={closeBackDrop}
+              >
+                <div className="modal-content relative bg-white w-full md:w-[420px] h-[369px] rounded py-4 shadow dark:bg-gray-700 px-4 md:px-4 md:left-[18%]">
                   <h1 className="text-[16px]">service categories</h1>
                   <div className="md:w-[380px] border-b border-categoriesColor mt-3 text-dark">
                     <div className="flex items-center overflow-x-hidden">
-                      <ul className="max-md:mb-4 flex items-center md:px-3 transition-transform duration-300 overflow-x-scroll scrolling-touch text-[14px]">
+                      <ul className="max-md:mb-4 flex items-center md:px-3 transition-transform duration-300 hover:overflow-x-auto scrollbar-thin text-[14px]">
                         {categories.map((x, index) => (
                           <li
                             key={`nav--${index}`}
