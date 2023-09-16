@@ -23,7 +23,7 @@ const Reviews: React.FC<{ setOpenReview: any; reviewsData: any[] }> = ({
               </div>
             </div>
 
-            <div className="px-8 h-[850px] overflow-y-scroll">
+            <div className="px-8 h-[850px] overflow-y-scroll pb-36">
               {reviewsData &&
                 reviewsData.length > 0 &&
                 reviewsData.map((x, i) => (
