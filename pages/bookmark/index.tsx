@@ -8,7 +8,7 @@ const Bookmark = () => {
   const [activeStep, setActiveStep] = useState(0);
   const [offers, setOffers] = useState<any[]>(Array(3).fill(""));
   return (
-    <div className="md:grid md:grid-cols-12">
+    <div className="md:grid md:grid-cols-12 ">
       <SideBar />
       <div className="main md:col-span-10">
         <div className="post-job bg-white h-screen relative">
@@ -19,7 +19,7 @@ const Bookmark = () => {
             type="notab-size"
           />
 
-          <div className="px-4 md:px-9 pt-5 md:flex text-pTagGrey ">
+          <div className="px-4 md:px-9 pt-5 md:flex text-pTagGrey pb-36">
             <div className="md:w-9/12 mx-auto">
               <div className="Offers max-sm:py-3 px-3 md:mx-10">
                 <div className="md:grid grid-cols-9 gap-5 ">

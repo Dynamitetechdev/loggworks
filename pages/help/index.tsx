@@ -7,6 +7,7 @@ import {
   ChatBubbleOvalLeftEllipsisIcon,
   ChatBubbleOvalLeftIcon,
 } from "@heroicons/react/24/outline";
+import Link from "next/link";
 
 const Help = () => {
   const [activeStep, setActiveStep] = useState(0);
@@ -33,7 +34,9 @@ const Help = () => {
                   <span>
                     <ChatBubbleOvalLeftEllipsisIcon width={20} height={20} />
                   </span>
-                  <p className="ml-2">Visit FAQ Page</p>
+                  <Link href={"/faq"}>
+                    <p className="ml-2">Visit FAQ Page</p>
+                  </Link>
                 </button>
               </div>
               <div className="Contact mb-3">
@@ -49,24 +52,32 @@ const Help = () => {
                   <p className="ml-2">Chat Us</p>
                 </button>
 
-                <button
-                  className="border-2 border-green text-green
+                <Link href="mailto:Loggworks@gmail.com" target="_blank">
+                  <button
+                    className="border-2 border-green text-green
                    w-full h-[48px] font-bold py-2 px-4 rounded mb-4"
-                >
-                  <p className="ml-2">Chat Us</p>
-                </button>
-                <button
-                  className="border-2 border-green text-green
+                  >
+                    <p className="ml-2">Send a mail</p>
+                  </button>
+                </Link>
+
+                <Link href={"https://twitter.com/loggworks"} target="_blank">
+                  <button
+                    className="border-2 border-green text-green
                    w-full h-[48px] font-bold py-2 px-4 rounded mb-4"
-                >
-                  <p className="ml-2">Tweet Us</p>
-                </button>
-                <button
-                  className="border-2 border-green text-green
+                  >
+                    <p className="ml-2">Tweet Us</p>
+                  </button>
+                </Link>
+
+                <Link href="tel:+1234567890" target="_blank">
+                  <button
+                    className="border-2 border-green text-green
                    w-full h-[48px] font-bold py-2 px-4 rounded mb-4"
-                >
-                  <p className="ml-2">Call Us</p>
-                </button>
+                  >
+                    <p className="ml-2">Call Us</p>
+                  </button>
+                </Link>
               </div>
 
               <div className="Suggestions">
