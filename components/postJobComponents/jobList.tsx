@@ -6,7 +6,7 @@ const JobList = () => {
   const [allJobs, setAllJobs] = useState<any[]>(Array(4).fill(""));
 
   return (
-    <div className="all_job relative ">
+    <div className="all_job relative pb-36">
       {allJobs.length > 0 ? (
         <div className="flex flex-col items-center justify-center">
           <div className="form_container mt-8 md:w-5/12 max-sm:px-3">

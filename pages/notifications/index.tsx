@@ -3,9 +3,12 @@ import SideBar from "../../components/general/sideBar";
 import Header from "../../components/general/nav/header";
 import NavHead from "../../components/postJobComponents/navHead";
 import { useState } from "react";
+import Switch, { switchClasses } from "@mui/joy/Switch";
+import { Theme } from "@mui/joy";
 
 const Notifications = () => {
   const [activeStep, setActiveStep] = useState(0);
+  const [checked, setChecked] = useState<boolean>(false);
   return (
     <div className="md:grid md:grid-cols-12">
       <SideBar />
@@ -24,11 +27,35 @@ const Notifications = () => {
                 <p>Push Notifications</p>
 
                 <div className="toggle">
-                  <Image
-                    src={"/assets/icons/toggleOn.svg"}
-                    width={56}
-                    height={32}
-                    alt=""
+                  <Switch
+                    checked={checked}
+                    onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
+                      setChecked(event.target.checked)
+                    }
+                    sx={(theme: Theme) => ({
+                      "--Switch-thumbShadow": "0 3px 7px 0 rgba(0 0 0 / 0.12)",
+                      "--Switch-thumbSize": "27px",
+                      "--Switch-trackWidth": "55px",
+                      "--Switch-trackHeight": "31px",
+                      "--Switch-trackBackground":
+                        theme.vars.palette.background.level3,
+                      [`& .${switchClasses.thumb}`]: {
+                        transition: "width 0.2s, left 0.2s",
+                      },
+                      "&:hover": {
+                        "--Switch-trackBackground":
+                          theme.vars.palette.background.level3,
+                      },
+                      "&:active": {
+                        "--Switch-thumbWidth": "32px",
+                      },
+                      [`&.${switchClasses.checked}`]: {
+                        "--Switch-trackBackground": "#2FA500",
+                        "&:hover": {
+                          "--Switch-trackBackground": "#2FA500",
+                        },
+                      },
+                    })}
                   />
                 </div>
               </div>
@@ -36,11 +63,35 @@ const Notifications = () => {
                 <p>Email Notifications</p>
 
                 <div className="toggle">
-                  <Image
-                    src={"/assets/icons/toggleOn.svg"}
-                    width={56}
-                    height={32}
-                    alt=""
+                  <Switch
+                    checked={checked}
+                    onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
+                      setChecked(event.target.checked)
+                    }
+                    sx={(theme: Theme) => ({
+                      "--Switch-thumbShadow": "0 3px 7px 0 rgba(0 0 0 / 0.12)",
+                      "--Switch-thumbSize": "27px",
+                      "--Switch-trackWidth": "55px",
+                      "--Switch-trackHeight": "31px",
+                      "--Switch-trackBackground":
+                        theme.vars.palette.background.level3,
+                      [`& .${switchClasses.thumb}`]: {
+                        transition: "width 0.2s, left 0.2s",
+                      },
+                      "&:hover": {
+                        "--Switch-trackBackground":
+                          theme.vars.palette.background.level3,
+                      },
+                      "&:active": {
+                        "--Switch-thumbWidth": "32px",
+                      },
+                      [`&.${switchClasses.checked}`]: {
+                        "--Switch-trackBackground": "#2FA500",
+                        "&:hover": {
+                          "--Switch-trackBackground": "#2FA500",
+                        },
+                      },
+                    })}
                   />
                 </div>
               </div>
@@ -48,11 +99,35 @@ const Notifications = () => {
                 <p>Promotion Management</p>
 
                 <div className="toggle">
-                  <Image
-                    src={"/assets/icons/toggleOn.svg"}
-                    width={56}
-                    height={32}
-                    alt=""
+                  <Switch
+                    checked={checked}
+                    onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
+                      setChecked(event.target.checked)
+                    }
+                    sx={(theme: Theme) => ({
+                      "--Switch-thumbShadow": "0 3px 7px 0 rgba(0 0 0 / 0.12)",
+                      "--Switch-thumbSize": "27px",
+                      "--Switch-trackWidth": "55px",
+                      "--Switch-trackHeight": "31px",
+                      "--Switch-trackBackground":
+                        theme.vars.palette.background.level3,
+                      [`& .${switchClasses.thumb}`]: {
+                        transition: "width 0.2s, left 0.2s",
+                      },
+                      "&:hover": {
+                        "--Switch-trackBackground":
+                          theme.vars.palette.background.level3,
+                      },
+                      "&:active": {
+                        "--Switch-thumbWidth": "32px",
+                      },
+                      [`&.${switchClasses.checked}`]: {
+                        "--Switch-trackBackground": "#2FA500",
+                        "&:hover": {
+                          "--Switch-trackBackground": "#2FA500",
+                        },
+                      },
+                    })}
                   />
                 </div>
               </div>
