@@ -2,11 +2,5 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/bookmark": "pages/bookmark.js",
-  "/": "pages/index.js",
-  "/jobs": "pages/jobs.js",
-  "/bookings": "pages/bookings.js",
-  "/message": "pages/message.js",
-  "/activity": "pages/activity.js",
-  "/account": "pages/account.js"
+  "/": "pages/index.js"
 }
