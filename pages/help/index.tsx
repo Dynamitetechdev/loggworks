@@ -52,7 +52,7 @@ const Help = () => {
                   <p className="ml-2">Chat Us</p>
                 </button>
 
-                <Link href="mailto:Loggworks@gmail.com" target="_blank">
+                <Link href="mailto:Info@loggworks.co.uk" target="_blank">
                   <button
                     className="border-2 border-green text-green
                    w-full h-[48px] font-bold py-2 px-4 rounded mb-4"
