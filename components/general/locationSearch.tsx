@@ -176,10 +176,10 @@ const LocationSearch = () => {
         </div>
 
         {openSearch && (
-          <div className="searchDetail ">
+          <div className="searchDetail max-md:relative">
             <div className="md:relative">
               <div
-                className="md:fixed absolute md:bg-modalDrop z-50 w-full top-[130px] md:top-[60px] left-0 h-full closeBackdrop"
+                className="md:fixed absolute md:bg-modalDrop z-50 w-full top-[10px] md:top-[60px] left-0 h-full closeBackdrop"
                 onClick={closeBackDrop}
               >
                 <div
