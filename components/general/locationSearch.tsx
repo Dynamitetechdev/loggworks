@@ -5,7 +5,7 @@ import {
   MagnifyingGlassIcon,
   MapPinIcon,
 } from "@heroicons/react/24/outline";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const LocationSearch = () => {
   const categories = [
@@ -138,8 +138,26 @@ const LocationSearch = () => {
     }
   };
 
+  const [isSticky, setIsSticky] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <div className="location_search max-md:mt-5 max-md:mb-4 w-full md:w-[420px] h-[44px] text-[16px] border border-grey rounded max-w-[100%] min-w-[100%]">
+    <div className="location_search max-md:mt-5 max-md:mb-4 w-full md:w-[420px] h-[44px] text-[16px] border border-grey rounded max-sm:max-w-[100%] max-sm:min-w-[100%]">
       <form onSubmit={(e) => handleSubmit(e)}>
         <div className="relative flex items-center w-full text-grey40 ">
           <div className="">
@@ -177,10 +195,12 @@ const LocationSearch = () => {
         </div>
 
         {openSearch && (
-          <div className="searchDetail  max-md:bg-modalDrop max-md:h-screen max-md:absolute w-full left-0 px-3">
-            <div className="md:relative bg-modalDrop">
+          <div className="searchDetail max-md:h-screen max-md:absolute w-full left-0 px-3">
+            <div className="md:relative ">
               <div
-                className="md:fixed absolute bg-modalDrop z-50 w-full top-[1px] md:top-[60px] left-0 h-full closeBackdrop"
+                className={`md:fixed absolute md:bg-modalDrop z-50 w-full top-[1px] md:top-[60px] left-0 h-full closeBackdrop ${
+                  !isSticky && "max-md:bg-modalDrop"
+                }`}
                 onClick={closeBackDrop}
               >
                 <div
