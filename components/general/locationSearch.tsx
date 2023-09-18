@@ -139,14 +139,14 @@ const LocationSearch = () => {
   };
 
   return (
-    <div className="location_search max-md:mt-5 max-md:mb-4 w-full md:w-[420px] h-[44px] text-[16px] border border-grey rounded">
+    <div className="location_search max-md:mt-5 max-md:mb-4 w-full md:w-[420px] h-[44px] text-[16px] border border-grey rounded max-w-[100%] min-w-[100%]">
       <form onSubmit={(e) => handleSubmit(e)}>
-        <div className="relative flex items-center w-full text-grey40">
+        <div className="relative flex items-center w-full text-grey40 ">
           <div className="">
             <input
               type="text"
               id="default-search"
-              className="w-full pl-2 text-sm text-gray-900 outline-none"
+              className="w-full pl-2 text-[16px] text-gray-900 outline-none"
               placeholder="Electrician"
               onChange={(e) => handleOnChange(e)}
             />
@@ -159,7 +159,8 @@ const LocationSearch = () => {
               <input
                 type="text"
                 id="default-search"
-                className="w-full outline-none text-sm text-gray-900 md:pr-10"
+                className="                               
+                w-full outline-none text-gray-900 md:pr-10 text-[16px]"
                 placeholder="Location or postcode"
                 onChange={(e) => handleOnChange(e)}
               />
@@ -176,17 +177,17 @@ const LocationSearch = () => {
         </div>
 
         {openSearch && (
-          <div className="searchDetail max-md:relative">
-            <div className="md:relative">
+          <div className="searchDetail  max-md:bg-modalDrop max-md:h-screen max-md:absolute w-full left-0 px-3">
+            <div className="md:relative bg-modalDrop">
               <div
-                className="md:fixed absolute md:bg-modalDrop z-50 w-full top-[10px] md:top-[60px] left-0 h-full closeBackdrop"
+                className="md:fixed absolute bg-modalDrop z-50 w-full top-[1px] md:top-[60px] left-0 h-full closeBackdrop"
                 onClick={closeBackDrop}
               >
                 <div
                   className="w-full mx-auto text-grey40 closeBackdrop"
                   onClick={closeBackDrop}
                 >
-                  <div className="modal-content relative bg-white w-full md:w-[420px] h-[369px] rounded py-4 shadow dark:bg-gray-700 px-4 md:px-4 md:left-[18%]">
+                  <div className="modal-content relative bg-white md:w-[420px] h-[369px] rounded py-4 shadow dark:bg-gray-700 px-4 md:px-4 md:left-[18%]">
                     <h1 className="text-[16px]">service categories</h1>
                     <div className="md:w-[380px] border-b border-categoriesColor mt-3 text-dark">
                       <div className="flex items-center overflow-x-hidden">
