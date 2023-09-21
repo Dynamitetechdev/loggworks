@@ -43,7 +43,7 @@ const CardMedium = () => {
           </div>
 
           <div className="md:my-3 my-2 text-[12px]">
-            <p className="text-center bg-lightWhite w-9/12 md:w-7/12 px-2 md:px-3 py-1 rounded-full mr-2 min-md:text-[10px]">
+            <p className="text-center bg-lightWhite w-8/12 md:w-5/12 px-2 md:px-3 py-1 rounded-full mr-2 min-md:text-[10px]">
               Power contractors
             </p>
           </div>

@@ -1,38 +1,12 @@
-// import { useState } from "react";
-// import CardLarge from "../general/cards/cardLarge";
-
-// const DealOfTheDay = () => {
-//   const [activeSlide, setActiveSlide] = useState(0);
-//   const [deals, setDeals] = useState<any[]>(Array(4).fill(""));
-//   const handleSlideChange = (index: any) => {
-//     setActiveSlide(index);
-//   };
-//   return (
-//     <div className="deals px-3 max-sm:py-3 md:mx-4">
-//       <h1 className="text-2xl font-bold max-sm:text-[18px]">Deal of the day</h1>
-//       <div className="deals gap-4 flex overflow-x-scroll scrolling-touch overflow-x-hidden ">
-//         {deals.map((_, i) => (
-//           <div className="flex-shrink-0 md:col-span-4" key={i}>
-//             <CardLarge />
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default DealOfTheDay;
-
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import CardLarge from "../general/cards/cardLarge";
-
+import { motion } from "framer-motion";
 const DealOfTheDay = () => {
   const [activeSlide, setActiveSlide] = useState(0);
-  const [deals, setDeals] = useState<any[]>(Array(4).fill(""));
+  const [deals, setDeals] = useState<any[]>(Array(6).fill(""));
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
-
   const containerRef: any = useRef(null);
 
   const handleMouseDown = (e: any) => {
@@ -49,19 +23,27 @@ const DealOfTheDay = () => {
     if (!isDragging) return;
     e.preventDefault();
     const x = e.pageX - containerRef.current.offsetLeft;
-    const walk = (x - startX) * 4; // Adjust the multiplier for sensitivity
+    const walk = (x - startX) * 4;
     containerRef.current.scrollLeft = scrollLeft - walk;
   };
+  const [width, setWidth] = useState(0);
+  const slide: any = useRef();
 
+  // useEffect(() => {
+  //   setWidth(slide.current.scrollWidth - slide.current.offsetWidth);
+  //   // console.log(slide.current);
+  // }, []);
+  const handleNext = () => {};
   return (
     <>
-      <div className=" deals px-3 max-sm:py-3 md:mx-4">
+      <motion.div className=" deals px-3 max-sm:py-3 md:mx-4 overflow-hidden">
         <h1 className="text-2xl font-bold max-sm:text-[18px]">
           Deal of the day
         </h1>
+        {/* mobile */}
         <div
           id="deals-container"
-          className="deals md:hidden gap-4 flex overflow-x-scroll scrolling-touch overflow-x-hidden"
+          className="deals gap-4 flex overflow-x-scroll scrolling-touch overflow-x-hidden"
           style={{ scrollBehavior: "smooth" }}
         >
           {deals.map((_, i) => (
@@ -70,25 +52,20 @@ const DealOfTheDay = () => {
             </div>
           ))}
         </div>
-        <div
-          ref={containerRef}
-          className="deals max-md:hidden gap-7 flex overflow-x-hidden"
+        {/* <motion.div
+          ref={slide}
+          className="deals max-md:hidden gap-7 flex scrolling-touch"
           style={{ scrollBehavior: "smooth" }}
-          onMouseDown={handleMouseDown}
-          onMouseUp={handleMouseUp}
-          onMouseLeave={handleMouseUp}
-          onMouseMove={handleMouseMove}
-          onTouchStart={handleMouseDown}
-          onTouchEnd={handleMouseUp}
-          onTouchMove={handleMouseMove}
+          drag="x"
+          dragConstraints={{ right: 0, left: -width }}
         >
           {deals.map((_, i) => (
             <div className="flex-shrink-0 md:col-span-4 cursor-pointer" key={i}>
               <CardLarge />
             </div>
           ))}
-        </div>
-      </div>
+        </motion.div> */}
+      </motion.div>
     </>
   );
 };
