@@ -11,7 +11,7 @@ const JobsPage = () => {
     <div className="md:grid md:grid-cols-12">
       <SideBar />
       <div className="main md:col-span-10">
-        <div className="post-job bg-white h-screen relative">
+        <div className="post-job bg-white relative">
           <StepNavHead />
           <JobList />
           <MobilePostButton />

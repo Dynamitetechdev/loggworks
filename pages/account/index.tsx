@@ -66,7 +66,7 @@ const Account = () => {
             title="Account"
             type="plain"
           />
-          <div className="px-6 md:px-9 md:flex text-pTagGrey ">
+          <div className="px-6 md:px-9 md:flex text-pTagGrey pb-36">
             <div className="md:w-5/12 bg-[#fafafa] mx-auto">
               <div className="main md:col-span-10">
                 <div className="relative">
