@@ -13,7 +13,7 @@ const MobileAds = () => {
           <h1 className="text-1xl">Promotions</h1>
         </div>
 
-        <div className=" all_promotions">
+        <div className=" all_promotions max-w-[360px]">
           {
             <div className="max-md:flex-shrink-0">
               <CardSmall />
