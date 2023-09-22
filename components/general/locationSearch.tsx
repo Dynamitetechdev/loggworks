@@ -157,7 +157,7 @@ const LocationSearch = () => {
   }, []);
 
   return (
-    <div className="location_search max-md:mt-5 max-md:mb-4 w-full md:w-[420px] h-[44px] text-[16px] border border-grey rounded max-sm:max-w-[100%] max-sm:min-w-[100%]">
+    <div className="location_search max-md:mt-5 max-md:mb-4 w-full md:w-[420px] h-[44px] text-[16px] border border-grey rounded max-sm:max-w-[100%] max-sm:min-w-[100%] max-md:w-[420px] max-md:mx-auto">
       <form onSubmit={(e) => handleSubmit(e)}>
         <div className="relative flex items-center w-full text-grey40 ">
           <div className="">
