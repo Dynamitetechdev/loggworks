@@ -27,34 +27,35 @@ const HomeTab = () => {
   };
   return (
     <div className="content_body max-sm:block h-screen md:grid md:grid-cols-12 md:pt-14">
-      <div className="main col-span-9 bg-white relative md:mb-16" id="main">
+      <div className="main col-span-9 bg-white relative md:mb-16 " id="main">
         <Categories />
+        <div className="md:max-w-[840px] md:mx-auto">
+          <BannerCarousel />
 
-        <BannerCarousel />
+          {/* Deals of the day */}
+          <DealOfTheDay />
 
-        {/* Deals of the day */}
-        <DealOfTheDay />
-
-        {/* Ads */}
-        <MobileAds />
-
-        {/* Offers */}
-        <Offers />
-
-        {/* Ads */}
-        <MobileAds />
-
-        {/* Recommendations */}
-        <Recommendations />
-
-        {/* Ads */}
-        <MobileAds />
-
-        <Explore />
-
-        {/* Ads */}
-        <div className="pb-36">
+          {/* Ads */}
           <MobileAds />
+
+          {/* Offers */}
+          <Offers />
+
+          {/* Ads */}
+          <MobileAds />
+
+          {/* Recommendations */}
+          <Recommendations />
+
+          {/* Ads */}
+          <MobileAds />
+
+          <Explore />
+
+          {/* Ads */}
+          <div className="pb-36">
+            <MobileAds />
+          </div>
         </div>
       </div>
 

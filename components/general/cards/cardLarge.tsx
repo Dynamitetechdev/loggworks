@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const CardLarge = () => {
   return (
-    <div className="card max-w-lg min-md:w-[374px] bg-white rounded-lg my-5 shadow relative">
+    <div className="card max-w-lg min-md:w-[374px] bg-white rounded-lg my-5 shadow relative max-w-[358px]">
       <WishListButton />
 
       <Link href={"/sampleCategory/Elite Carpenters/"}>

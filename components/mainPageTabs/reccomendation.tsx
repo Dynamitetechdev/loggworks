@@ -10,10 +10,10 @@ const Recommendations = () => {
       <h1 className="text-2xl max-sm:text-[18px] font-bold my-3">
         Recommendations
       </h1>
-      <div className="md:grid grid-cols-9  gap-5 max-md:flex max-md:overflow-x-scroll max-md:scrolling-touch max-md:overflow-x-hidden">
+      <div className="gap-5 flex overflow-x-scroll scrolling-touch ">
         {reccomendation.map((_, i) => (
           <div
-            className="md:col-span-3 max-md:flex-shrink-0 max-sm:w-[177px]"
+            className="md:col-span-3 flex-shrink-0 max-sm:w-[177px] max-w-[228px]"
             key={i}
           >
             <CardSmall reccomend={true} />

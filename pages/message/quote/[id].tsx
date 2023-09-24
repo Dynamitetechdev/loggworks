@@ -16,6 +16,7 @@ const Quote = () => {
             activeStep={activeStep}
             setActiveStep={setActiveStep}
             title="Quote"
+            type="notab"
           />
 
           <div className="px-6 md:px-9 pt-5 md:flex text-pTagGrey ">
@@ -181,14 +182,12 @@ const Quote = () => {
                       Declined
                     </button>
 
-                    <Link href="">
-                      <button
-                        className="bg-green text-white w-[177px] text-[14px] py-[12px] px-4 rounded"
-                        onClick={() => setQuoteRequest("paid")}
-                      >
-                        Accept
-                      </button>
-                    </Link>
+                    <button
+                      className="bg-green text-white w-[177px] text-[14px] py-[12px] px-4 rounded"
+                      onClick={() => setQuoteRequest("paid")}
+                    >
+                      Accept
+                    </button>
                   </div>
                 )}
 
