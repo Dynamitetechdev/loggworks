@@ -37,7 +37,7 @@ const DealOfTheDay = () => {
   return (
     <>
       <motion.div className=" deals px-3 max-sm:py-3 md:mx-4 overflow-hidden">
-        <h1 className="text-2xl font-bold max-sm:text-[18px]">
+        <h1 className="text-2xl font-semibold max-sm:text-[18px]">
           Deal of the day
         </h1>
         {/* mobile */}

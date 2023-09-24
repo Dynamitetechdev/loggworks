@@ -182,12 +182,14 @@ const Quote = () => {
                       Declined
                     </button>
 
-                    <button
-                      className="bg-green text-white w-[177px] text-[14px] py-[12px] px-4 rounded"
-                      onClick={() => setQuoteRequest("paid")}
-                    >
-                      Accept
-                    </button>
+                    <Link href={`/message/payment/9`}>
+                      <button
+                        className="bg-green text-white w-[177px] text-[14px] py-[12px] px-4 rounded"
+                        onClick={() => setQuoteRequest("paid")}
+                      >
+                        Accept
+                      </button>
+                    </Link>
                   </div>
                 )}
 

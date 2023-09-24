@@ -27,15 +27,15 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/message": [
+    "/account": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/message.js"
+      "static/chunks/pages/account.js"
     ],
-    "/message/quote/[id]": [
+    "/activity": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/message/quote/[id].js"
+      "static/chunks/pages/activity.js"
     ]
   },
   "ampFirstPages": []
