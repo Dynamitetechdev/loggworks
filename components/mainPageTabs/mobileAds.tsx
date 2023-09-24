@@ -5,7 +5,7 @@ const MobileAds = () => {
   const [promotions, setPromotion] = useState<any[]>(Array(6).fill(""));
   return (
     <div className="md:hidden promotion bg-sideBarColor py-2 px-3 relative ">
-      <div className="max-w-[360px] mx-auto">
+      <div className="max-w-[388px] mx-auto">
         <div className="head flex items-center py-3">
           <div className="ad bg-yellow py-1 px-2 rounded-md mr-3 text-white">
             Ads

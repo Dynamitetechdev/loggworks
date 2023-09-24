@@ -14,7 +14,7 @@ const CardMedium = () => {
           width={360}
           height={140}
           alt=""
-          className="rounded-lg "
+          className="rounded-t-lg "
         />
       </div>
 
