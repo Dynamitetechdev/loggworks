@@ -20,7 +20,7 @@ const CardLarge = () => {
         />
       </Link>
 
-      <div className="card_content md:p-3 p-2">
+      <div className="card_content md:p-3 p-2 text-[12px]">
         <div className="title flex items-center justify-between">
           <Link href={"/sampleCategory/Elite Carpenters/"}>
             <div className="flex items-center">
@@ -31,20 +31,20 @@ const CardLarge = () => {
                 alt="brand_logo "
                 className="mr-2"
               />
-              <h4 className="font-bold">Elite Carpenters</h4>
+              <h4 className="font-bold text-[14px]">Elite Carpenters</h4>
             </div>
           </Link>
-          <div className="flex items-center my-1 min-md:text-[14px]">
+          <div className="flex items-center my-1">
             <StarReview />
             <p className="mx-1">5.0</p>
             <p>(300k)</p>
           </div>
         </div>
 
-        <div className="job_category min-md:text-[14px]">
-          <h1>Job category</h1>
+        <div className="job_category">
+          <h1 className="my-3">Job category</h1>
 
-          <ul className="flex my-3 ">
+          <ul className="flex mb-2">
             <li className="bg-lightWhite px-3 py-1 rounded-full mr-2">
               Power contractors
             </li>
@@ -57,7 +57,7 @@ const CardLarge = () => {
         <div className="flex items-center justify-between mb-3 min-md:text-[14px]">
           <h5>Get 20% off 5 weeks booking</h5>{" "}
           <h5 className="text-timerColor font-bold">
-            Ends in: <span className="ml-2">04:34:40</span>{" "}
+            Ends in: <span className="ml-1">04h:34m:40s</span>{" "}
           </h5>
         </div>
         <Link href={"/message"}>

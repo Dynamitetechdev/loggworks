@@ -43,15 +43,15 @@ const CardMedium = () => {
           </div>
 
           <div className="md:my-3 my-2 text-[12px]">
-            <p className="text-center bg-lightWhite w-8/12 md:w-5/12 px-2 md:px-3 py-1 rounded-full mr-2 min-md:text-[10px]">
+            <p className="text-center bg-lightWhite w-8/12 md:w-7/12 px-2 md:px-3 py-1 rounded-full mr-2 min-md:text-[10px]">
               Power contractors
             </p>
           </div>
 
-          <div className="md:flex items-center justify-between mb-3 max-sm:text-[12px] text-[12px]">
-            <p>{sampleText.substring(20, -1)}...</p>{" "}
+          <div className="md:flex items-center justify-between mb-3 text-[12px]">
+            <p className=" text-[10px]">{sampleText.substring(20, -1)}...</p>{" "}
             <p className="text-timerColor font-bold">
-              Ends in: <span className="ml-1">04:34:40</span>{" "}
+              Ends in: <span className="">04:34:40</span>{" "}
             </p>
           </div>
           <button className="w-full py-[4px] text-green text-[14px] max-sm:text-[10px] font-bold py-2 px-4 border-2 border-green rounded rounded items-center ">

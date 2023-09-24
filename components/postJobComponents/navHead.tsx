@@ -22,7 +22,7 @@ const NavHead: React.FC<{
   return (
     <>
       {type === "notab" && (
-        <div className="nav_head flex items-center py-3 md:mx-6 mx-3 border-b border-grey80">
+        <div className="nav_head flex items-center py-3 md:mx-6 mx-3 border-b border-grey80 xl:-ml-[3.5%]">
           <div
             className="back z-10 md:border border-grey80 w-[40px] h-[40px] flex items-center justify-center"
             onClick={() => goBack()}
@@ -30,9 +30,9 @@ const NavHead: React.FC<{
             <ChevronLeftIcon width={20} height={20} />
           </div>
 
-          <div className="md:w-5/12 w-full md:relative md:left-[26%] max-md:flex max-md:justify-center max-md:-ml-[40px]">
+          <div className="md:w-9/12 w-full md:relative md:left-[33%] max-md:flex max-md:justify-center max-md:-ml-[40px]">
             <div className="flex items-start">
-              <h1 className="font-bold capitalize md:text-[20px] text-[16px]">
+              <h1 className="font-bold capitalize md:text-[20px] text-[16px] md:-ml-8">
                 {title}
               </h1>
             </div>
@@ -41,9 +41,9 @@ const NavHead: React.FC<{
       )}
 
       {type == "plain" && (
-        <div className="nav_head flex items-center md:py-5 py-3 md:mx-6 mx-3 border-b  border-grey80">
-          <div className="flex items-center md:w-8/12 w-full justify-center">
-            <h1 className="font-bold capitalize md:text-[20px] text-[16px]">
+        <div className="nav_head flex items-center md:py-5 py-3 md:mx-6 mx-3 border-b  border-grey80 xl:-ml-[3.5%]">
+          <div className="flex items-center md:w-9/12 w-full justify-center">
+            <h1 className="font-bold capitalize md:text-[20px] text-[16px] md:-ml-8">
               {title}
             </h1>
           </div>

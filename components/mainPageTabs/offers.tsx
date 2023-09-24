@@ -8,11 +8,16 @@ const Offers = () => {
     setActiveSlide(index);
   };
   return (
-    <div className="Offers max-sm:py-3 px-3 md:mx-4">
-      <h1 className="text-2xl font-bold my-3 max-sm:text-[18px]">Offers</h1>
+    <div className="Offers max-sm:py-3 px-3 md:mx-4 md:my-10">
+      <h1 className="text-2xl font-semibold my-3 max-sm:text-[18px] ">
+        Offers
+      </h1>
       <div className=" grid-cols-9 gap-5 flex overflow-x-scroll max-md:scrolling-touch ">
         {offers.map((_, i) => (
-          <div className="md:col-span-3 flex-shrink-0 max-sm:w-[200px]" key={i}>
+          <div
+            className="md:col-span-3 flex-shrink-0 max-sm:w-[200px] md:max-w-[228px]"
+            key={i}
+          >
             <CardMedium />
           </div>
         ))}

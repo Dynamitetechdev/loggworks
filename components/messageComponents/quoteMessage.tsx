@@ -33,7 +33,7 @@ const QuoteMessage: React.FC<{
             >
               Decline
             </button>
-            <Link href={`/message/quote/1`}>
+            <Link href={`/message/payment/9`}>
               <button
                 className="bg-green text-white w-[140px] text-[14px] py-[8px] px-4 rounded"
                 onClick={() => setQuoteRequest("paid")}

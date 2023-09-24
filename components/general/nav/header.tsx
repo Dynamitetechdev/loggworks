@@ -12,7 +12,7 @@ const Header = () => {
 
   const [openAdminNav, setOpenAdminNav] = useState(false);
   return (
-    <div className="header md:bg-white md:z-50 md:fixed md:w-10/12 md:h-[62px] md:flex justify-between md:border-b border-grey items-center md:px-6 px-3 max-sm:pt-3">
+    <div className="header md:bg-white md:z-50 md:fixed md:w-10/12 md:h-[62px] md:flex justify-between md:border-b border-grey items-center md:px-6 px-3 max-sm:pt-3 xl:-ml-[3.5%]">
       <div className="md:hidden mobile flex items-center justify-between">
         <div className="mobile_log">
           <Link href="/">
