@@ -193,7 +193,7 @@ const Quote = () => {
 
                 {quoteRequest && (
                   <div className="acceptRequest flex mt-9 justify-end ">
-                    <button className="bg-[#FDE8E7] text-dark w-7/12 text-[14px] text-[#F02D16] py-[8px] px-4 rounded mt-2 capitalize">
+                    <button className="bg-[#FDE8E7] w-7/12 text-[14px] text-[#F02D16] py-[8px] px-4 rounded mt-2 capitalize">
                       {quoteRequest}
                     </button>
                   </div>
