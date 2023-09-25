@@ -3,9 +3,7 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/": "pages/index.js",
-  "/security": "pages/security.js",
-  "/search": "pages/search.js",
-  "/account": "pages/account.js",
-  "/message": "pages/message.js",
-  "/message/payment/[id]": "pages/message/payment/[id].js"
+  "/message/payment/[id]": "pages/message/payment/[id].js",
+  "/activity": "pages/activity.js",
+  "/bookings": "pages/bookings.js"
 }

@@ -41,7 +41,7 @@ const Modal: React.FC<{
                       alt=""
                       className=""
                     />
-                    <h1 className="text-[20px] font-bold">
+                    <h1 className="text-[20px] font-semibold">
                       Job marked complete
                     </h1>
                   </div>
@@ -54,8 +54,12 @@ const Modal: React.FC<{
                 </div>
                 <div className="px-8 py-4 bg-white flex flex-col justify-between">
                   <div className="">
-                    <h1 className="text-[16px] font-bold">Leave a Review</h1>
-                    <p>Reviews help service professionals serve you better</p>
+                    <h1 className="md:text-[16px] text-[20px] font-semibold">
+                      Leave a Review
+                    </h1>
+                    <p className="text-[16px]">
+                      Reviews help service professionals serve you better
+                    </p>
                   </div>
                   <div className="rate flex items-center py-3">
                     {Array(5)
@@ -70,9 +74,9 @@ const Modal: React.FC<{
                   </div>
 
                   <div className="upload">
-                    <div className="flex justify-between my-6 max-sm:w-[130%]">
+                    <div className="flex justify-between my-6 ">
                       {uploadedImages.map((x: any, i: number) => (
-                        <div className="" key={i}>
+                        <div key={i}>
                           {x.imageUrl ? (
                             <div className="rounded w-[57px] h-[68px] my-2 focus:outline-none bg-grey80  md:mb-0 relative ">
                               <div className="" id="grid-first-name">
@@ -91,12 +95,12 @@ const Modal: React.FC<{
                               </div>
                             </div>
                           ) : (
-                            <div className="border border-dashed border-[#CCCCCC] rounded w-[57px] h-[68px] my-2 focus:outline-none bg-grey80  md:mb-0 relative ">
+                            <div className="border border-dashed border-[#CCCCCC] rounded  max-sm:w-[40px] max-sm:h-[40px] w-[57px] h-[68px] my-2 focus:outline-none bg-grey80  md:mb-0 relative ">
                               <label
                                 className="text-gray-700  "
                                 id="grid-first-name"
                               >
-                                <div className="absolute top-[20px] left-[17px]">
+                                <div className="absolute top-[20px] left-[17px] max-sm:left-[7px] max-sm:top-[8px]">
                                   <PlusIcon width={24} height={24} />
                                 </div>
                                 <input
@@ -119,7 +123,7 @@ const Modal: React.FC<{
                   </div>
 
                   <div className="writeReview">
-                    <div className="x-3 my-2 md:mb-0 w-full">
+                    <div className="x-3 my-2 md:mb-0 w-full text-[14px]">
                       <label
                         className="capitalize tracking-wide text-md"
                         id="grid-first-name"
