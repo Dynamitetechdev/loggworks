@@ -14,7 +14,7 @@ const AdsPromotions = () => {
           </div>
         </div>
 
-        <div className="all_promotions  md:overflow-y-scroll md:h-[calc(100vh-4rem)] max-md:flex scrolling-touch overflow-x-hidden w-[360px]">
+        <div className="all_promotions  md:overflow-y-scroll md:h-[calc(100vh-4rem)] max-md:flex scrolling-touch overflow-x-hidden w-[300px] xl:w-[360px]">
           {promotions.map((_, i) => (
             <div className="max-md:flex-shrink-0 max-md:mb-16" key={i}>
               <CardSmall />
