@@ -115,7 +115,7 @@ const SideBar = () => {
 
   return (
     <>
-      <div className="relative md:col-span-2">
+      <div className="relative ">
         <div className="sidebar max-md:fixed max-md:z-50 w-full max-md:bottom-0 md:fixed  bg-sideBarColor md:h-screen max-md:px-3  md:max-w-[221px]">
           <Link href="/">
             <div className="max-md:hidden logo pl-7 pt-7">
