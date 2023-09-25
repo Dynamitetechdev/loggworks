@@ -26,7 +26,7 @@ const HomeTab = () => {
     setActiveSlide(index);
   };
   return (
-    <div className="content_body max-sm:block h-screen md:grid md:grid-cols-12 md:pt-14 pr-10">
+    <div className="content_body max-sm:block h-screen md:grid md:grid-cols-12 md:pt-14 md:pr-10">
       <div
         className="main col-span-9 bg-white relative md:mb-16 md:-ml-0 "
         id="main"
