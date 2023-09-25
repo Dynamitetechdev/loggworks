@@ -46,7 +46,7 @@ const Modal: React.FC<{
                     </h1>
                   </div>
                   <div
-                    className="max-sm:hidden close cursor-pointer"
+                    className="close cursor-pointer"
                     onClick={() => setModalPopUp(!modalPop)}
                   >
                     <XMarkIcon width={24} height={24} />
@@ -74,9 +74,9 @@ const Modal: React.FC<{
                   </div>
 
                   <div className="upload">
-                    <div className="flex justify-between my-6 ">
+                    <div className="flex justify-between my-6 max-sm:w-[130%]">
                       {uploadedImages.map((x: any, i: number) => (
-                        <div key={i}>
+                        <div className="max-sm:w-[54px] h-[54px]" key={i}>
                           {x.imageUrl ? (
                             <div className="rounded w-[57px] h-[68px] my-2 focus:outline-none bg-grey80  md:mb-0 relative ">
                               <div className="" id="grid-first-name">
@@ -95,12 +95,12 @@ const Modal: React.FC<{
                               </div>
                             </div>
                           ) : (
-                            <div className="border border-dashed border-[#CCCCCC] rounded  max-sm:w-[40px] max-sm:h-[40px] w-[57px] h-[68px] my-2 focus:outline-none bg-grey80  md:mb-0 relative ">
+                            <div className="border border-dashed border-[#CCCCCC] rounded w-[57px] h-[68px] my-2 focus:outline-none bg-grey80  md:mb-0 relative ">
                               <label
                                 className="text-gray-700  "
                                 id="grid-first-name"
                               >
-                                <div className="absolute top-[20px] left-[17px] max-sm:left-[7px] max-sm:top-[8px]">
+                                <div className="absolute top-[20px] left-[17px]">
                                   <PlusIcon width={24} height={24} />
                                 </div>
                                 <input
@@ -123,7 +123,7 @@ const Modal: React.FC<{
                   </div>
 
                   <div className="writeReview">
-                    <div className="x-3 my-2 md:mb-0 w-full text-[14px]">
+                    <div className="x-3 my-2 md:mb-0 w-full">
                       <label
                         className="capitalize tracking-wide text-md"
                         id="grid-first-name"
@@ -132,7 +132,7 @@ const Modal: React.FC<{
                       </label>
                       <textarea
                         className="appearance-none w-full text-gray-700 border border-red-500 rounded p-4 my-2 leading-tight focus:outline-none focus:bg-white bg-lightWhite border border-grey80 h-[108px]"
-                        id="grid-first-name"
+                        id="grid-first-name text-[16px]"
                         placeholder=""
                       />
                     </div>

@@ -2,8 +2,8 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/": "pages/index.js",
-  "/message/payment/[id]": "pages/message/payment/[id].js",
   "/activity": "pages/activity.js",
-  "/bookings": "pages/bookings.js"
+  "/bookings": "pages/bookings.js",
+  "/message": "pages/message.js",
+  "/": "pages/index.js"
 }

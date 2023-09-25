@@ -12,7 +12,7 @@ const Header = () => {
 
   const [openAdminNav, setOpenAdminNav] = useState(false);
   return (
-    <div className="header md:bg-white md:z-50 md:fixed md:w-10/12 md:h-[62px] md:flex justify-between md:border-b border-grey items-center md:pl-6 pr-2 px-3 max-sm:pt-3">
+    <div className="header md:bg-white md:z-50 md:fixed xl:w-[87%] xxl:w-[90%] md:w-[85%] md:h-[62px] md:flex justify-between md:border-b border-grey items-center md:pl-6 pr-2 px-3 max-sm:pt-3">
       <div className="md:hidden mobile flex items-center justify-between">
         <div className="mobile_log">
           <Link href="/">
@@ -60,7 +60,7 @@ const Header = () => {
         </Link>
 
         <Link href={"/bookmark"}>
-          <div className="bookmarks flex flex-col items-center">
+          <div className="bookmarks flex flex-col items-center pr-10">
             <Image
               src={"/assets/images/wishlist_mobile.svg"}
               width={24}
