@@ -28,7 +28,7 @@ const HomeTab = () => {
   return (
     <div className="content_body max-sm:block h-screen md:grid md:grid-cols-12 md:pt-14">
       <div
-        className="main col-span-9 bg-white relative md:mb-16 md:-ml-0 xl:-ml-16"
+        className="main col-span-9 bg-white relative md:mb-16 md:-ml-0 "
         id="main"
       >
         <Categories />
