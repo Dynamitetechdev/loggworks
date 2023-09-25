@@ -2,7 +2,7 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
+  "/account": "pages/account.js",
   "/": "pages/index.js",
-  "/logg-cash": "pages/logg-cash.js",
-  "/account": "pages/account.js"
+  "/logg-cash": "pages/logg-cash.js"
 }
