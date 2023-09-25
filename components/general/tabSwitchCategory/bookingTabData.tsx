@@ -2,16 +2,22 @@ import Image from "next/image";
 import {
   CalendarIcon,
   ClockIcon,
+  EllipsisVerticalIcon,
   MapPinIcon,
 } from "@heroicons/react/24/outline";
 import { useState } from "react";
 import Modal from "../../activitiesComponents/markAsComplete/modal";
+import Option from "./options";
+import RescheduleModal from "./modal/reSchedule";
+import CancelJobModal from "./modal/cancelJob";
 
 const BookingTabData: React.FC<{ data: any[]; selectedOption: any }> = ({
   data,
   selectedOption,
 }) => {
   const [modalPop, setModalPopUp] = useState(false);
+  const [ReScheduleModalPopUp, setreScheduleModalPopUp] = useState(false);
+  const [cancelJobModalPopUp, setcancelJobModalPopUp] = useState(false);
   const [star, setStar] = useState<any[]>(Array(4).fill(""));
   return (
     <div className="my-4 mb-28">
@@ -19,8 +25,8 @@ const BookingTabData: React.FC<{ data: any[]; selectedOption: any }> = ({
         .filter((x) => x.status.toLowerCase() === selectedOption.toLowerCase())
         .map((x, i) => (
           <div className="card_content px-2 py-1 my-3 shadow" key={i}>
-            <div className="title flex items-center justify-between">
-              <div className="flex items-center mb-2 md:mb-3">
+            <div className="flex justify-between items-start mb-2 md:mb-3">
+              <div className="flex items-center">
                 <Image
                   src={"/assets/images/client_test.png"}
                   width={40}
@@ -37,22 +43,48 @@ const BookingTabData: React.FC<{ data: any[]; selectedOption: any }> = ({
                   </div>
                 </div>
               </div>
+              {selectedOption != "current" && (
+                <>
+                  <Option
+                    setreScheduleModalPopUp={setreScheduleModalPopUp}
+                    setcancelJobModalPopUp={setcancelJobModalPopUp}
+                  />
+                </>
+              )}
             </div>
+
             <h5 className="max-sm:text-[16px]">
               Electrician required to fix a spoilt vaccum cleaner. Please treat
               as urgent.
             </h5>
             <div className="flex items-center max-md:w-11/12 w-8/12 justify-between  min-md:text-[14px] max-sm:text-[14px] md:my-3 my-2 font-light ">
               <div className="flex items-center">
-                <CalendarIcon width={24} height={24} />
+                <Image
+                  src={"/assets/icons/calendar.svg"}
+                  width={24}
+                  height={24}
+                  alt=""
+                />
                 <p className="ml-1">09/06/2021</p>
               </div>
               <div className="flex items-center">
-                <ClockIcon width={24} height={24} />
+                <Image
+                  src={"/assets/icons/clock.svg"}
+                  width={24}
+                  height={24}
+                  alt=""
+                />
+
                 <p className="ml-1">9:00AM</p>
               </div>
               <div className=" flex items-center">
-                <ClockIcon width={24} height={24} />
+                <Image
+                  src={"/assets/icons/timehalf.svg"}
+                  width={24}
+                  height={24}
+                  alt=""
+                />
+
                 <p className="ml-1">5 days</p>
               </div>
             </div>
@@ -105,10 +137,20 @@ const BookingTabData: React.FC<{ data: any[]; selectedOption: any }> = ({
           </div>
         ))}
 
-      {modalPop && (
-        <div className="">
-          <Modal setModalPopUp={setModalPopUp} modalPop={modalPop} />
-        </div>
+      {modalPop && <Modal setModalPopUp={setModalPopUp} modalPop={modalPop} />}
+
+      {ReScheduleModalPopUp && (
+        <RescheduleModal
+          setreScheduleModalPopUp={setreScheduleModalPopUp}
+          ReScheduleModalPopUp={ReScheduleModalPopUp}
+        />
+      )}
+
+      {cancelJobModalPopUp && (
+        <CancelJobModal
+          setcancelJobModalPopUp={setcancelJobModalPopUp}
+          cancelJobModalPopUp={cancelJobModalPopUp}
+        />
       )}
     </div>
   );
