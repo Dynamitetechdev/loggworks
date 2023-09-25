@@ -3,7 +3,6 @@ import CardLarge from "../general/cards/cardLarge";
 import { motion } from "framer-motion";
 const DealOfTheDay = () => {
   const [deals, setDeals] = useState<any[]>(Array(6).fill(""));
-
   return (
     <>
       <motion.div className=" deals px-3 max-sm:py-3 md:mx-4 overflow-hidden">

@@ -1,115 +1,104 @@
 import Image from "next/image";
 import { DragControls, motion, useDragControls } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import { HomeIcon } from "@heroicons/react/24/outline";
+import { EyeIcon, HomeIcon } from "@heroicons/react/24/outline";
 const Categories = () => {
   const categories = [
     {
-      title: "Health, wellness & beauty",
-      image: "home",
-      activeImage: "home-green",
+      title: "Catering",
+      image: "catering",
+      hoverImg: "catering",
     },
     {
-      title: "beauty",
-      image: "home",
-      activeImage: "home-green",
+      title: "Childcare",
+      image: "childcare",
+      hoverImg: "childcare",
     },
     {
-      title: "beauty",
-      image: "home",
-      activeImage: "home-green",
+      title: "Cleaning",
+      image: "cleaning",
+      hoverImg: "cleaning",
     },
     {
-      title: "beauty",
-      image: "home",
-      activeImage: "home-green",
+      title: "Entertainment",
+      image: "entertainment",
+      hoverImg: "entertainment",
     },
     {
-      title: "beauty",
-      image: "home",
-      activeImage: "home-green",
+      title: "Appliance Repair",
+      image: "appRepair",
+      hoverImg: "appRepair",
     },
     {
-      title: "beauty",
-      image: "home",
-      activeImage: "home-green",
+      title: "Mobile Mechanic",
+      image: "mechanic",
+      hoverImg: "mechanic",
     },
     {
-      title: "beauty",
-      image: "home",
-      activeImage: "home-green",
+      title: "Personal Assistance",
+      image: "pa",
+      hoverImg: "pa",
     },
     {
-      title: "beauty",
-      image: "home",
-      activeImage: "home-green",
+      title: "Pet Groomers",
+      image: "petg",
+      hoverImg: "petg",
     },
     {
-      title: "beauty",
-      image: "home",
-      activeImage: "home-green",
+      title: "Recovery Services",
+      image: "recovery",
+      hoverImg: "recovery",
     },
     {
-      title: "beauty",
-      image: "home",
-      activeImage: "home-green",
+      title: "Computer & Phone repair",
+      image: "computer",
+      hoverImg: "computer",
     },
     {
-      title: "beauty",
-      image: "home",
-      activeImage: "home-green",
+      title: "Removal Services",
+      image: "removal",
+      hoverImg: "removal",
     },
     {
-      title: "beauty",
-      image: "home",
-      activeImage: "home-green",
+      title: "Tradesman",
+      image: "trade",
+      hoverImg: "trade",
     },
     {
-      title: "beauty",
-      image: "home",
-      activeImage: "home-green",
+      title: "Transport Services",
+      image: "transport",
+      hoverImg: "transport",
     },
     {
-      title: "beauty",
-      image: "home",
-      activeImage: "home-green",
+      title: "Dry Cleaning & Laundry",
+      image: "dryclean",
+      hoverImg: "dryclean",
     },
     {
-      title: "beauty",
-      image: "home",
-      activeImage: "home-green",
+      title: "Health, Wellness & Beauty",
+      image: "health",
+      hoverImg: "health",
     },
     {
-      title: "beauty",
-      image: "home",
-      activeImage: "home-green",
-    },
-    {
-      title: "beauty",
-      image: "home",
-      activeImage: "home-green",
-    },
-    {
-      title: "beauty",
-      image: "home",
-      activeImage: "home-green",
-    },
-    {
-      title: "beauty",
-      image: "home",
-      activeImage: "home-green",
-    },
-    {
-      title: "beauty",
-      image: "home",
-      activeImage: "home-green",
-    },
-    {
-      title: "beauty",
-      image: "home",
-      activeImage: "home-green",
+      title: "Tuition & Classes",
+      image: "tuition",
+      hoverImg: "tuition",
     },
   ];
+  const [hover, setHover] = useState(Array(categories.length).fill(false));
+
+  const onHoverEnter = (index: number) => {
+    const newArr = [...hover];
+    newArr[index] = true;
+    setHover(newArr);
+  };
+
+  const onHoverLeave = (index: number) => {
+    const newArr = [...hover];
+    newArr[index] = false;
+    setHover(newArr);
+  };
+
   return (
     <div className="md:fixed bg-white md:z-10 top-12 categories border-b md:my-2 border-categoriesColor md:w-8/12 cat-scroll md:pr-38">
       <div className="flex items-center max-md:overflow-x-auto md:hover:overflow-auto md:overflow-x-scroll">
@@ -117,10 +106,26 @@ const Categories = () => {
           {categories.map((x, index) => (
             <li
               key={`nav--${index}`}
-              className="flex items-center md:my-4 py-2 px-3 border border-categoriesColor rounded-full hover:text-white hover:bg-[#000000] cursor-pointer mr-3 "
+              className="flex items-center md:my-4 py-2 px-3 border border-categoriesColor rounded-full hover:text-white hover:bg-[#000000] cursor-pointer mr-3"
+              onMouseEnter={() => onHoverEnter(index)}
+              onMouseLeave={() => onHoverLeave(index)}
             >
-              <span className="w-[14px]">
-                <HomeIcon />
+              <span className="w-[24px]">
+                {hover[index] ? (
+                  <Image
+                    src={`/assets/icons/category/${x.hoverImg}-white.svg`}
+                    width={24}
+                    height={24}
+                    alt=""
+                  />
+                ) : (
+                  <Image
+                    src={`/assets/icons/category/${x.image}.svg`}
+                    width={24}
+                    height={24}
+                    alt=""
+                  />
+                )}
               </span>
               <p className="capitalize text-[14px] ml-1 whitespace-nowrap">
                 {x.title}
