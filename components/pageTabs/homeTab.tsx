@@ -1,10 +1,6 @@
 import { useState } from "react";
 import Categories from "../general/categories";
 import BannerCarousel from "../general/bannerCarousel";
-import CardLarge from "../general/cards/cardLarge";
-import CardMedium from "../general/cards/cardMedium";
-import CardSmall from "../general/cards/cardSmall";
-import CardPlain from "../general/cards/cardPlain";
 import DealOfTheDay from "../mainPageTabs/dealOfTheDay";
 import Offers from "../mainPageTabs/offers";
 import Recommendations from "../mainPageTabs/reccomendation";

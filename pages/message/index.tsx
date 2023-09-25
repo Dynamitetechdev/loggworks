@@ -241,9 +241,11 @@ const Message = () => {
   };
   console.log(message);
   return (
-    <div className="md:grid md:grid-cols-12">
-      <SideBar />
-      <div className="main md:col-span-10">
+    <div className="md:flex">
+      <div className="w-[221px]">
+        <SideBar />
+      </div>
+      <div className="flex-grow">
         <div className="content_body max-sm:block md:grid md:grid-cols-10 h-screen">
           <div
             className={`border-r border-grey80 relative bg-white md:z-20 py-2 px-4 md:px-5 md:col-span-3 relative md:z-50 h-screen ${

@@ -7,7 +7,7 @@ const Recommendations = () => {
   );
   return (
     <div className=" reccomendation mx-3 md:mx-4">
-      <h1 className="text-2xl max-sm:text-[18px] font-bold my-3">
+      <h1 className="text-2xl max-sm:text-[18px] font-semibold my-3">
         Recommendations
       </h1>
       <div className="gap-5 flex overflow-x-scroll scrolling-touch ">

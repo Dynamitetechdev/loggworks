@@ -28,7 +28,7 @@ const BannerCarousel = () => {
   return (
     <div className="banner md:mx-6 mx-3 my-2 md:mt-24">
       <div className="banner_img md:mt-5 relative flex flex-col items-center">
-        <div className="relative w-full max-sm:h-[146px] md:h-[292px] overflow-hidden md:rounded-lg rounded-md">
+        <div className="relative w-full max-sm:h-[146px] h-[292px] overflow-hidden md:rounded-lg rounded-md">
           <div
             className="transition-transform duration-500 ease-in-out transform"
             style={{ transform: `translateX(-${activeSlide * 980}px)` }}

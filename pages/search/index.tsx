@@ -71,9 +71,11 @@ const Search = () => {
   const options = ["relevance", "distance", "most Reviewed", "ratings"];
 
   return (
-    <div className="md:grid md:grid-cols-12">
-      <SideBar />
-      <div className="main md:col-span-10">
+    <div className="md:flex">
+      <div className="w-[221px]">
+        <SideBar />
+      </div>
+      <div className="flex-grow">
         <Header />
 
         <div className="content_body max-sm:block md:grid md:grid-cols-12 md:pt-14 ">
