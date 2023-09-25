@@ -93,9 +93,11 @@ const Detail = () => {
   }, []);
 
   return (
-    <div className="md:grid md:grid-cols-12 px-6 max-sm:px-0 mb-20">
-      <SideBar />
-      <div className="main md:col-span-10">
+    <div className="md:flex max-sm:px-0 mb-20">
+      <div className="w-[300px]">
+        <SideBar />
+      </div>
+      <div className="main md:flex-grow overflow-hidden">
         <div className="post-job bg-white relative">
           <NavHead
             activeStep={activeStep}

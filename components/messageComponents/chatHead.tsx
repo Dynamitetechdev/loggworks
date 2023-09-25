@@ -9,7 +9,7 @@ const ChatHead: React.FC<{
   return (
     <div className="max-md:fixed max-md:w-full max-md:top-0 z-50 bg-white chat_head flex items-center md:py-3 py-3 md:px-6  border-b  border-grey80">
       <div className="flex items-center">
-        <div className="" onClick={() => setShowChatList(true)}>
+        <div className="md:hidden" onClick={() => setShowChatList(true)}>
           <ChevronLeftIcon width={28} height={28} className="mr-3 ml-2" />
         </div>
 
