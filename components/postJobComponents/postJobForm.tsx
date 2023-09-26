@@ -10,12 +10,11 @@ const PostJobForm: React.FC<{
 }> = ({ activeStep, setActiveStep }) => {
   const [optionSelected, setOptionSelected] = useState<any>(null);
   const [formFilled, setFormFilled] = useState<any>(false);
+  const [optionSelectedIndex, setOptionSelectedIndex] = useState<any>(0);
   const [uploadedImages, setUploadedImages] = useState<any>(
     Array(4).fill({ imageUrl: "" })
   );
 
-  console.log(uploadedImages);
-  console.log("dd", activeStep);
   const [formData, setFormData] = useState<any>({
     title: "",
     description: "",
@@ -46,7 +45,7 @@ const PostJobForm: React.FC<{
     });
     console.log(imageUrl);
   };
-
+  console.log("optionSelected", optionSelected);
   return (
     <>
       <div className="all-forms">
@@ -96,7 +95,7 @@ const PostJobForm: React.FC<{
                 <div className="appearance-none w-full text-gray-700 border border-red-500 rounded p-4 my-2 leading-tight focus:outline-none focus:bg-white bg-lightWhite border border-grey80 flex items-center justify-between cursor-pointer">
                   <h1>
                     {optionSelected
-                      ? `${optionSelected.title} (${optionSelected.options[0]})`
+                      ? `${optionSelected.title} (${optionSelected.options[optionSelectedIndex]})`
                       : " Choose a category"}
                   </h1>
                   <span>
@@ -114,106 +113,7 @@ const PostJobForm: React.FC<{
             </button>
           </form>
         )}
-        {/* {activeStep == 1 && (
-          <form action="" onSubmit={handleSubmit} className="text-grey20">
-            <div className="flex flex-wrap mb-6">
-              <div className="x-3 my-2 md:mb-0 w-full">
-                <label
-                  className="capitalize tracking-wide text-md"
-                  id="grid-first-name"
-                >
-                  Address line 1
-                </label>
-                <input
-                  className="appearance-none w-full text-gray-700 border border-red-500 rounded p-4 my-2 leading-tight focus:outline-none focus:bg-white bg-lightWhite border border-grey80"
-                  id="grid-first-name"
-                  type="text"
-                  name="title"
-                  value={formData.title}
-                  onChange={handleOnChange}
-                />
-                <p className="text-[12px]">Street address, P.O. Box</p>
-              </div>
-              <div className="x-3 my-2 md:mb-0 w-full">
-                <label
-                  className="capitalize tracking-wide text-md"
-                  id="grid-first-name"
-                >
-                  Address line 2 (Optional)
-                </label>
-                <input
-                  className="appearance-none w-full text-gray-700 border border-red-500 rounded p-4 my-2 leading-tight focus:outline-none focus:bg-white bg-lightWhite border border-grey80"
-                  id="grid-first-name"
-                  type="text"
-                  name="title"
-                  value={formData.title}
-                  onChange={handleOnChange}
-                />
-                <p className="text-[12px]">
-                  Apartment, suite, unit, building, floor.
-                </p>
-              </div>
-              <div className="x-3 my-2 md:mb-0 w-full">
-                <label
-                  className="capitalize tracking-wide text-md"
-                  id="grid-first-name"
-                >
-                  City
-                </label>
-                <input
-                  className="appearance-none w-full text-gray-700 border border-red-500 rounded p-4 my-2 leading-tight focus:outline-none focus:bg-white bg-lightWhite border border-grey80"
-                  id="grid-first-name"
-                  type="text"
-                  name="title"
-                  value={formData.title}
-                  onChange={handleOnChange}
-                />
-              </div>
 
-              <div className="w-full flex items-center justify-between">
-                <div className="x-3 my-2 md:mb-0 w-6/12 pr-3">
-                  <label
-                    className="capitalize tracking-wide text-md"
-                    id="grid-first-name"
-                  >
-                    State/Province/Region
-                  </label>
-                  <input
-                    className="appearance-none w-full text-gray-700 border border-red-500 rounded p-4 my-2 leading-tight focus:outline-none focus:bg-white bg-lightWhite border border-grey80"
-                    id="grid-first-name"
-                    type="text"
-                    name="title"
-                    value={formData.title}
-                    onChange={handleOnChange}
-                  />
-                </div>
-                <div className="x-3 my-2 md:mb-0 w-6/12 pl-3">
-                  <label
-                    className="capitalize tracking-wide text-md"
-                    id="grid-first-name"
-                  >
-                    Zip/Postcode
-                  </label>
-                  <input
-                    className="appearance-none w-full text-gray-700 border border-red-500 rounded p-4 my-2 leading-tight focus:outline-none focus:bg-white bg-lightWhite border border-grey80"
-                    id="grid-first-name"
-                    type="text"
-                    name="title"
-                    value={formData.title}
-                    onChange={handleOnChange}
-                  />
-                </div>
-              </div>
-            </div>
-
-            <button
-              className="bg-green text-white w-full h-[48px] font-bold py-2 px-4 rounded"
-              onClick={() => setActiveStep(activeStep + 1)}
-            >
-              Enter a budget
-            </button>
-          </form>
-        )} */}
         {activeStep == 1 && (
           <form action="" onSubmit={handleSubmit} className="text-grey20">
             <div className="flex flex-wrap mb-6">
@@ -384,6 +284,7 @@ const PostJobForm: React.FC<{
           setModalPopUp={setModalPopUp}
           optionSelected={optionSelected}
           setOptionSelected={setOptionSelected}
+          setOptionSelectedIndex={setOptionSelectedIndex}
         />
       )}
 
