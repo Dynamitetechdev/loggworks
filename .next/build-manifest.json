@@ -31,6 +31,11 @@
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/bookings.js"
+    ],
+    "/post-job": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/post-job.js"
     ]
   },
   "ampFirstPages": []

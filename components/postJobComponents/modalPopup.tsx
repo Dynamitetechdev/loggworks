@@ -5,62 +5,38 @@ import {
 } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import CategoryData from "../general/categoryData";
 
 const ModalPopup: React.FC<{
   modalPop: boolean;
   setModalPopUp: (e: any) => any;
   setOptionSelected: any;
   optionSelected: any;
-}> = ({ modalPop, setModalPopUp, optionSelected, setOptionSelected }) => {
-  const optionSampleData: any = [
-    {
-      id: "1",
-      title: "Catering",
-      options: ["Domestic appliance repair", "Appliance repair"],
-    },
-    {
-      id: "2",
-      title: "Childcare",
-      options: ["Domestic appliance repair", "Appliance repair"],
-    },
-    {
-      id: "3",
-      title: "Entertainment",
-      options: ["Domestic appliance repair", "Appliance repair"],
-    },
-    {
-      id: "4",
-      title: "Mobile Mechanic",
-      options: ["Domestic appliance repair", "Appliance repair"],
-    },
-    {
-      id: "4",
-      title: "Mobile Mechanic",
-      options: ["Domestic appliance repair", "Appliance repair"],
-    },
-    {
-      id: "4",
-      title: "Mobile Mechanic",
-      options: ["Domestic appliance repair", "Appliance repair"],
-    },
-  ];
+  setOptionSelectedIndex: any;
+}> = ({
+  modalPop,
+  setModalPopUp,
+  optionSelected,
+  setOptionSelected,
+  setOptionSelectedIndex,
+}) => {
+  const { categories } = CategoryData();
 
   const [optionToggle, setOptionToggle] = useState(
-    Array(optionSampleData.length).fill(false)
+    Array(categories.length).fill(false)
   );
-
+  const [selectedOption, setSelectedOption] = useState<number>(-1);
   const handleToggle = (e: any, index: number) => {
     const newToggle = [...optionToggle];
     newToggle[index] = !newToggle[index];
     setOptionToggle(newToggle);
+    setSelectedOption(index);
   };
-
-  const [selectedOption, setSelectedOption] = useState();
 
   const [searchValue, setSearchValue] = useState("");
 
   const handleSelected = (index: number, optionIndex: number) => {
-    setOptionSelected(optionSampleData[optionIndex]);
+    setOptionSelected(categories[selectedOption]);
   };
 
   console.log("Checking", optionSelected);
@@ -94,7 +70,7 @@ const ModalPopup: React.FC<{
 
               <div className="flex flex-col h-[550px] md:h-[660px] justify-between">
                 <div className="max-h-[660px] overflow-y-auto">
-                  {optionSampleData
+                  {categories
                     .filter((x: any) =>
                       x.title.toLowerCase().includes(searchValue)
                     )
@@ -107,7 +83,7 @@ const ModalPopup: React.FC<{
                           >
                             <div className="flex items-center ">
                               <Image
-                                src={"/assets/icons/catering.svg"}
+                                src={`/assets/icons/category/${option.image}.svg`}
                                 width={24}
                                 height={24}
                                 alt=""
@@ -125,11 +101,14 @@ const ModalPopup: React.FC<{
                           {optionToggle[index] && (
                             <div className="option ml-5 mt-4">
                               <ul>
-                                {option.options.map((x: any, i: number) => (
+                                {option?.options?.map((x: any, i: number) => (
                                   <li
                                     className="flex items-center mb-3 "
                                     key={i}
-                                    onClick={() => handleSelected(index, i)}
+                                    onClick={() => {
+                                      handleSelected(index, i),
+                                        setOptionSelectedIndex(i);
+                                    }}
                                   >
                                     <label className="w-[24px] h-[24px] border border-green rounded-full flex items-center justify-center">
                                       <input
@@ -139,7 +118,7 @@ const ModalPopup: React.FC<{
                                         className="form-checkbox rounded-full "
                                       />
                                     </label>
-                                    <p className="mx-3">{x}</p>
+                                    <p className="mx-3 capitalize">{x}</p>
                                   </li>
                                 ))}
                               </ul>

@@ -2,89 +2,9 @@ import Image from "next/image";
 import { DragControls, motion, useDragControls } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { EyeIcon, HomeIcon } from "@heroicons/react/24/outline";
+import CategoryData from "./categoryData";
 const Categories = () => {
-  const categories = [
-    {
-      title: "Catering",
-      image: "catering",
-      hoverImg: "catering",
-    },
-    {
-      title: "Childcare",
-      image: "childcare",
-      hoverImg: "childcare",
-    },
-    {
-      title: "Cleaning",
-      image: "cleaning",
-      hoverImg: "cleaning",
-    },
-    {
-      title: "Entertainment",
-      image: "entertainment",
-      hoverImg: "entertainment",
-    },
-    {
-      title: "Appliance Repair",
-      image: "appRepair",
-      hoverImg: "appRepair",
-    },
-    {
-      title: "Mobile Mechanic",
-      image: "mechanic",
-      hoverImg: "mechanic",
-    },
-    {
-      title: "Personal Assistance",
-      image: "pa",
-      hoverImg: "pa",
-    },
-    {
-      title: "Pet Groomers",
-      image: "petg",
-      hoverImg: "petg",
-    },
-    {
-      title: "Recovery Services",
-      image: "recovery",
-      hoverImg: "recovery",
-    },
-    {
-      title: "Computer & Phone repair",
-      image: "computer",
-      hoverImg: "computer",
-    },
-    {
-      title: "Removal Services",
-      image: "removal",
-      hoverImg: "removal",
-    },
-    {
-      title: "Tradesman",
-      image: "trade",
-      hoverImg: "trade",
-    },
-    {
-      title: "Transport Services",
-      image: "transport",
-      hoverImg: "transport",
-    },
-    {
-      title: "Dry Cleaning & Laundry",
-      image: "dryclean",
-      hoverImg: "dryclean",
-    },
-    {
-      title: "Health, Wellness & Beauty",
-      image: "health",
-      hoverImg: "health",
-    },
-    {
-      title: "Tuition & Classes",
-      image: "tuition",
-      hoverImg: "tuition",
-    },
-  ];
+  const { categories } = CategoryData();
   const [hover, setHover] = useState(Array(categories.length).fill(false));
 
   const onHoverEnter = (index: number) => {
