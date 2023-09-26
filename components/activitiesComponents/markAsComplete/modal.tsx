@@ -25,6 +25,14 @@ const Modal: React.FC<{
   const [activeIndex, setActiveIndex] = useState(0);
   const count = ["10", "9", "8", "7", "6", "5", "4", "3", "2", "1", "0"];
   const [select, setSelect] = useState(-1);
+
+  const [rate, setRate] = useState(Array(5).fill(false));
+  const [rateIndex, setRateIndex] = useState(0);
+  const handleRate = (index: number) => {
+    setRateIndex(index);
+    const newArr = rate.map((_, i) => i <= index);
+    setRate(newArr);
+  };
   return (
     <div className="relative">
       <div className="fixed modal-container z-50 w-full bg-green md:p-4 top-0 left-0 h-full flex items-center max-sm:items-end justify-center">
@@ -62,15 +70,27 @@ const Modal: React.FC<{
                     </p>
                   </div>
                   <div className="rate flex items-center py-3">
-                    {Array(5)
-                      .fill("")
-                      .map((x, i) => (
-                        <div className="mr-2" key={i}>
-                          <StarIcon width={24} height={24} />
-                        </div>
-                      ))}
+                    {rate.map((x, i) => (
+                      <div className="mr-2" key={i}>
+                        {x ? (
+                          <StarIcon
+                            width={24}
+                            height={24}
+                            onClick={() => handleRate(i)}
+                            fill="green"
+                            className="text-[green]"
+                          />
+                        ) : (
+                          <StarIcon
+                            width={24}
+                            height={24}
+                            onClick={() => handleRate(i)}
+                          />
+                        )}
+                      </div>
+                    ))}
 
-                    <h2 className="mx-4">0.0</h2>
+                    <h2 className="mx-4">{rateIndex + 1}.0</h2>
                   </div>
 
                   <div className="upload">
