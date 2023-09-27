@@ -64,8 +64,8 @@ const FAQ = () => {
       <div className="w-[221px]">
         <SideBar />
       </div>
-      <div className="flex-grow">
-        <div className="post-job bg-white h-screen relative ">
+      <div className="flex-grow overflow-x-hidden">
+        <div className="post-job bg-white relative ">
           <NavHead
             activeStep={activeStep}
             setActiveStep={setActiveStep}
@@ -77,7 +77,7 @@ const FAQ = () => {
               {faq.map((x, index) => (
                 <div className="" key={index}>
                   <div
-                    className="flex items-center py-4 justify-between border-b border-grey md:px-5 cursor-pointer max-sm:text-[14px]"
+                    className="flex w-full items-center py-4 justify-between border-b border-grey md:px-5 cursor-pointer max-sm:text-[14px]"
                     onClick={() => handleClick(index)}
                   >
                     <p className="font-bold">{x.title}</p>
@@ -88,7 +88,7 @@ const FAQ = () => {
                   </div>
 
                   {openDetail[index] && (
-                    <p className="text-pTagGrey md:px-5 py-3 pb-8">
+                    <p className="text-pTagGrey md:px-5 py-3 pb-8 ">
                       {x.content}
                     </p>
                   )}

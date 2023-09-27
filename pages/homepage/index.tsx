@@ -12,7 +12,7 @@ const HomePage = () => {
         <SideBar />
       </div>
 
-      <div className="flex-grow">
+      <div className="flex-grow overflow-x-hidden">
         <Header />
         {/* ALL TABS BELOW */}
         <HomeTab />

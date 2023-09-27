@@ -14,7 +14,7 @@ const Notifications = () => {
       <div className="w-[221px]">
         <SideBar />
       </div>
-      <div className="flex-grow">
+      <div className="flex-grow overflow-x-hidden">
         <div className="post-job bg-white h-screen relative">
           <NavHead
             activeStep={activeStep}

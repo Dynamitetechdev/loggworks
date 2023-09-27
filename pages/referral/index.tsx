@@ -11,7 +11,7 @@ const Referral = () => {
       <div className="w-[221px]">
         <SideBar />
       </div>
-      <div className="flex-grow">
+      <div className="flex-grow overflow-x-hidden">
         <NavHead
           activeStep={activeStep}
           setActiveStep={setActiveStep}
