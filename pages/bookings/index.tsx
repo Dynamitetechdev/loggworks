@@ -112,7 +112,7 @@ const Bookings = () => {
       <div className="w-[221px]">
         <SideBar />
       </div>
-      <div className="flex-grow">
+      <div className="flex-grow overflow-hidden">
         <div className="post-job bg-white min-h-screen relative">
           <NavHead
             activeStep={activeStep}

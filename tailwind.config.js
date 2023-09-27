@@ -32,12 +32,12 @@ module.exports = {
       sm: "576px",
       // => @media (min-width: 576px) { ... }
 
-      md: "1250px",
+      md: "951px",
       // => @media (min-width: 960px) { ... }
 
-      lg: "1338px",
+      lg: "1024px",
 
-      xl: "1580px",
+      xl: "1440px",
       xxl: "1750px",
       // => @media (min-width: 1440px) { ... }
     },

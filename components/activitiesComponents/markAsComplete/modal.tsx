@@ -27,7 +27,7 @@ const Modal: React.FC<{
   const [select, setSelect] = useState(-1);
 
   const [rate, setRate] = useState(Array(5).fill(false));
-  const [rateIndex, setRateIndex] = useState(0);
+  const [rateIndex, setRateIndex] = useState(-1);
   const handleRate = (index: number) => {
     setRateIndex(index);
     const newArr = rate.map((_, i) => i <= index);
