@@ -3,6 +3,6 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/": "pages/index.js",
-  "/jobs": "pages/jobs.js",
-  "/post-job": "pages/post-job.js"
+  "/bookings": "pages/bookings.js",
+  "/activity": "pages/activity.js"
 }

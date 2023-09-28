@@ -27,10 +27,15 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/post-job": [
+    "/activity": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/post-job.js"
+      "static/chunks/pages/activity.js"
+    ],
+    "/bookings": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/bookings.js"
     ]
   },
   "ampFirstPages": []
