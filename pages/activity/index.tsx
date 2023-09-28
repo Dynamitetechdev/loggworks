@@ -90,8 +90,8 @@ const Notifications = () => {
             title="Activities"
             type="plain"
           />
-          <div className="px-6 md:px-9 pt-5 md:flex text-pTagGrey ">
-            <div className="md:w-5/12 mx-auto">
+          <div className="px-6 md:px-6 lg:px-8 pt-5 md:flex text-pTagGrey ">
+            <div className="md:w-8/12 lp:w-7/12 lg:w-5/12 mx-auto lp:text-[14px] lg:text-[16px]">
               <TabNav
                 options={activitiesSectionData.tabSwitch}
                 activeTab={activeTab}
