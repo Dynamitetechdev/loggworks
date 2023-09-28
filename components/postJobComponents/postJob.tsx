@@ -16,7 +16,7 @@ const PostJob: React.FC<{ activeStep: number; setActiveStep: any }> = ({
         />
       </div>
 
-      <div className="form_container md:w-5/12">
+      <div className="form_container md:w-8/12 lp:w-7/12 lg:w-5/12">
         <ProfileCard />
 
         <PostJobForm activeStep={activeStep} setActiveStep={setActiveStep} />
