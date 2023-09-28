@@ -1,6 +1,9 @@
 const CategoryData = () => {
   const categories = [
     {
+      title: "explore",
+    },
+    {
       title: "Catering",
       image: "catering",
       hoverImg: "catering",

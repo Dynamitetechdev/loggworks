@@ -30,23 +30,26 @@ const Categories = () => {
               onMouseEnter={() => onHoverEnter(index)}
               onMouseLeave={() => onHoverLeave(index)}
             >
-              <span className="w-[24px]">
-                {hover[index] ? (
-                  <Image
-                    src={`/assets/icons/category/${x.hoverImg}-white.svg`}
-                    width={24}
-                    height={24}
-                    alt=""
-                  />
-                ) : (
-                  <Image
-                    src={`/assets/icons/category/${x.image}.svg`}
-                    width={24}
-                    height={24}
-                    alt=""
-                  />
-                )}
-              </span>
+              {x.hoverImg && (
+                <span className="w-[24px]">
+                  {hover[index] ? (
+                    <Image
+                      src={`/assets/icons/category/${x.hoverImg}-white.svg`}
+                      width={24}
+                      height={24}
+                      alt=""
+                    />
+                  ) : (
+                    <Image
+                      src={`/assets/icons/category/${x.image}.svg`}
+                      width={24}
+                      height={24}
+                      alt=""
+                    />
+                  )}
+                </span>
+              )}
+
               <p className="capitalize text-[14px] ml-1 whitespace-nowrap">
                 {x.title}
               </p>
