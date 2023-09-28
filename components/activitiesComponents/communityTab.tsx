@@ -29,7 +29,7 @@ const CommunityTabData: React.FC<{ data: any[] }> = ({ data }) => {
     },
   ];
   return (
-    <div className="my-4">
+    <div className="my-4 max-w-[550px]">
       {communitySampleData.map((x, i) => (
         <div className="" key={i}>
           <div className="card_content px-2 py-1 my-3 shadow">

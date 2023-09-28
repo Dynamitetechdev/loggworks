@@ -12,7 +12,7 @@ const ReviewTabData: React.FC<{ data: any[]; selectedOption: any }> = ({
 }) => {
   const [star, setStar] = useState<any[]>(Array(4).fill(""));
   return (
-    <div className="my-4">
+    <div className="my-4 max-w-[550px]">
       {data
         .filter(
           (x) => x.category.toLowerCase() === selectedOption.toLowerCase()
@@ -22,95 +22,93 @@ const ReviewTabData: React.FC<{ data: any[]; selectedOption: any }> = ({
             className="card_content px-2 py-1 my-3 border-b border-grey80"
             key={i}
           >
-            <div className="">
-              <div className="title flex items-start justify-between">
-                <div className="flex items-center mb-2 md:mb-2">
-                  <Image
-                    src={"/assets/images/client_test.png"}
-                    width={40}
-                    height={40}
-                    alt="brand_logo"
-                    className="mr-2"
-                  />
-                  <div>
-                    {x.category === "reviews" && (
-                      <h4 className="font-bold text-[18px]">{x.title}</h4>
-                    )}
-                    {x.category === "question & answers" && (
-                      <h4 className="font-bold text-[18px]">{x.name}</h4>
-                    )}
-                    {x.category === "comments" && (
-                      <h4 className="font-normal text-[18px]">
-                        Replying
-                        <span className="font-bold text-green ml-1">
-                          {x.repliedTo}
-                        </span>
-                      </h4>
-                    )}
-                    {x.category === "reviews" && (
-                      <div className="text-[14px]">
-                        <div className="stars flex items-center">
-                          {star.map((_: any, i: number) => (
-                            <Image
-                              key={i}
-                              src={"/assets/icons/filledStar.svg"}
-                              height={16}
-                              width={16}
-                              alt="icon"
-                              className=""
-                            />
-                          ))}
+            <div className="title flex items-start justify-between">
+              <div className="flex items-center mb-2 md:mb-2">
+                <Image
+                  src={"/assets/images/client_test.png"}
+                  width={40}
+                  height={40}
+                  alt="brand_logo"
+                  className="mr-2"
+                />
+                <div>
+                  {x.category === "reviews" && (
+                    <h4 className="font-bold text-[18px]">{x.title}</h4>
+                  )}
+                  {x.category === "question & answers" && (
+                    <h4 className="font-bold text-[18px]">{x.name}</h4>
+                  )}
+                  {x.category === "comments" && (
+                    <h4 className="font-normal text-[18px]">
+                      Replying
+                      <span className="font-bold text-green ml-1">
+                        {x.repliedTo}
+                      </span>
+                    </h4>
+                  )}
+                  {x.category === "reviews" && (
+                    <div className="text-[14px]">
+                      <div className="stars flex items-center">
+                        {star.map((_: any, i: number) => (
                           <Image
-                            src={"/assets/icons/emptyStar.svg"}
+                            key={i}
+                            src={"/assets/icons/filledStar.svg"}
                             height={16}
                             width={16}
                             alt="icon"
+                            className=""
                           />
-                        </div>
+                        ))}
+                        <Image
+                          src={"/assets/icons/emptyStar.svg"}
+                          height={16}
+                          width={16}
+                          alt="icon"
+                        />
                       </div>
-                    )}
-                  </div>
-                </div>
-
-                <div className="">
-                  {x.category === "reviews" && <h1>1d</h1>}
-                  {(x.category === "question & answers" ||
-                    x.category === "comments") && <h1>3 mins ago</h1>}
+                    </div>
+                  )}
                 </div>
               </div>
 
-              {x.category === "reviews" && (
-                <div className="">
-                  <div className="grid grid-cols-5 gap-0 mb-2">
-                    {Array(x.image)
-                      .fill("")
-                      .map((x, i) => (
-                        <div className="others" key={i}>
-                          <Image
-                            src={"/assets/images/details/gallery2.png"}
-                            width={48}
-                            height={48}
-                            alt={`slide-main`}
-                            className="md:rounded-lg"
-                          />
-                        </div>
-                      ))}
-                  </div>
-                </div>
-              )}
-
-              <h5 className="font-light pb-3 max-sm:text-[16px]">
-                {x.category === "reviews" && x.reviewText}
-                {x.category === "question & answers" && x.question}
-                {x.category === "comments" && x.reply}
-              </h5>
-
-              {x.category === "question & answers" && (
-                <h5 className="p-2 border border-grey80 rounded my-2 max-sm:text-[16px]">
-                  {x.answer}
-                </h5>
-              )}
+              <div className="">
+                {x.category === "reviews" && <h1>1d</h1>}
+                {(x.category === "question & answers" ||
+                  x.category === "comments") && <h1>3 mins ago</h1>}
+              </div>
             </div>
+
+            {x.category === "reviews" && (
+              <div className="">
+                <div className="grid grid-cols-5 gap-0 mb-2">
+                  {Array(x.image)
+                    .fill("")
+                    .map((x, i) => (
+                      <div className="others" key={i}>
+                        <Image
+                          src={"/assets/images/details/gallery2.png"}
+                          width={48}
+                          height={48}
+                          alt={`slide-main`}
+                          className="md:rounded-lg"
+                        />
+                      </div>
+                    ))}
+                </div>
+              </div>
+            )}
+
+            <h5 className="font-light pb-3 max-sm:text-[16px]">
+              {x.category === "reviews" && x.reviewText}
+              {x.category === "question & answers" && x.question}
+              {x.category === "comments" && x.reply}
+            </h5>
+
+            {x.category === "question & answers" && (
+              <h5 className="p-2 border border-grey80 rounded my-2 max-sm:text-[16px]">
+                {x.answer}
+              </h5>
+            )}
           </div>
         ))}
     </div>
