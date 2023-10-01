@@ -26,11 +26,14 @@ const ModalPopup: React.FC<{
     Array(categories.length).fill(false)
   );
   const [selectedOption, setSelectedOption] = useState<number>(-1);
+  const [catIndex, setCatIndex] = useState(-1);
+  const [catOptionIndex, setCatOptionIndex] = useState(-1);
+  console.log("....", selectedOption);
   const handleToggle = (e: any, index: number) => {
-    const newToggle = [...optionToggle];
-    newToggle[index] = !newToggle[index];
+    const newToggle = optionToggle.map((value, i) => i === index);
     setOptionToggle(newToggle);
     setSelectedOption(index);
+    setCatOptionIndex(-1);
   };
 
   const [searchValue, setSearchValue] = useState("");
@@ -41,6 +44,11 @@ const ModalPopup: React.FC<{
 
   console.log("Checking", optionSelected);
 
+  const handleCheckBox = (mainIndex: number, optionIndex: number) => {
+    if (mainIndex === catIndex && optionIndex === catOptionIndex) {
+      return true;
+    }
+  };
   return (
     <div className="relative">
       {" "}
@@ -72,14 +80,17 @@ const ModalPopup: React.FC<{
                 <div className="max-h-[660px] overflow-y-auto">
                   {categories
                     .filter((x: any) =>
-                      x.title.toLowerCase().includes(searchValue)
+                      x.title.toLowerCase().includes(searchValue.toLowerCase())
                     )
                     .map((option: any, index: number) => (
                       <>
                         <div className=" py-4 cursor-pointer">
                           <div
                             className="option_head flex items-center justify-between"
-                            onClick={(e) => handleToggle(e, index)}
+                            onClick={(e) => {
+                              handleToggle(e, index);
+                              setCatIndex(index);
+                            }}
                           >
                             <div className="flex items-center ">
                               <Image
@@ -108,6 +119,7 @@ const ModalPopup: React.FC<{
                                     onClick={() => {
                                       handleSelected(index, i),
                                         setOptionSelectedIndex(i);
+                                      setCatOptionIndex(i);
                                     }}
                                   >
                                     <label className="w-[24px] h-[24px] border border-green rounded-full flex items-center justify-center">
@@ -115,7 +127,12 @@ const ModalPopup: React.FC<{
                                         type="checkbox"
                                         name=""
                                         id=""
-                                        className="form-checkbox rounded-full "
+                                        className="form-checkbox rounded-full"
+                                        checked={
+                                          handleCheckBox(index, i)
+                                            ? true
+                                            : false
+                                        }
                                       />
                                     </label>
                                     <p className="mx-3 capitalize">{x}</p>

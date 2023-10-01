@@ -1,8 +1,7 @@
 {
-  "/_document": "pages/_document.js",
-  "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
-  "/": "pages/index.js",
-  "/bookings": "pages/bookings.js",
-  "/activity": "pages/activity.js"
+  "/_app": "pages/_app.js",
+  "/_document": "pages/_document.js",
+  "/jobs": "pages/jobs.js",
+  "/post-job": "pages/post-job.js"
 }
