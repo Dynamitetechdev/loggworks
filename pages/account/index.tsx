@@ -76,10 +76,11 @@ const Account = () => {
                     <div className="admin_info mb-3 px-3 py-6 bg-white flex flex-col items-center">
                       <div className="admin_image">
                         <Image
-                          src={"/assets/images/client_test.png"}
+                          src={"/assets/bg/te.jpg"}
                           width={32}
                           height={32}
-                          alt=""
+                          alt="brand_logo "
+                          className="mr-2 max-sm:hidden rounded-full max-h-[32px] max-w-[32px]"
                         />
                       </div>
                       <h1 className="text-[14px] font-bold mb-1 mt-3">

@@ -36,11 +36,11 @@ const CommunityTabData: React.FC<{ data: any[] }> = ({ data }) => {
             <div className="title flex items-center justify-between mb-3">
               <div className="flex items-center">
                 <Image
-                  src={"/assets/images/client_test.png"}
+                  src={"/assets/bg/te.jpg"}
                   width={40}
                   height={40}
-                  alt="brand_logo"
-                  className="mr-2"
+                  alt="brand_logo "
+                  className="mr-2 max-sm:hidden rounded-full max-h-[40px] max-w-[40px]"
                 />
                 <div>
                   <h4 className="font-bold text-[18px]">{x.name}</h4>

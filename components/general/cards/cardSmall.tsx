@@ -10,29 +10,40 @@ const CardSmall: React.FC<CardSmallProps> = ({ reccomend }) => {
   return (
     <div className="card  bg-white my-3 relative">
       <WishListButton />
-      <div className="max-w-[388px]">
-        <Image
-          src={"/assets/images/promotions/01.png"}
-          layout="responsive"
-          width={360}
-          height={140}
-          objectFit="cover"
-          objectPosition="center"
-          alt=""
-          className="object-center rounded-t-lg"
-        />
-      </div>
+      {reccomend ? (
+        <div className="max-w-[228px] md:w-[260px] h-[95px] relative">
+          <Image
+            src={"/assets/bg/te.jpg"}
+            layout="fill"
+            alt=""
+            className="w-full rounded-t-lg object-center object-cover "
+            objectFit="cover"
+            objectPosition="center"
+          />
+        </div>
+      ) : (
+        <div className=" h-[140px] relative">
+          <Image
+            src={"/assets/bg/te.jpg"}
+            layout="fill"
+            alt=""
+            className="w-full rounded-t-lg object-center object-cover "
+            objectFit="cover"
+            objectPosition="center"
+          />
+        </div>
+      )}
 
       <div className="card_content md:p-3 p-2">
         <div className="title">
           <div className="flex items-center">
             <div className="max-sm:hidden">
               <Image
-                src={"/assets/images/client_test.png"}
+                src={"/assets/bg/te.jpg"}
                 width={20}
                 height={20}
                 alt="brand_logo "
-                className="mr-2"
+                className="mr-2 max-sm:hidden rounded-full max-h-[20px] max-w-[20px]"
               />
             </div>
 

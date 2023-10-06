@@ -57,28 +57,27 @@ const ProfileTab = () => {
         <h1 className="font-bold text-[18px] md:mb-3">Gallery</h1>
 
         <div className="">
-          <div className="w-full max-sm:h-[146px]">
+          <div className="w-full max-sm:h-[146px] relative h-[288px] max-h-[288px]">
             <Image
-              src={"/assets/images/details/gallery1.png"}
-              width={600}
-              objectFit="contain"
-              height={228}
+              src={"/assets/bg/te.jpg"}
+              layout="fill"
+              objectFit="cover"
               objectPosition="center"
               alt={`slide-main`}
               className="object-center md:rounded-lg"
             />
           </div>
-          <div className="max-sm:mt-7 grid grid-cols-5 gap-0">
+          <div className="max-sm:mt-7 grid grid-cols-5 gap-x-4">
             {Array(6)
               .fill("")
               .map((x, i) => (
                 <div className="others mt-5" key={i}>
                   <Image
-                    src={"/assets/images/details/gallery2.png"}
+                    src={"/assets/bg/te.jpg"}
                     width={64}
                     height={64}
                     alt={`slide-main`}
-                    className="md:rounded-lg"
+                    className="rounded-lg"
                   />
                 </div>
               ))}
@@ -186,11 +185,11 @@ const ProfileTab = () => {
                 <div className="title flex items-start justify-between">
                   <div className="flex items-center mb-3">
                     <Image
-                      src={"/assets/images/client_test.png"}
+                      src={"/assets/bg/te.jpg"}
                       width={40}
                       height={40}
-                      alt="brand_logo"
-                      className="mr-2"
+                      alt="brand_logo "
+                      className="mr-2 max-sm:hidden rounded-full max-h-[40px] max-w-[40px]"
                     />
                     <div>
                       <h4 className="font-bold text-[18px]">Avigdor Branca</h4>

@@ -28,11 +28,11 @@ const BookingTabData: React.FC<{ data: any[]; selectedOption: any }> = ({
             <div className="flex justify-between items-start mb-2 md:mb-3">
               <div className="flex items-center">
                 <Image
-                  src={"/assets/images/client_test.png"}
+                  src={"/assets/bg/te.jpg"}
                   width={40}
                   height={40}
-                  alt="brand_logo"
-                  className="mr-2"
+                  alt="brand_logo "
+                  className="mr-2 max-sm:hidden rounded-full max-h-[40px] max-w-[40px]"
                 />
                 <div>
                   <h4 className="font-bold text-[18px] max-sm:text-[16px]">

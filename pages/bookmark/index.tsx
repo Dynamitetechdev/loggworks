@@ -27,7 +27,7 @@ const Bookmark = () => {
                 <div className="md:grid grid-cols-9 gap-5 ">
                   {offers.map((_, i) => (
                     <div className="md:col-span-3" key={i}>
-                      <CardMedium />
+                      <CardMedium bookmark={true} />
                     </div>
                   ))}
                 </div>

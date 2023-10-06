@@ -25,11 +25,11 @@ const ReviewTabData: React.FC<{ data: any[]; selectedOption: any }> = ({
             <div className="title flex items-start justify-between">
               <div className="flex items-center mb-2 md:mb-2">
                 <Image
-                  src={"/assets/images/client_test.png"}
+                  src={"/assets/bg/te.jpg"}
                   width={40}
                   height={40}
-                  alt="brand_logo"
-                  className="mr-2"
+                  alt="brand_logo "
+                  className="mr-2 max-sm:hidden rounded-full max-h-[40px] max-w-[40px]"
                 />
                 <div>
                   {x.category === "reviews" && (
@@ -80,17 +80,17 @@ const ReviewTabData: React.FC<{ data: any[]; selectedOption: any }> = ({
 
             {x.category === "reviews" && (
               <div className="">
-                <div className="grid grid-cols-5 gap-0 mb-2">
+                <div className="grid grid-cols-9 gap-0 mb-2">
                   {Array(x.image)
                     .fill("")
                     .map((x, i) => (
                       <div className="others" key={i}>
                         <Image
-                          src={"/assets/images/details/gallery2.png"}
+                          src={"/assets/bg/te.jpg"}
                           width={48}
                           height={48}
-                          alt={`slide-main`}
-                          className="md:rounded-lg"
+                          alt=""
+                          className="mr-2 max-sm:hidden rounded-md max-h-[48px] max-w-[48px]"
                         />
                       </div>
                     ))}

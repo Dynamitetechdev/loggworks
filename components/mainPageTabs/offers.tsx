@@ -15,7 +15,7 @@ const Offers = () => {
       <div className=" grid-cols-9 gap-5 flex overflow-x-scroll max-md:scrolling-touch ">
         {offers.map((_, i) => (
           <div
-            className="md:col-span-3 flex-shrink-0 max-sm:w-[200px] md:max-w-[228px]"
+            className="md:col-span-3 flex-shrink-0 max-sm:w-[200px] md:max-w-[228px] max-md:mr-5"
             key={i}
           >
             <CardMedium />

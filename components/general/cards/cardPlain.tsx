@@ -3,13 +3,14 @@ import Image from "next/image";
 const CardPlain = () => {
   return (
     <div className="card  bg-white rounded-lg my-2 mr-5">
-      <div className="">
+      <div className="max-w-[228px] w-[177px] md:w-[260px] h-[107px] relative mr-10">
         <Image
-          src={"/assets/images/promotions/01.png"}
-          width={360}
-          height={140}
+          src={"/assets/bg/te.jpg"}
+          layout="fill"
           alt=""
-          className="rounded-t-lg"
+          className="w-full rounded-t-lg object-center object-cover "
+          objectFit="cover"
+          objectPosition="center"
         />
       </div>
 
