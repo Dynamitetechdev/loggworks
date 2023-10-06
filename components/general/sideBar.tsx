@@ -8,8 +8,11 @@ import {
   UserCircleIcon,
 } from "@heroicons/react/24/outline";
 import Link from "next/link";
+
 import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
 const SideBar = () => {
+  const router = useRouter();
   interface AllIcons {
     [iconName: string]: React.ComponentType<any>;
   }
@@ -88,30 +91,7 @@ const SideBar = () => {
     },
   ];
 
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
-
-  const handleActive = (index: number) => {
-    setActiveIndex(index);
-    setActiveIndexInLocalStorage(index);
-  };
-
   const [openAdminNav, setOpenAdminNav] = useState(false);
-
-  const setActiveIndexInLocalStorage = (index: number | null) => {
-    if (index !== null) {
-      localStorage.setItem("activeIndex", index.toString());
-    }
-  };
-
-  useEffect(() => {
-    const storedIndex = localStorage.getItem("activeIndex");
-    if (storedIndex !== null) {
-      const parsedIndex = parseInt(storedIndex, 10);
-      if (!isNaN(parsedIndex)) {
-        setActiveIndex(parsedIndex);
-      }
-    }
-  }, []);
 
   return (
     <>
@@ -136,9 +116,9 @@ const SideBar = () => {
                   <Link href={nav.route} key={`nav--${index}`}>
                     <li
                       className={`flex max-md:flex-col items-center md:my-4 py-2  cursor-pointer md:pl-7  ${
-                        activeIndex === index && "md:bg-lightWhite text-green"
+                        router.pathname === nav.route &&
+                        "md:bg-lightWhite text-green"
                       }`}
-                      onClick={() => handleActive(index)}
                     >
                       <div className="icon w-[20px] h-[20px] max-md:ml-2">
                         <Icon />
@@ -157,13 +137,14 @@ const SideBar = () => {
             <ul className="max-md:hidden max-md:flex max-sm:justify-between max-md:justify-center  max-sm:mx-0 pr-5">
               {sideNav.map((nav, index) => {
                 const Icon = allIcons[nav.icon];
+
                 return (
                   <Link href={nav.route} key={`nav--${index}`}>
                     <li
                       className={`flex max-md:flex-col max-md:mx-4 items-center  md:my-4 py-2  cursor-pointer md:pl-5 font-[500]  ${
-                        activeIndex === index && "bg-lightWhite text-green"
+                        router.pathname === nav.route &&
+                        "bg-lightWhite text-green"
                       }`}
-                      onClick={() => handleActive(index)}
                     >
                       <div className="icon w-[24px] h-[24px] max-md:ml-2">
                         <Icon />

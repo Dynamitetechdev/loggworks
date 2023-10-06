@@ -25,7 +25,7 @@ const Payment = () => {
       <div className="w-[221px]">
         <SideBar />
       </div>
-      <div className="flex-grow">
+      <div className="flex-grow overflow-hidden">
         <div className="post-job bg-white min-h-screen relative">
           <NavHead
             activeStep={activeStep}
@@ -35,7 +35,7 @@ const Payment = () => {
           />
 
           <div className="px-6 md:px-9 pt-5 my-20 md:flex text-pTagGrey ">
-            <div className="md:w-5/12 mx-auto">
+            <div className="md:w-7/12 lp:w-7/12 lg:w-5/12 mx-auto">
               <div className="">
                 <div className="my-4">
                   <div className="confirmed flex items-center">
@@ -79,17 +79,34 @@ const Payment = () => {
                       Electrician required to fix a spoilt vaccum cleaner.
                       Please treat as urgent.
                     </h5>
-                    <div className="flex items-center w-11/12 md:w-7/12 justify-between min-md:text-[14px] my-3 font-light ">
+                    <div className="flex items-center max-md:w-11/12 w-8/12 justify-between  min-md:text-[14px] max-sm:text-[14px] md:my-3 my-2 font-light">
                       <div className="flex items-center">
-                        <CalendarIcon width={24} height={24} />
+                        <Image
+                          src={"/assets/icons/calendar.svg"}
+                          width={24}
+                          height={24}
+                          alt=""
+                        />
                         <p className="ml-1">09/06/2021</p>
                       </div>
                       <div className="flex items-center">
-                        <ClockIcon width={24} height={24} />
+                        <Image
+                          src={"/assets/icons/clock.svg"}
+                          width={24}
+                          height={24}
+                          alt=""
+                        />
+
                         <p className="ml-1">9:00AM</p>
                       </div>
                       <div className=" flex items-center">
-                        <ClockIcon width={24} height={24} />
+                        <Image
+                          src={"/assets/icons/timehalf.svg"}
+                          width={24}
+                          height={24}
+                          alt=""
+                        />
+
                         <p className="ml-1">5 days</p>
                       </div>
                     </div>
