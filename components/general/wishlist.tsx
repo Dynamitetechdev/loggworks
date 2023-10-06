@@ -5,7 +5,7 @@ const WishListButton = () => {
   const [onWishlist, setOnwishList] = useState(false);
   return (
     <div
-      className="wishlist absolute z-[9999] right-3 top-3 cursor-pointer rounded-full flex items-center justify-center"
+      className="wishlist absolute z-[9] right-3 top-3 cursor-pointer rounded-full flex items-center justify-center"
       onClick={() => setOnwishList(!onWishlist)}
     >
       <Image
