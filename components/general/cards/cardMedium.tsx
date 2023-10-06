@@ -1,20 +1,23 @@
 import Image from "next/image";
 import StarReview from "../starReview";
 import WishListButton from "../wishlist";
+import React from "react";
 
-const CardMedium = () => {
+const CardMedium: React.FC<{ bookmark?: boolean }> = ({ bookmark }) => {
   const sampleText = "Spend $100 and get 20% off";
 
   return (
     <div className="card min-md:w-[181px] bg-white my-2 relative">
       <WishListButton />
-      <div className="">
+
+      <div className=" h-[104px] relative">
         <Image
-          src={"/assets/images/promotions/01.png"}
-          width={360}
-          height={140}
+          src={"/assets/bg/te.jpg"}
+          layout="fill"
           alt=""
-          className="rounded-t-lg "
+          className="w-full rounded-t-lg object-center object-cover "
+          objectFit="cover"
+          objectPosition="center"
         />
       </div>
 
@@ -22,11 +25,11 @@ const CardMedium = () => {
         <div className="title">
           <div className="flex items-center">
             <Image
-              src={"/assets/images/client_test.png"}
+              src={"/assets/bg/te.jpg"}
               width={20}
               height={20}
               alt="brand_logo "
-              className="mr-2 max-sm:hidden"
+              className="mr-2 max-sm:hidden rounded-full max-h-[20px] max-w-[20px]"
             />
             <h4 className="font-bold text-[14px]">Elite Carpenters</h4>
           </div>

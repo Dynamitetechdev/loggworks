@@ -4,10 +4,11 @@ import Image from "next/image";
 const BannerCarousel = () => {
   const [activeSlide, setActiveSlide] = useState(0);
   const slideImages = [
+    "/assets/bg/te.jpg",
     "/assets/images/banner/01.png",
     "/assets/images/banner/01.png",
     // "/assets/images/promotions/01.png",
-    // "/assets/images/client_test.png",
+    "/assets/images/client_test.png",
   ];
 
   const handleSlideChange = (index: number) => {

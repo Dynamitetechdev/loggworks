@@ -19,13 +19,14 @@ const DealsTab: React.FC<{ data: any[]; selectedOption: any }> = ({
     <div className="my-4 grid grid-cols-2 gap-5">
       {data.map((x, i) => (
         <div className="card min-md:w-[181px] bg-white my-2 relative" key={i}>
-          <div className="">
+          <div className="w-full h-[118px] relative">
             <Image
-              src={"/assets/images/promotions/01.png"}
-              width={360}
-              height={140}
+              src={"/assets/bg/te.jpg"}
+              layout="fill"
               alt=""
-              className="rounded-lg "
+              className="w-full rounded-t-lg object-center object-cover "
+              objectFit="cover"
+              objectPosition="center"
             />
           </div>
 

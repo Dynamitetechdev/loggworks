@@ -11,13 +11,16 @@ const CardLarge = () => {
       <WishListButton />
 
       <Link href={"/sampleCategory/Elite Carpenters/"}>
-        <Image
-          src={"/assets/images/promotions/01.png"}
-          width={380}
-          height={140}
-          alt="object-fit"
-          className="min-w-[374px]"
-        />
+        <div className="max-w-[358px] w-[358px] h-[118px] relative">
+          <Image
+            src={"/assets/bg/te.jpg"}
+            layout="fill"
+            alt=""
+            className="w-full rounded-t-lg object-center object-cover "
+            objectFit="cover"
+            objectPosition="center"
+          />
+        </div>
       </Link>
 
       <div className="card_content md:p-3 p-2 text-[12px]">
@@ -25,11 +28,11 @@ const CardLarge = () => {
           <Link href={"/sampleCategory/Elite Carpenters/"}>
             <div className="flex items-center">
               <Image
-                src={"/assets/images/client_test.png"}
+                src={"/assets/bg/te.jpg"}
                 width={24}
                 height={24}
                 alt="brand_logo "
-                className="mr-2"
+                className="mr-2 rounded-full max-h-[24px] max-w-[24px]"
               />
               <h4 className="font-bold text-[14px]">Elite Carpenters</h4>
             </div>

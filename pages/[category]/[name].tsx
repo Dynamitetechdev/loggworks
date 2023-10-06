@@ -106,19 +106,19 @@ const Detail = () => {
             type="notab"
           />
 
-          <div className=" md:px-9 md:pt-10 md:flex text-pTagGrey ">
+          <div className="md:px-9 md:pt-10 md:flex text-pTagGrey ">
             <div className="md:w-5/12 mx-auto relative">
               <Banner />
-              <div className="px-6">
+              <div className="max-md:px-6 mt-4">
                 <div className="border-b pb-3 border-grey80">
                   <div className="header flex items-start justify-between">
                     <div className="flex items-start">
                       <Image
-                        src={"/assets/images/client_test.png"}
+                        src={"/assets/bg/te.jpg"}
                         width={56}
                         height={56}
-                        alt="brand_logo min-w-[40px] max-h-[40px]"
-                        className="mr-2"
+                        alt="brand_logo "
+                        className="mr-2 max-sm:hidden rounded-full max-h-[56px] max-w-[56px]"
                       />
                       <div className="">
                         <div className="flex items-center">

@@ -7,6 +7,7 @@ import { EllipsisVerticalIcon } from "@heroicons/react/24/outline";
 const Banner = () => {
   const [activeSlide, setActiveSlide] = useState(0);
   const slideImages = [
+    "/assets/bg/te.jpg",
     "/assets/images/promotions/01.png",
     // "/assets/images/details/main.png",
   ];
@@ -85,14 +86,13 @@ const Banner = () => {
             {slideImages.map((image, index) => (
               <div
                 key={index}
-                className="w-full max-sm:h-[146px] absolute"
+                className="w-full max-sm:h-[146px] max-h-[228px] h-[228px] absolute"
                 style={{ left: `${index * 980}px` }}
               >
                 <Image
                   src={image}
-                  width={558}
-                  objectFit="contain"
-                  height={228}
+                  layout="fill"
+                  objectFit="cover"
                   objectPosition="center"
                   alt={`slide-${index}`}
                   className="object-center md:rounded-lg"
