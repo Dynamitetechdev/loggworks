@@ -27,15 +27,25 @@
       "static/chunks/main.js",
       "static/chunks/pages/account.js"
     ],
-    "/faq": [
+    "/connect-social": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/faq.js"
+      "static/chunks/pages/connect-social.js"
     ],
-    "/help": [
+    "/dashboard-personal": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/help.js"
+      "static/chunks/pages/dashboard-personal.js"
+    ],
+    "/notifications": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/notifications.js"
+    ],
+    "/security": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/security.js"
     ]
   },
   "ampFirstPages": []
