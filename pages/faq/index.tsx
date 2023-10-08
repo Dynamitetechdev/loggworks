@@ -73,7 +73,7 @@ const FAQ = () => {
             type="notab"
           />
           <div className="px-6 md:px-9 pt-10 md:flex text-pTagGrey ">
-            <div className="md:w-5/12 mx-auto">
+            <div className="md:w-5/12 max-w-[550px] mx-auto">
               {faq.map((x, index) => (
                 <div className="" key={index}>
                   <div
