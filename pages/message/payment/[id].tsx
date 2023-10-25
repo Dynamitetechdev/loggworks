@@ -14,6 +14,7 @@ const Payment = () => {
   const [activeStep, setActiveStep] = useState(0);
   const [sortOption, setSortOption] = useState<string | null>(null);
   const [paymentComplete, setPaymentComplete] = useState(false);
+  const [paymentNotComplete, setPaymentNotComplete] = useState(false);
   const handleSelected = (option: string) => {
     console.log(option);
     setSortOption(option);
@@ -214,7 +215,8 @@ const Payment = () => {
                   <div className="mt-7">
                     <button
                       className="w-full h-[48px] bg-green  font-bold py-2 px-4 mb-2 rounded"
-                      onClick={() => setPaymentComplete(true)}
+                      // onClick={() => setPaymentComplete(true)}
+                      onClick={() => setPaymentNotComplete(true)}
                     >
                       Pay Now
                     </button>
@@ -242,6 +244,7 @@ const Payment = () => {
         </div>
       </div>
 
+      {/* for successful payment */}
       {paymentComplete && (
         <GeneralModal
           message="Payment successful"
@@ -249,6 +252,18 @@ const Payment = () => {
           img="payment"
           setModalPopUp={setPaymentComplete}
           modalPop={paymentComplete}
+        />
+      )}
+
+      {/* For failed payment */}
+      {paymentNotComplete && (
+        <GeneralModal
+          message="Payment failed"
+          optionalMsg="Something went wrong.
+ let’s try again."
+          img="failed"
+          setModalPopUp={setPaymentNotComplete}
+          modalPop={paymentNotComplete}
         />
       )}
     </div>

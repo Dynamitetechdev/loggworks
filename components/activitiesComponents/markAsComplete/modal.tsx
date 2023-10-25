@@ -23,6 +23,10 @@ const Modal: React.FC<{
   };
 
   const [activeIndex, setActiveIndex] = useState(0);
+  const [reviewAlert, setReviewAlert] = useState({
+    noReviewText: true,
+    rateValue: false
+  })
   const count = ["10", "9", "8", "7", "6", "5", "4", "3", "2", "1", "0"];
   const [select, setSelect] = useState(-1);
 
@@ -33,13 +37,21 @@ const Modal: React.FC<{
     const newArr = rate.map((_, i) => i <= index);
     setRate(newArr);
   };
+
+  const checkReviewText = (e: any) => {
+    const isReviewTextValid = e.target.value.length > 3;
+    setReviewAlert((prev: any) => ({
+      ...prev,
+      noReviewText: !isReviewTextValid
+    }));
+  }
   return (
     <div className="relative">
       <div className="fixed modal-container z-50 w-full bg-green md:p-4 top-0 left-0 h-full flex items-center max-sm:items-end justify-center">
         <div className=" w-full mx-auto flex items-center justify-center">
           <div className="relative bg-grey80 md:w-[461px] rounded-lg shadow dark:bg-gray-700 ">
             {activeIndex === 0 && (
-              <div className="container">
+              <form className="container">
                 <div className="bg-white flex items-center justify-between mb-2 py-4 px-8">
                   <div className="flex items-center  ">
                     <Image
@@ -89,7 +101,7 @@ const Modal: React.FC<{
                         )}
                       </div>
                     ))}
-
+                    
                     <h2 className="mx-4">{rateIndex + 1}.0</h2>
                   </div>
 
@@ -150,21 +162,28 @@ const Modal: React.FC<{
                       >
                         Write a review
                       </label>
+                      {
+                        
+                        reviewAlert.noReviewText && <p className="text-sm mt-2">The Review text should be up to 3 character</p> 
+                      }
                       <textarea
                         className="appearance-none w-full text-gray-700 border border-red-500 rounded p-4 my-2 leading-tight focus:outline-none focus:bg-white bg-lightWhite border border-grey80 h-[108px]"
                         id="grid-first-name text-[16px]"
+                        required={true}
                         placeholder=""
+                        onChange={e => checkReviewText(e)}
                       />
                     </div>
                   </div>
                   <button
-                    className="relative bg-green text-white w-full h-[48px] font-bold py-2 px-4 rounded "
+                    className={`relative  text-white w-full h-[48px] font-bold py-2 px-4 rounded ${reviewAlert.noReviewText ? "bg-grey" : "bg-green"}`}
+                    disabled ={reviewAlert.noReviewText}
                     onClick={() => setActiveIndex(activeIndex + 1)}
                   >
                     Submit Review
                   </button>
                 </div>
-              </div>
+              </form>
             )}
             {activeIndex === 1 && (
               <div className="h-[605px] max-sm:w-[410px] max-sm:rounded">
@@ -215,11 +234,14 @@ const Modal: React.FC<{
                     </div>
                   </div>
                   <button
-                    className="relative bg-green text-white w-full h-[48px] font-bold py-2 px-4 rounded "
+                    className={`relative  text-white w-full h-[48px] font-bold py-2 px-4 rounded ${select < 0 ? "bg-grey" : "bg-green"}`}
                     onClick={() => setActiveIndex(activeIndex + 1)}
+                    disabled={select < 0}
                   >
                     Submit
                   </button>
+                  
+                  
                 </div>
               </div>
             )}

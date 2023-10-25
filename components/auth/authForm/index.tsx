@@ -192,14 +192,14 @@ const AuthForm: React.FC<AuthFormProp> = ({ title, login, route }) => {
                   </div>
                 </div>
                 {login && (
-                  <p className="text-right underline text-greyDark mt-2">
+                  <p className="text-right underline text-greyDark mt-2 cursor-pointer">
                     Forgot Password
                   </p>
                 )}
               </div>
 
               <button className="w-full h-[48px] bg-green  font-bold py-2 px-4 rounded">
-                {login ? "Log In" : " Verify phone number"}
+                {login ? "Log In" : "Sign Up"}
               </button>
             </div>
           </form>
@@ -219,7 +219,7 @@ const AuthForm: React.FC<AuthFormProp> = ({ title, login, route }) => {
                 className="mr-2"
               />
             </div>
-            <span>Sign up with Facebook</span>
+            <span>Continue with Facebook</span>
           </button>
           <button className="w-full my-4 bg-greyDark font-bold py-2 px-4 rounded h-[48px] flex justify-center items-center">
             <div className="icon">
@@ -231,7 +231,7 @@ const AuthForm: React.FC<AuthFormProp> = ({ title, login, route }) => {
                 className="mr-2"
               />
             </div>
-            <span>Sign up with Apple</span>
+            <span>Continue with Apple</span>
           </button>
           <button className="w-full h-[48px] text-green font-bold py-2 px-4 border border-blue rounded flex justify-center items-center mb-4">
             <div className="icon">
@@ -243,11 +243,11 @@ const AuthForm: React.FC<AuthFormProp> = ({ title, login, route }) => {
                 className="mr-2"
               />
             </div>
-            <span>Sign up with Google</span>
+            <span>Continue with Google</span>
           </button>
         </div>
 
-        <div className="relative top-20">
+        <div className="relative top-10">
           {login ? (
             <h4 className="">
               Don’t have an account?{" "}

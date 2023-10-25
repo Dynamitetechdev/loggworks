@@ -30,7 +30,7 @@ const Payment = () => {
           <NavHead
             activeStep={activeStep}
             setActiveStep={setActiveStep}
-            title="Bookings"
+            title="Payment"
             type="notab"
           />
 
