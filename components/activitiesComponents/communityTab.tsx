@@ -29,10 +29,10 @@ const CommunityTabData: React.FC<{ data: any[] }> = ({ data }) => {
     },
   ];
   return (
-    <div className="my-4 max-w-[550px]">
+    <div className="my-4">
       {communitySampleData.map((x, i) => (
-        <div className="" key={i}>
-          <div className="card_content px-2 py-1 my-3 shadow">
+        <>
+          <div className="card_content px-2 py-1 my-3 shadow" key={i}>
             <div className="title flex items-center justify-between mb-3">
               <div className="flex items-center">
                 <Image
@@ -67,10 +67,11 @@ const CommunityTabData: React.FC<{ data: any[] }> = ({ data }) => {
 
               <p>3d</p>
             </div>
+            <div className="max-w-[500px]">
+              <h5>{x.content}</h5>
+            </div>
 
-            <div className="">{/* images & review section */}</div>
-            <h5>{x.content}</h5>
-
+              
             <div className="flex items-center justify-between my-2">
               <div className="flex items-center">
                 <div className="flex items-center">
@@ -106,11 +107,10 @@ const CommunityTabData: React.FC<{ data: any[] }> = ({ data }) => {
             </div>
           </div>
 
-          {/* Reviews Section */}
           {openReview && openReviewIndex === i && (
             <Reviews setOpenReview={setOpenReview} reviewsData={x.reviews} />
           )}
-        </div>
+        </>
       ))}
     </div>
   );

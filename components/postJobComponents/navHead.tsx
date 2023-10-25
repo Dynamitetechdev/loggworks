@@ -32,7 +32,7 @@ const NavHead: React.FC<{
 
           <div className="md:w-9/12 w-full md:relative md:left-[33%] max-md:flex max-md:justify-center max-md:-ml-[40px]">
             <div className="flex items-start">
-              <h1 className="font-bold capitalize md:text-[20px] text-[16px] md:-ml-8">
+              <h1 className="font-bold capitalize md:text-[20px] text-[16px] md:-ml-20">
                 {title}
               </h1>
             </div>

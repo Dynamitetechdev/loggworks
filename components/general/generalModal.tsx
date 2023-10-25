@@ -35,7 +35,7 @@ const GeneralModal: React.FC<{
               className="relative bg-green text-white w-full h-[48px] font-bold py-2 px-4 rounded "
               onClick={() => setModalPopUp(!modalPop)}
             >
-              Close
+              {message.includes('failed') ? "Try Again" : "Close"}
             </button>
           </div>
         </div>

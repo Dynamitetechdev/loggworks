@@ -46,7 +46,7 @@ const QuoteMessage: React.FC<{
 
         {quoteRequest && (
           <div className="acceptRequest">
-            <button className="bg-[#FDE8E7] w-full text-[14px] text-[#F02D16] py-[8px] px-4 rounded mt-2 capitalize">
+            <button className={`bg-[#FDE8E7] w-full text-[14px]  py-[8px] px-4 rounded mt-2 capitalize ${quoteRequest === "decline" ? "text-[#F02D16]" : "text-[#2FA500] font-semibold"}`}>
               {quoteRequest}
             </button>
           </div>

@@ -83,7 +83,7 @@ const Notifications = () => {
         <SideBar />
       </div>
       <div className="flex-grow overflow-hidden">
-        <div className="post-job bg-white min-h-screen relative">
+        <div className="bg-white min-h-screen relative">
           <NavHead
             activeStep={activeStep}
             setActiveStep={setActiveStep}
@@ -116,9 +116,10 @@ const Notifications = () => {
                   selectedOption={selectedOption || "booking"}
                 />
               )}
-              {activeTab === "community" && (
-                <CommunityTabData data={communityData} />
-              )}
+           
+                {activeTab === "community" && (
+                  <CommunityTabData data={communityData} />
+                )}
             </div>
           </div>
         </div>

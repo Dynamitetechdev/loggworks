@@ -12,7 +12,7 @@ const ReviewTabData: React.FC<{ data: any[]; selectedOption: any }> = ({
 }) => {
   const [star, setStar] = useState<any[]>(Array(4).fill(""));
   return (
-    <div className="my-4 max-w-[550px]">
+    <div className="my-4">
       {data
         .filter(
           (x) => x.category.toLowerCase() === selectedOption.toLowerCase()
@@ -98,7 +98,7 @@ const ReviewTabData: React.FC<{ data: any[]; selectedOption: any }> = ({
               </div>
             )}
 
-            <h5 className="font-light pb-3 max-sm:text-[16px]">
+            <h5 className="font-light pb-3 max-sm:text-[16px] max-w-[550px]">
               {x.category === "reviews" && x.reviewText}
               {x.category === "question & answers" && x.question}
               {x.category === "comments" && x.reply}
