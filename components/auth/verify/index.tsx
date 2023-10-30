@@ -5,6 +5,7 @@ import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import Testimonial from "../testimonial";
 import { useRouter } from "next/router";
+import Alert from "../../general/alert/alert";
 
 interface AuthFormProp {
   title: string;
@@ -20,7 +21,7 @@ const VerifyForm: React.FC<AuthFormProp> = ({ title }) => {
   const [verifyCode, setVerifyCode] = useState<string[]>(new Array(5).fill(""));
   const [editNumber, setEditNumber] = useState<boolean>(false);
   const [timer, setTimer] = useState<number>(60);
-
+  const [isSent, setIsSent] = useState(true)
   const [phoneNumber, setPhoneNumber] = useState("+44 7911 123456");
   const [formData, setFormData] = useState<FormData>({
     phoneNumber,
@@ -66,7 +67,7 @@ const VerifyForm: React.FC<AuthFormProp> = ({ title }) => {
     <div className="authForm text-center md:grid grid-cols-7 gap-8 items-center">
       <Testimonial />
 
-      <div className="right max-sm:flex max-sm:flex-col max-sm:justify-between formInput col-span-4 px-5 md:w-6/12 md:mx-auto md:my-auto max-sm:relative">
+      <div className="right max-sm:flex max-sm:flex-col max-sm:justify-between formInput col-span-4 px-5 md:w-6/12 md:mx-auto md:my-auto relative">
         <div className="md:hidden mobile_nav absolute top-10">
           <Image
             src={"/assets/icons/navBack.svg"}
@@ -124,12 +125,15 @@ const VerifyForm: React.FC<AuthFormProp> = ({ title }) => {
               </div>
 
               <div className="resendCount">
-                <h3 className="text-right">
+                <h3 className="text-left">
                   {timer}
                   <span>s</span>
                 </h3>
               </div>
             </div>
+
+            <p className="text-red text-left mt-2 mb-4">Wrong 2fa code, please enter correct code.</p>
+
 
             <h4 className="flex flex-col max-sm:mt-10 mb-8">
               Didn’t get the OTP?
@@ -149,7 +153,14 @@ const VerifyForm: React.FC<AuthFormProp> = ({ title }) => {
               )}
             </div>
           </form>
+
+         
         </div>
+
+        {
+          isSent && <Alert setIsSent={setIsSent} />
+        }
+       
       </div>
     </div>
   );
