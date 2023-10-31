@@ -27,6 +27,7 @@ module.exports = {
       grey40: "var(--grey-40, #858585)",
       timerColor: "#E22410",
       modalDrop: "rgba(7, 26, 0, 0.25)",
+      red: "#F02D16"
     },
     screens: {
       sm: "576px",
