@@ -1,14 +1,30 @@
 import Image from "next/image";
 import WishListButton from "../wishlist";
 import Option from "../../postJobComponents/options";
+import { useEffect, useRef, useState } from "react";
 
 const JobCard = () => {
   let sampleText =
     "I’m in need of a skilled electrician at Manchester UK. My circuit box just got blown due to flutuauting I’m in need of a skilled electrician at Manchester UK. My circuit box just got blown due to flutuauting I’m in need of a skilled electrician at Manchester UK. My circuit box just got blown due to flutuauting ";
+  const [clickOption, setClickOption] = useState(false);
+  const modalRef: any = useRef(null)
 
+  const handleModalOutsideClick = (e: any) => {
+    if (modalRef.current && !modalRef.current.contains(e.target)) {
+      setClickOption(false)
+    }
+  }
+
+  useEffect(() => {
+    document.addEventListener('click', handleModalOutsideClick)
+
+    return () => {
+      document.removeEventListener('click', handleModalOutsideClick)
+    }
+  },[])
   return (
     <div className="jobCard relative shadow h-[261px] mb-10 rounded">
-      <Option />
+      <Option clickOption={clickOption} setClickOption={setClickOption} modalRef={ modalRef} />
       <div className="img w-full h-[99px] rounded-t bg-[red] bg-[url('/assets/bg/jobpost.png')] bg-cover bg-no-repeat bg-center"></div>
       <div className="card relative">
         <div className="card_content p-3">
