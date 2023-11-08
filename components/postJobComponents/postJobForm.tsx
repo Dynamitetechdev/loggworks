@@ -45,7 +45,7 @@ const PostJobForm: React.FC<{
     });
     console.log(imageUrl);
   };
-  console.log("optionSelected", optionSelected);
+  console.log("optionSelected:", optionSelected?.title,"/", optionSelected?.options[optionSelectedIndex]);
   return (
     <>
       <div className="all-forms">
