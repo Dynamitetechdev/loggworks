@@ -3,10 +3,11 @@ import SideBar from "../../components/general/sideBar";
 import Header from "../../components/general/nav/header";
 import NavHead from "../../components/postJobComponents/navHead";
 import Image from "next/image";
+import Modal from "../../components/depositComponents/modal";
 
 const LoggCash = () => {
   const [activeStep, setActiveStep] = useState(0);
-
+  const [modalPop, setModalPopUp] = useState(false);
   const transData = [
     {
       name: "Deposit",
@@ -38,6 +39,7 @@ const LoggCash = () => {
     },
   ];
   return (
+    <>
     <div className="md:flex">
       <div className="w-[221px]">
         <SideBar />
@@ -59,7 +61,7 @@ const LoggCash = () => {
                   <h1 className="text-[32px]">£900</h1>
                 </div>
 
-                <button className="w-full h-[48px] bg-green  font-bold my-3 py-2 px-4 rounded">
+                <button className="w-full h-[48px] bg-green  font-bold my-3 py-2 px-4 rounded" onClick={() => setModalPopUp(true)}>
                   Deposit
                 </button>
               </div>
@@ -109,7 +111,13 @@ const LoggCash = () => {
           </div>
         </div>
       </div>
-    </div>
+      </div>
+
+      {
+        modalPop && <Modal setModalPopUp={setModalPopUp} modalPop={modalPop} />
+      }
+      
+    </>
   );
 };
 

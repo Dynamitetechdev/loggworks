@@ -20,69 +20,79 @@ const ModalPopup: React.FC<{
   setOptionSelected,
   setOptionSelectedIndex,
 }) => {
-  const { categories } = CategoryData();
+    const { categories } = CategoryData();
 
-  const [optionToggle, setOptionToggle] = useState(
-    Array(categories.length).fill(false)
-  );
-  const [selectedOption, setSelectedOption] = useState<number>(-1);
-  const [catIndex, setCatIndex] = useState(-1);
-  const [catOptionIndex, setCatOptionIndex] = useState(-1);
-  console.log("....", selectedOption);
-  const handleToggle = (e: any, index: number) => {
-    const newToggle = optionToggle.map((value, i) => i === index);
-    setOptionToggle(newToggle);
-    setSelectedOption(index);
-    setCatOptionIndex(-1);
-  };
+    const [optionToggle, setOptionToggle] = useState(
+      Array(categories.length).fill(false)
+    );
+    const [selectedOption, setSelectedOption] = useState<number>(-1);
+    const [catIndex, setCatIndex] = useState(-1);
+    const [catOptionIndex, setCatOptionIndex] = useState(-1);
+    console.log("....", selectedOption);
 
-  const [searchValue, setSearchValue] = useState("");
+    const handleToggle = (e: any, index: number) => {
+      const newToggle = optionToggle.map((value, i) => i === index);
+      setOptionToggle(newToggle);
+      setSelectedOption(index);
+      setCatOptionIndex(-1);
+    };
 
-  const handleSelected = (index: number, optionIndex: number) => {
-    setOptionSelected(categories[selectedOption]);
-  };
-
-  console.log("Checking", optionSelected);
-
-  const handleCheckBox = (mainIndex: number, optionIndex: number) => {
-    if (mainIndex === catIndex && optionIndex === catOptionIndex) {
-      return true;
+    const [searchValue, setSearchValue] = useState("");
+  const data = () => {
+    if (searchValue) {
+      const filteredCategories = categories.filter((category: any) =>
+        category.title.toLowerCase().includes(searchValue.toLowerCase())
+      );
+      return filteredCategories;
     }
+    return categories;
   };
-  return (
-    <div className="relative">
-      {" "}
-      <div className="fixed modal-container z-50 w-full bg-green md:p-4 top-0 left-0 h-full flex items-center justify-center max-sm:mt-10">
-        <div className=" max-sm:w-full max-sm:max-w-2xl  mx-auto ">
-          <div className="bg-white  md:w-[511px] md:h-[830px] lp:w-[411px] lp:h-[500px] lg:w-[511px] lg:h-[830px] h-screen rounded-md shadow dark:bg-gray-700 md:px-8 px-6 py-6">
-            <div className="flex items-start justify-between dark:border-gray-600">
-              <h3 className="text-xl font-semibold text-dark">Categories</h3>
-              <div
-                className="close cursor-pointer"
-                onClick={() => setModalPopUp(false)}
-              >
-                <XMarkIcon width={24} height={24} />
-              </div>
-            </div>
+    const handleSelected = (index: number, optionIndex: number) => {
+      setOptionSelected(data()[index]);
+      setSelectedOption(index);
+    };
 
-            <form action="" className="">
-              <div className="search">
-                <input
-                  type="text"
-                  className="appearance-none w-full text-gray-700 border border-red-500 rounded p-4 my-5 leading-tight focus:outline-none focus:bg-white bg-lightWhite border border-grey80"
-                  placeholder="Search"
-                  onChange={(e) => setSearchValue(e.target.value)}
-                  value={searchValue}
-                />
+    console.log("Checking", optionSelected);
+
+    const handleCheckBox = (mainIndex: number, optionIndex: number) => {
+      if (mainIndex === catIndex && optionIndex === catOptionIndex) {
+        return true;
+      }
+      return false;
+    };
+
+
+
+    return (
+      <div className="relative">
+        {" "}
+        <div className="fixed modal-container z-50 w-full bg-green md:p-4 top-0 left-0 h-full flex items-center justify-center max-sm:mt-10">
+          <div className="max-sm:w-full max-sm:max-w-2xl  mx-auto ">
+            <div className="bg-white  md:w-[511px] md:h-[630px] lp:w-[411px] lp:h-[500px] lg:w-[511px] lg:h-[630px] h-screen rounded-md shadow dark:bg-gray-700 md:px-8 px-6 py-6">
+              <div className="flex items-start justify-between dark:border-gray-600">
+                <h3 className="text-xl font-semibold text-dark">Categories</h3>
+                <div
+                  className="close cursor-pointer"
+                  onClick={() => setModalPopUp(false)}
+                >
+                  <XMarkIcon width={24} height={24} />
+                </div>
               </div>
 
-              <div className="flex flex-col h-[550px] md:h-[660px] lp:h-[330px] lg:h-[660px] justify-between">
-                <div className="max-h-[660px] overflow-y-auto">
-                  {categories
-                    .filter((x: any) =>
-                      x.title.toLowerCase().includes(searchValue.toLowerCase())
-                    )
-                    .map((option: any, index: number) => (
+              <form action="" className="">
+                <div className="search">
+                  <input
+                    type="text"
+                    className="appearance-none w-full text-gray-700 border border-red-500 rounded p-4 my-5 leading-tight focus:outline-none focus:bg-white bg-lightWhite border border-grey80"
+                    placeholder="Search"
+                    onChange={(e) => setSearchValue(e.target.value)}
+                    value={searchValue}
+                  />
+                </div>
+
+                <div className="flex flex-col h-[550px] md:h-[450px] lp:h-[330px] lg:h-[460px] justify between ">
+                  <div className="max-h-[660px] overflow-y-auto">
+                    {data().map((option: any, index: number) => (
                       <>
                         <div className=" py-4 cursor-pointer">
                           <div
@@ -117,8 +127,8 @@ const ModalPopup: React.FC<{
                                     className="flex items-center mb-3 "
                                     key={i}
                                     onClick={() => {
-                                      handleSelected(index, i),
-                                        setOptionSelectedIndex(i);
+                                      handleSelected(index, i);
+                                      setOptionSelectedIndex(i);
                                       setCatOptionIndex(i);
                                     }}
                                   >
@@ -128,11 +138,7 @@ const ModalPopup: React.FC<{
                                         name=""
                                         id=""
                                         className="form-checkbox rounded-full"
-                                        checked={
-                                          handleCheckBox(index, i)
-                                            ? true
-                                            : false
-                                        }
+                                        checked={handleCheckBox(index, i)}
                                       />
                                     </label>
                                     <p className="mx-3 capitalize">{x}</p>
@@ -144,21 +150,21 @@ const ModalPopup: React.FC<{
                         </div>
                       </>
                     ))}
-                </div>
+                  </div>
 
-                <button
-                  className="relative bg-green text-white w-full h-[48px] font-bold py-2 px-4 rounded "
-                  onClick={() => setModalPopUp(!modalPop)}
-                >
-                  Select Category
-                </button>
-              </div>
-            </form>
+                  <button
+                    className="relative bg-green text-white w-full h-[48px] font-bold py-2 px-4 rounded "
+                    onClick={() => setModalPopUp(!modalPop)}
+                  >
+                    Select Category
+                  </button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  );
-};
+    );
+  };
 
 export default ModalPopup;
